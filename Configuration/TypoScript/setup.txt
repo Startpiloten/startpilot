@@ -49,3 +49,5 @@ page.10 {
 [global]
 
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:kickstart/Configuration/TypoScript/lib">
+
+kickstart.settings.favicon = {$favicon}
