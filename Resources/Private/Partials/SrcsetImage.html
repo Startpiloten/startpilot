@@ -1,0 +1,38 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:f="http://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers"
+	 data-namespace-typo3-fluid="true">
+
+	<f:section name="SrcsetImage">
+		<v:variable.set name="imgurl" value="{f:uri.image(image:'{image}',maxWidth: '{maxWidth}') -> v:format.substring(start: 1)}" />
+		<v:variable.set name="imgsize" value="{v:media.image.width(src:'{imgurl}')}" />
+		<v:variable.set name="img480" value="{f:uri.image(image:'{image}',maxWidth:'480')} 480w,"/>
+		<v:variable.set name="img768" value="{f:uri.image(image:'{image}',maxWidth:'768')} 768w,"/>
+		<v:variable.set name="img992" value="{f:uri.image(image:'{image}',maxWidth:'992')} 992w,"/>
+		<v:variable.set name="img1200" value="{f:uri.image(image:'{image}',maxWidth:'1200')} 1200w,"/>
+		<v:variable.set name="img2500" value="{f:uri.image(image:'{image}',maxWidth:'2500')} 2x,"/>
+		<figure>
+			<f:link.typolink parameter="{image.link}">
+				<img src="{f:uri.image(image:'{image}',maxWidth:'1200')}"
+					 alt="{image.alternative}"
+					 class="img-responsive"
+					 srcset="	{f:if(condition:'{imgsize} > 480', then:'{img480}')}
+					 			{f:if(condition:'{imgsize} > 768', then:'{img768}')}
+					 			{f:if(condition:'{imgsize} > 992', then:'{img992}')}
+					 			{f:if(condition:'{imgsize} > 1200', then:'{img1200}')}
+					 			{f:if(condition:'{imgsize} > 2500', then:'{img2500}')}
+					 			">
+			</f:link.typolink>
+			<f:if condition="{image.description}">
+				<figcaption>
+					{image.description}
+				</figcaption>
+			</f:if>
+		</figure>
+	</f:section>
+
+	<f:comment>
+		// Use this code to render an Image in your CE //
+		<f:render partial="SrcsetImage" section="SrcsetImage" arguments="{image:image,maxWidth:2500}" />
+	</f:comment>
+</div>

@@ -1,0 +1,7 @@
+### Google Webmaster Header Code ###
+page.headerData.700 = TEXT
+page.headerData.700.value (
+    <meta name="google-site-verification" content="xxxxxxxx" />
+)
+### Google Webmaster Header Code - END ###
+

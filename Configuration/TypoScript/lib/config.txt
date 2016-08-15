@@ -1,0 +1,62 @@
+config {
+    metaCharset = utf-8
+    renderCharset = utf-8
+    extTarget = _blank
+    disableImgBorderAttr = 1
+
+    doctype = html5
+    doctypeSwitch = 0
+    pageTitleFirst = 1
+    xhtml_cleaning = all
+    disablePrefixComment = 1
+    inlineStyle2TempFile = 1
+    removeDefaultJS = external
+    moveJsFromHeaderToFooter = 0
+    meaningfulTempFilePrefix = 100
+
+    simulateStaticDocuments = 0
+
+    spamProtectEmailAddresses = 2
+    spamProtectEmailAddresses_atSubst = (at)
+    sendCacheHeaders = 1
+
+    headerComment (
+         bschauer
+    )
+}
+
+config {
+    sys_language_mode = strict
+    sys_language_overlay = 0
+    sys_language_uid = 0
+    linkVars = L
+}
+
+config {
+    language = de
+    locale_all = de_DE
+    htmlTag_langKey = de
+    htmlTag_setParams = lang="de"
+}
+
+config.enableContentLengthHeader = 0
+
+config {
+    compressJs = 1
+    compressCss = 1
+    concatenateCss = 1
+    concatenateJs = 1
+    concatenateJsAndCss = 1
+    inlineStyle2TempFile = 1
+}
+
+[applicationContext = Development]
+    config {
+        compressJs = 0
+        compressCss = 0
+        concatenateCss = 0
+        concatenateJs = 0
+        concatenateJsAndCss = 0
+        inlineStyle2TempFile = 0
+    }
+[end]

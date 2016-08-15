@@ -1,0 +1,56 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:f="http://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers"
+	 data-namespace-typo3-fluid="true">
+
+	<f:section name="Favicon">
+		{v:variable.set(name:'iconurl', value:'EXT:amtemplate/Resources/Public/Icons/Device/Icon.png')}
+		{f:uri.image(src:'{iconurl}', width: '57', height: '57') -> v:format.substring(start: 1) -> v:variable.set(name:'icon57')}
+		{f:uri.image(src:'{iconurl}', width: '114', height: '114') -> v:format.substring(start: 1) -> v:variable.set(name:'icon114')}
+		{f:uri.image(src:'{iconurl}', width: '72', height: '72') -> v:format.substring(start: 1) -> v:variable.set(name:'icon72')}
+		{f:uri.image(src:'{iconurl}', width: '144', height: '144') -> v:format.substring(start: 1) -> v:variable.set(name:'icon144')}
+		{f:uri.image(src:'{iconurl}', width: '60', height: '60') -> v:format.substring(start: 1) -> v:variable.set(name:'icon60')}
+		{f:uri.image(src:'{iconurl}', width: '120', height: '120') -> v:format.substring(start: 1) -> v:variable.set(name:'icon120')}
+		{f:uri.image(src:'{iconurl}', width: '76', height: '76') -> v:format.substring(start: 1) -> v:variable.set(name:'icon76')}
+		{f:uri.image(src:'{iconurl}', width: '152', height: '152') -> v:format.substring(start: 1) -> v:variable.set(name:'icon152')}
+
+		{f:uri.image(src:'{iconurl}', width: '196', height: '196') -> v:format.substring(start: 1) -> v:variable.set(name:'icon196')}
+		{f:uri.image(src:'{iconurl}', width: '96', height: '96') -> v:format.substring(start: 1) -> v:variable.set(name:'icon96')}
+		{f:uri.image(src:'{iconurl}', width: '32', height: '32') -> v:format.substring(start: 1) -> v:variable.set(name:'icon32')}
+		{f:uri.image(src:'{iconurl}', width: '16', height: '16') -> v:format.substring(start: 1) -> v:variable.set(name:'icon16')}
+		{f:uri.image(src:'{iconurl}', width: '128', height: '128') -> v:format.substring(start: 1) -> v:variable.set(name:'icon128')}
+
+		{f:uri.image(src:'{iconurl}', width: '70', height: '70') -> v:format.substring(start: 1) -> v:variable.set(name:'icon70')}
+		{f:uri.image(src:'{iconurl}', width: '150', height: '150') -> v:format.substring(start: 1) -> v:variable.set(name:'icon150')}
+		{f:uri.image(src:'{iconurl}', width: '310', height: '150c') -> v:format.substring(start: 1) -> v:variable.set(name:'iconwide')}
+		{f:uri.image(src:'{iconurl}', width: '310', height: '310') -> v:format.substring(start: 1) -> v:variable.set(name:'icon310')}
+
+		<v:page.header.link additionalAttributes="{sizes: '57x57'}" rel="apple-touch-icon-precomposed" href="{icon57}"/>
+		<v:page.header.link additionalAttributes="{sizes: '114x114'}" rel="apple-touch-icon-precomposed" href="{icon114}"/>
+		<v:page.header.link additionalAttributes="{sizes: '72x72'}" rel="apple-touch-icon-precomposed" href="{icon72}"/>
+		<v:page.header.link additionalAttributes="{sizes: '144x144'}" rel="apple-touch-icon-precomposed" href="{icon144}"/>
+		<v:page.header.link additionalAttributes="{sizes: '60x60'}" rel="apple-touch-icon-precomposed" href="{icon60}"/>
+		<v:page.header.link additionalAttributes="{sizes: '120x120'}" rel="apple-touch-icon-precomposed" href="{icon120}"/>
+		<v:page.header.link additionalAttributes="{sizes: '76x76'}" rel="apple-touch-icon-precomposed" href="{icon76}"/>
+		<v:page.header.link additionalAttributes="{sizes: '152x152'}" rel="apple-touch-icon-precomposed" href="{icon152}"/>
+
+		<v:page.header.link additionalAttributes="{sizes: '196x196'}" rel="icon" href="{icon196}" type="image/png"/>
+		<v:page.header.link additionalAttributes="{sizes: '196x196'}" rel="icon" href="{icon96}" type="image/png"/>
+		<v:page.header.link additionalAttributes="{sizes: '196x196'}" rel="icon" href="{icon32}" type="image/png"/>
+		<v:page.header.link additionalAttributes="{sizes: '196x196'}" rel="icon" href="{icon16}" type="image/png"/>
+		<v:page.header.link additionalAttributes="{sizes: '196x196'}" rel="icon" href="{icon128}" type="image/png"/>
+
+		<v:page.header.meta name="application-name" content="&nbsp;" />
+		<v:page.header.meta name="msapplication-TileColor" content="#FFFFFF" />
+		<v:page.header.meta name="msapplication-TileImage" content="{icon144}" />
+		<v:page.header.meta name="msapplication-square70x70logo" content="{icon70}" />
+		<v:page.header.meta name="msapplication-square150x150logo" content="{icon150}" />
+		<v:page.header.meta name="msapplication-wide310x150logo" content="{iconwide}" />
+		<v:page.header.meta name="msapplication-square310x310logo" content="{icon310}" />
+	</f:section>
+
+	<f:comment>
+		// Use this code to render a Favicon Set //
+		<f:render partial="Favicon" section="Favicon" />
+	</f:comment>
+</div>
