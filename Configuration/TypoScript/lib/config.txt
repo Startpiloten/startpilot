@@ -50,13 +50,14 @@ config {
     inlineStyle2TempFile = 1
 }
 
-// [applicationContext = Development]
-//     config {
-//         compressJs = 0
-//         compressCss = 0
-//         concatenateCss = 0
-//         concatenateJs = 0
-//         concatenateJsAndCss = 0
-//         inlineStyle2TempFile = 0
-//     }
-// [end]
+[applicationContext = Development]
+    config {
+        compressJs = 0
+        compressCss = 0
+        concatenateCss = 0
+        concatenateJs = 0
+        concatenateJsAndCss = 0
+        inlineStyle2TempFile = 0
+    }
+[end]
+

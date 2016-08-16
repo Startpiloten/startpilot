@@ -25,3 +25,16 @@ page.headerData {
 }
 
 ### Mobile Settings - END ###
+
+### Boostrap Settings ###
+page.includeCSS{
+    boostrap = EXT:kickstart/Resources/Public/bower_components/bootstrap/dist/css/bootstrap.css
+}
+
+page.includeJSFooterlibs{
+    jquery = EXT:kickstart/Resources/Public/bower_components/jquery/dist/jquery.js
+    jquery.forceOnTop = true
+    boostrap = EXT:kickstart/Resources/Public/bower_components/bootstrap/dist/js/bootstrap.js
+}
+
+### Boostrap Settings - END ###
