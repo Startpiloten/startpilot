@@ -13,5 +13,17 @@ page {
 # cat=kickstart: advanced/100/140; type=string; label= Path to Favicon
 favicon = EXT:kickstart/Resources/Public/Icons/Device/Icon.png
 
-# cat=kickstart: advanced/100/150; type=string; label= Google Webmaster Header Code (content="xxxxxxxx")
+# cat=kickstart: advanced/100/150; type=string; label= Google Webmaster ID (content="xxxxxxxx")
 googlewebmaster =
+
+# cat=kickstart: advanced/100/155; type=string; label= Google Analytics ID (content="UA-xxx-x")
+googleanalytics =
+
+# cat=kickstart: advanced/100/160; type=string; label= Live Domain (mytld.de)
+livedomain =
+
+# cat=kickstart: advanced/100/170; type=string; label= Develop Domain (mytld.de)
+developdomain =
+
+# cat=kickstart: advanced/100/180; type=string; label= Local Domain (mytld.de)
+localdomain =

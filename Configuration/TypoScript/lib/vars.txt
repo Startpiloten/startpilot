@@ -1,3 +1,7 @@
 ### TS Variables for Constants
 kickstart.settings.favicon = {$favicon}
-kickstart.settings.googlewebmaster = {$googlewebmaster}
+kickstart.settings.googlewebmaster = {googlewebmaster}
+kickstart.settings.googleanalytics = {googleanalytics}
+kickstart.settings.livedomain = {$livedomain}
+kickstart.settings.developdomain = {$developdomain}
+kickstart.settings.localdomain = {$localdomain}
