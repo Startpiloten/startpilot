@@ -39,7 +39,7 @@ page.10 {
     }
 }
 
-[globalVar =   TSFE : beUserLogin > 0]
+[globalVar =    TSFE : beUserLogin > 0]
     config {
         no_cache = 1
         sourceopt {
@@ -49,5 +49,3 @@ page.10 {
 [global]
 
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:kickstart/Configuration/TypoScript/lib">
-
-kickstart.settings.favicon = {$favicon}

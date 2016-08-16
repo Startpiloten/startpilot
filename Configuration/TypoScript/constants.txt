@@ -12,3 +12,6 @@ page {
 
 # cat=kickstart: advanced/100/140; type=string; label= Path to Favicon
 favicon = EXT:kickstart/Resources/Public/Icons/Device/Icon.png
+
+# cat=kickstart: advanced/100/150; type=string; label= Google Webmaster Header Code (content="xxxxxxxx")
+googlewebmaster =
