@@ -2,6 +2,12 @@
 kickstart.settings.favicon = {$favicon}
 kickstart.settings.googlewebmaster = {googlewebmaster}
 kickstart.settings.googleanalytics = {googleanalytics}
-kickstart.settings.livedomain = {$livedomain}
-kickstart.settings.developdomain = {$developdomain}
-kickstart.settings.localdomain = {$localdomain}
+
+kickstart.settings.live_domain = {$live_domain}
+kickstart.settings.live_absRefPrefix = {$live_absRefPrefix}
+
+kickstart.settings.develop_domain = {$develop_domain}
+kickstart.settings.develop_absRefPrefix = {$develop_absRefPrefix}
+
+kickstart.settings.local_domain = {$local_domain}
+kickstart.settings.local_absRefPrefix = {$local_absRefPrefix}

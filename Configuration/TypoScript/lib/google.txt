@@ -1,4 +1,4 @@
-[globalString = IENV:HTTP_HOST = {$livedomain}]
+[globalString = IENV:HTTP_HOST = {$live_domain}]
 
 ### Google Webmaster Header Code ###
 page.headerData.700.if.isTrue = {$googlewebmaster}

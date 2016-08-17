@@ -1,7 +1,6 @@
-## PAGE
+## Constants ##
 
 # customsubcategory=100=Template Path
-
 page {
 	template {
 		# cat=kickstart: Settings/100/100; type=string; label=Layout Root Path: Path to layouts
@@ -14,25 +13,25 @@ page {
 }
 
 # customsubcategory=200=Favicon
-
 # cat=kickstart: Settings/100/100; type=string; label= Path to Favicon (PNG)
 favicon = EXT:kickstart/Resources/Public/Icons/Device/Icon.png
 
 # customsubcategory=120=Google Webmaster/Analytics
-
 # cat=kickstart: Settings/200/100; type=string; label= Google Webmaster ID - (content="xxxxxxxx")
 googlewebmaster =
-
 # cat=kickstart: Settings/200/110; type=string; label= Google Analytics ID - (content="UA-xxx-x")
 googleanalytics =
 
 # customsubcategory=300=Domains
-
 # cat=kickstart: Settings/300/100; type=string; label= Live Domain - (mytld.de)
-livedomain =
-
+live_domain =
+# cat=kickstart: Settings/300/101; type=string; label= Live absRefPrefix - (/)
+live_absRefPrefix = /
 # cat=kickstart: Settings/300/110; type=string; label= Develop Domain - (mytld.de)
-developdomain =
-
+develop_domain =
+# cat=kickstart: Settings/300/111; type=string; label= Develop absRefPrefix - (/)
+develop_absRefPrefix = /
 # cat=kickstart: Settings/300/120; type=string; label= Local Domain - (mytld.local)
-localdomain =
+local_domain =
+# cat=kickstart: Settings/300/121; type=string; label= Local absRefPrefix - (/)
+local_absRefPrefix = /

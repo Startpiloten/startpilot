@@ -1,4 +1,4 @@
-[globalString = IENV:HTTP_HOST = {$developdomain}]
+[globalString = IENV:HTTP_HOST = {$develop_domain}]
     ## CSS and JS Compression ##
     config {
         compressJs = 1
@@ -8,4 +8,6 @@
         concatenateJsAndCss = 1
         inlineStyle2TempFile = 1
     }
+
+    config.absRefPrefix = {$develop_absRefPrefix}
 [END]
