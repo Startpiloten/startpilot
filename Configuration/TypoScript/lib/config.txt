@@ -25,6 +25,7 @@ config {
     )
 }
 
+## Languge Settings ##
 config {
     sys_language_mode = strict
     sys_language_overlay = 0
@@ -39,25 +40,15 @@ config {
     htmlTag_setParams = lang="de"
 }
 
+## Languge Settings - END ##
+
 config.enableContentLengthHeader = 0
 
-config {
-    compressJs = 1
-    compressCss = 1
-    concatenateCss = 1
-    concatenateJs = 1
-    concatenateJsAndCss = 1
-    inlineStyle2TempFile = 1
-}
-
-[applicationContext = Development]
+## Disable Cache when logged in BE ##
+[globalVar = TSFE : beUserLogin > 0]
     config {
-        compressJs = 0
-        compressCss = 0
-        concatenateCss = 0
-        concatenateJs = 0
-        concatenateJsAndCss = 0
-        inlineStyle2TempFile = 0
+        no_cache = 1
     }
-[end]
+[global]
 
+## Disable Cache when logged in BE - END ##

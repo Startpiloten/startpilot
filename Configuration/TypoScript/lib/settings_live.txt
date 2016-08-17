@@ -1,0 +1,11 @@
+[globalString = IENV:HTTP_HOST = {$livedomain}]
+    ## CSS and JS Compression ##
+    config {
+        compressJs = 1
+        compressCss = 1
+        concatenateCss = 1
+        concatenateJs = 1
+        concatenateJsAndCss = 1
+        inlineStyle2TempFile = 1
+    }
+[END]

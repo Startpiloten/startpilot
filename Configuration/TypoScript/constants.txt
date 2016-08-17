@@ -1,29 +1,38 @@
 ## PAGE
+
+# customsubcategory=100=Template Path
+
 page {
 	template {
-		# cat=kickstart: advanced/100/100; type=string; label=Layout Root Path: Path to layouts
+		# cat=kickstart: Settings/100/100; type=string; label=Layout Root Path: Path to layouts
 		layoutRootPath = EXT:kickstart/Resources/Private/Layouts/
-		# cat=kickstart: advanced/100/110; type=string; label=Partial Root Path: Path to partials
+		# cat=kickstart: Settings/100/110; type=string; label=Partial Root Path: Path to partials
 		partialRootPath = EXT:kickstart/Resources/Private/Partials/
-		# cat=kickstart: advanced/100/120; type=string; label=Template Root Path: Path to templates
+		# cat=kickstart: Settings/100/120; type=string; label=Template Root Path: Path to templates
 		templateRootPath = EXT:kickstart/Resources/Private/Templates/
 	}
 }
 
-# cat=kickstart: advanced/100/140; type=string; label= Path to Favicon
+# customsubcategory=200=Favicon
+
+# cat=kickstart: Settings/100/100; type=string; label= Path to Favicon (PNG)
 favicon = EXT:kickstart/Resources/Public/Icons/Device/Icon.png
 
-# cat=kickstart: advanced/100/150; type=string; label= Google Webmaster ID (content="xxxxxxxx")
+# customsubcategory=120=Google Webmaster/Analytics
+
+# cat=kickstart: Settings/200/100; type=string; label= Google Webmaster ID - (content="xxxxxxxx")
 googlewebmaster =
 
-# cat=kickstart: advanced/100/155; type=string; label= Google Analytics ID (content="UA-xxx-x")
+# cat=kickstart: Settings/200/110; type=string; label= Google Analytics ID - (content="UA-xxx-x")
 googleanalytics =
 
-# cat=kickstart: advanced/100/160; type=string; label= Live Domain (mytld.de)
+# customsubcategory=300=Domains
+
+# cat=kickstart: Settings/300/100; type=string; label= Live Domain - (mytld.de)
 livedomain =
 
-# cat=kickstart: advanced/100/170; type=string; label= Develop Domain (mytld.de)
+# cat=kickstart: Settings/300/110; type=string; label= Develop Domain - (mytld.de)
 developdomain =
 
-# cat=kickstart: advanced/100/180; type=string; label= Local Domain (mytld.de)
+# cat=kickstart: Settings/300/120; type=string; label= Local Domain - (mytld.local)
 localdomain =
