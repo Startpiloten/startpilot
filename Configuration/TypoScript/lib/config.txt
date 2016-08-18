@@ -23,6 +23,10 @@ config {
     headerComment (
          bschauer
     )
+
+    ## Enable RealUrl
+    tx_realurl_enable = 1
+    simulateStaticDocuments = 0
 }
 
 ## Languge Settings ##

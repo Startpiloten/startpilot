@@ -14,6 +14,11 @@ page.meta {
     author_email.field = author_email
 }
 
+
+[globalVar = TSFE:page|no_search = 1]
+    page.meta.robots = noindex,follow
+[end]
+
 ### Meta Fields END ###
 
 ### Mobile Settings ###

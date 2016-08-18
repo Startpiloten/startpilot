@@ -1,0 +1,8 @@
+############################
+### CUSTOM SUBCATEGORIES ###
+############################
+
+# customsubcategory=120_pagets=PageTs
+
+# cat=General/120_pagets/50; type=boolean; label=Boostrap RTE
+disablePageTsRTE = 0
