@@ -1,7 +1,7 @@
 ### TS Variables for Constants
 startpilot.settings.favicon = {$favicon}
-startpilot.settings.googlewebmaster = {googlewebmaster}
-startpilot.settings.googleanalytics = {googleanalytics}
+startpilot.settings.googlewebmaster = {$googlewebmaster}
+startpilot.settings.googleanalytics = {$googleanalytics}
 
 startpilot.settings.live_domain = {$live_domain}
 startpilot.settings.live_absRefPrefix = {$live_absRefPrefix}
