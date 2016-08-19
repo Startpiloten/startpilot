@@ -4,7 +4,7 @@
 	 data-namespace-typo3-fluid="true">
 
 	<f:section name="Favicon">
-		<v:variable.set name="iconurl" value="{v:variable.typoscript(path: 'kickstart.settings.favicon')}" />
+		<v:variable.set name="iconurl" value="{v:variable.typoscript(path: 'startpilot.settings.favicon')}" />
 
 		{f:uri.image(src:'{iconurl}', width: '57', height: '57') -> v:format.substring(start: 0) -> v:variable.set(name:'icon57')}
 		{f:uri.image(src:'{iconurl}', width: '114', height: '114') -> v:format.substring(start: 0) -> v:variable.set(name:'icon114')}

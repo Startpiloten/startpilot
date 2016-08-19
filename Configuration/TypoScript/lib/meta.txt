@@ -33,13 +33,13 @@ page.headerData {
 
 ### Boostrap Settings ###
 page.includeCSS{
-    boostrap = EXT:kickstart/Resources/Public/bower_components/bootstrap/dist/css/bootstrap.css
+    boostrap = EXT:startpilot/Resources/Public/bower_components/bootstrap/dist/css/bootstrap.css
 }
 
 page.includeJSFooterlibs{
-    jquery = EXT:kickstart/Resources/Public/bower_components/jquery/dist/jquery.js
+    jquery = EXT:startpilot/Resources/Public/bower_components/jquery/dist/jquery.js
     jquery.forceOnTop = true
-    boostrap = EXT:kickstart/Resources/Public/bower_components/bootstrap/dist/js/bootstrap.js
+    boostrap = EXT:startpilot/Resources/Public/bower_components/bootstrap/dist/js/bootstrap.js
 }
 
 ### Boostrap Settings - END ###

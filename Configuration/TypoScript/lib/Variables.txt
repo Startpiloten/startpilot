@@ -1,13 +1,13 @@
 ### TS Variables for Constants
-kickstart.settings.favicon = {$favicon}
-kickstart.settings.googlewebmaster = {googlewebmaster}
-kickstart.settings.googleanalytics = {googleanalytics}
+startpilot.settings.favicon = {$favicon}
+startpilot.settings.googlewebmaster = {googlewebmaster}
+startpilot.settings.googleanalytics = {googleanalytics}
 
-kickstart.settings.live_domain = {$live_domain}
-kickstart.settings.live_absRefPrefix = {$live_absRefPrefix}
+startpilot.settings.live_domain = {$live_domain}
+startpilot.settings.live_absRefPrefix = {$live_absRefPrefix}
 
-kickstart.settings.develop_domain = {$develop_domain}
-kickstart.settings.develop_absRefPrefix = {$develop_absRefPrefix}
+startpilot.settings.develop_domain = {$develop_domain}
+startpilot.settings.develop_absRefPrefix = {$develop_absRefPrefix}
 
-kickstart.settings.local_domain = {$local_domain}
-kickstart.settings.local_absRefPrefix = {$local_absRefPrefix}
+startpilot.settings.local_domain = {$local_domain}
+startpilot.settings.local_absRefPrefix = {$local_absRefPrefix}

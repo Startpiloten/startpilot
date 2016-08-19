@@ -3,35 +3,35 @@
 # customsubcategory=100=Template Path
 page {
 	template {
-		# cat=kickstart: Settings/100/100; type=string; label=Layout Root Path: Path to layouts
-		layoutRootPath = EXT:kickstart/Resources/Private/Layouts/
-		# cat=kickstart: Settings/100/110; type=string; label=Partial Root Path: Path to partials
-		partialRootPath = EXT:kickstart/Resources/Private/Partials/
-		# cat=kickstart: Settings/100/120; type=string; label=Template Root Path: Path to templates
-		templateRootPath = EXT:kickstart/Resources/Private/Templates/
+		# cat=startpilot: Settings/100/100; type=string; label=Layout Root Path: Path to layouts
+		layoutRootPath = EXT:startpilot/Resources/Private/Layouts/
+		# cat=startpilot: Settings/100/110; type=string; label=Partial Root Path: Path to partials
+		partialRootPath = EXT:startpilot/Resources/Private/Partials/
+		# cat=startpilot: Settings/100/120; type=string; label=Template Root Path: Path to templates
+		templateRootPath = EXT:startpilot/Resources/Private/Templates/
 	}
 }
 
 # customsubcategory=200=Favicon
-# cat=kickstart: Settings/100/100; type=string; label= Path to Favicon (PNG)
-favicon = EXT:kickstart/Resources/Public/Icons/Device/Icon.png
+# cat=startpilot: Settings/100/100; type=string; label= Path to Favicon (PNG)
+favicon = EXT:startpilot/Resources/Public/Icons/Device/Icon.png
 
 # customsubcategory=120=Google Webmaster/Analytics
-# cat=kickstart: Settings/200/100; type=string; label= Google Webmaster ID - (content="xxxxxxxx")
+# cat=startpilot: Settings/200/100; type=string; label= Google Webmaster ID - (content="xxxxxxxx")
 googlewebmaster =
-# cat=kickstart: Settings/200/110; type=string; label= Google Analytics ID - (content="UA-xxx-x")
+# cat=startpilot: Settings/200/110; type=string; label= Google Analytics ID - (content="UA-xxx-x")
 googleanalytics =
 
 # customsubcategory=300=Domains
-# cat=kickstart: Settings/300/100; type=string; label= Live Domain - (mytld.de)
+# cat=startpilot: Settings/300/100; type=string; label= Live Domain - (mytld.de)
 live_domain =
-# cat=kickstart: Settings/300/101; type=string; label= Live absRefPrefix - (/)
+# cat=startpilot: Settings/300/101; type=string; label= Live absRefPrefix - (/)
 live_absRefPrefix = /
-# cat=kickstart: Settings/300/110; type=string; label= Develop Domain - (mytld.de)
+# cat=startpilot: Settings/300/110; type=string; label= Develop Domain - (mytld.de)
 develop_domain =
-# cat=kickstart: Settings/300/111; type=string; label= Develop absRefPrefix - (/)
+# cat=startpilot: Settings/300/111; type=string; label= Develop absRefPrefix - (/)
 develop_absRefPrefix = /
-# cat=kickstart: Settings/300/120; type=string; label= Local Domain - (mytld.local)
+# cat=startpilot: Settings/300/120; type=string; label= Local Domain - (mytld.local)
 local_domain =
-# cat=kickstart: Settings/300/121; type=string; label= Local absRefPrefix - (/)
+# cat=startpilot: Settings/300/121; type=string; label= Local absRefPrefix - (/)
 local_absRefPrefix = /

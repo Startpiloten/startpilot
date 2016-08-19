@@ -12,91 +12,91 @@ RTE >
 ################################################
 RTE.classes {
     text-left {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.text-left
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.text-left
     }
     text-center {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.text-center
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.text-center
     }
     text-right {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.text-right
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.text-right
     }
     text-justify {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.text-justify
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.text-justify
     }
     lead {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.lead
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.lead
     }
     active {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.active
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.active
     }
     danger {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.danger
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.danger
     }
     info {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.info
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.info
     }
     success {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.success
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.success
     }
     warning {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.warning
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.warning
     }
     visible-lg {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.visible-lg
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.visible-lg
     }
     visible-md {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.visible-md
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.visible-md
     }
     visible-print {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.visible-print
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.visible-print
     }
     visible-sm {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.visible-sm
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.visible-sm
     }
     visible-xs {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.visible-xs
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.visible-xs
     }
     table-striped {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.table-striped
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.table-striped
     }
     table-bordered {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.table-bordered
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.table-bordered
     }
     table-hover {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.table-hover
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.table-hover
     }
     table-condensed {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.table-condensed
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.table-condensed
     }
     list-unstyled {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.list-unstyled
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.list-unstyled
     }
     list-inline {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.list-inline
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.list-inline
     }
     btn {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.btn
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.btn
     }
     btn-default {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.btn-default
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.btn-default
     }
     btn-primary {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.btn-primary
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.btn-primary
     }
     btn-success {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.btn-success
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.btn-success
     }
     btn-warning {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.btn-warning
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.btn-warning
     }
     btn-danger {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.btn-danger
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.btn-danger
     }
     btn-link {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.btn-link
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.btn-link
     }
     btn-block {
-        name = LLL:EXT:kickstart/Resources/Private/Language/locallang_rte.xlf:class.btn-block
+        name = LLL:EXT:startpilot/Resources/Private/Language/locallang_rte.xlf:class.btn-block
     }
 }
 
@@ -107,7 +107,7 @@ RTE.default {
 
     // Use delivered rte css file that includes a default bootstrap css file.
     // This css file is only for backend purposes and not used in frontend anyways!
-    contentCSS = typo3conf/ext/kickstart/Resources/Public/Css/RTE/rte.css
+    contentCSS = typo3conf/ext/startpilot/Resources/Public/Css/RTE/rte.css
 
     // Use default schema for microdata
     schema.sources {
