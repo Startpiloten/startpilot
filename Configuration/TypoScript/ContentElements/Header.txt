@@ -1,0 +1,15 @@
+tt_content.header = FLUIDTEMPLATE
+tt_content.header {
+    templateName = header
+    templateRootPaths {
+        20 = EXT:startpilot/Resources/Private/Templates/ContentElements/
+    }
+
+    partialRootPaths {
+        20 = EXT:startpilot/Resources/Private/Partials/
+    }
+
+    layoutRootPaths {
+        20 = EXT:startpilot/Resources/Private/Layouts/
+    }
+}
