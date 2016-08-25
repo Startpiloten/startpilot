@@ -1,0 +1,21 @@
+{
+  "name": "startpilot",
+  "homepage": "https://github.com/misterboe/startpilot",
+  "authors": [
+    "Boris Schauer <me@bschauer.de>"
+  ],
+  "description": "Typo3 Provider Extension",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

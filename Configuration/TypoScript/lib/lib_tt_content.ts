@@ -1,0 +1,6 @@
+tt_content = CASE
+tt_content {
+    key {
+        field = CType
+    }
+}

@@ -1,0 +1,13 @@
+[globalString = IENV:HTTP_HOST = {$local_domain}]
+    ## CSS and JS Compression ##
+    config {
+        compressJs = 0
+        compressCss = 0
+        concatenateCss = 0
+        concatenateJs = 0
+        concatenateJsAndCss = 0
+        inlineStyle2TempFile = 0
+    }
+
+    config.absRefPrefix = {$local_absRefPrefix}
+[end]

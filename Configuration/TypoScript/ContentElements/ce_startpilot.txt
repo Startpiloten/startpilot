@@ -1,0 +1,4 @@
+tt_content.ce_startpilot =< lib.default
+tt_content.ce_startpilot {
+    templateName = Ce_startpilot
+}

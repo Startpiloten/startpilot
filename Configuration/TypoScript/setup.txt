@@ -1,3 +1,7 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/lib/">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/ContentElements/">
+
+
 ## PAGE
 page = PAGE
 page.10 = FLUIDTEMPLATE
@@ -39,13 +43,13 @@ page.10 {
     }
 }
 
-[globalVar =   TSFE : beUserLogin > 0]
+config {
+    no_cache = 0
+}
+
+## Disable Cache when logged in BE ##
+[globalVar = TSFE : beUserLogin > 0]
     config {
         no_cache = 1
-        sourceopt {
-            formatHtml = 4
-        }
     }
 [global]
-
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:kickstart/Configuration/TypoScript/lib">
