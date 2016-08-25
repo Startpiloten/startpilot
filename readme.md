@@ -1,0 +1,1 @@
+curl https://raw.githubusercontent.com/misterboe/startpilot/develop/start.sh > start.sh && sh start.sh myext

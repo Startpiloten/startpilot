@@ -15,6 +15,5 @@ else
 	git clone https://github.com/misterboe/startpilot.git $DIR --depth=1
 	echo "$DIR created."
 	cd $DIR && rm -rf .git && grep -rl "startpilot" ./* -R | xargs sed -i '' "s/startpilot/${PWD##*/}/" && grep -rl "startpilot" ./* -R | xargs sed -i '' "s/startpilot/${PWD##*/}/" && grep -rl "startpilot" ./* -R | xargs sed -i '' "s/startpilot/${PWD##*/}/" && grep -rl "Startpilot" ./* -R | xargs sed -i '' "s/Startpilot/${PWD##*/}/" && mv startpilot.svg ${PWD##*/}.svg
-	echo "Changed all occurrences of modernpackage to $DIR."
-	echo "Have fun with your theme!"
+	echo "Your extension is now in $DIR."
 fi
