@@ -9,3 +9,10 @@ You can use the `stath.sh` script to clone `startpilot` as extension with any na
 curl https://raw.githubusercontent.com/misterboe/startpilot/develop/start.sh > start.sh && sh start.sh ./web/typo3conf/ext/myext
 ```
 This script is tested on MAC OSX. This script needs bower to load boostrap and jquery. 
+
+#### Thanks
+
+* To Benjamin Kott and his Bootstrap Package 
+	*  https://github.com/benjaminkott/bootstrap_package
+* To Georg Ringer for the start.sh script
+    * https://github.com/georgringer/modernpackage
