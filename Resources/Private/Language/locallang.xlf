@@ -4,7 +4,7 @@
 
         <body>
             <trans-unit id="ce_startpilot_dropdown.title">
-                <source>Top</source>
+                <source>Image Position</source>
             </trans-unit>
             <trans-unit id="ce_startpilot_dropdown.option1">
                 <source>Top</source>

@@ -88,3 +88,4 @@ $GLOBALS['TCA']['tt_content']['types']['ce_startpilot'] = array_replace_recursiv
         ]
     ]
 );
+
