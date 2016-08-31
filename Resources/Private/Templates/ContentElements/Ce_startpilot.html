@@ -1,4 +1,56 @@
-{_all -> f:debug()}
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:f="http://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers"
+	 data-namespace-typo3-fluid="true">
 
-<h1>{data.header}</h1>
+	<f:layout name="Default" />
 
+	<f:section name="Main">
+
+		{_all -> f:debug()}
+		<h1>{data.header}</h1>
+		<div class="container">
+			<div class="row">
+				<f:comment>
+					<f:render partial="SrcsetImage" section="SrcsetImage" arguments="{image:images.0,maxWidth:2500}" />
+				</f:comment>
+
+
+				<f:switch expression="{data.imageposition}">
+					<f:case value="top">
+						<div class="col-md-12">
+							<f:image image="{images.0}" class="img-responsive" />
+						</div>
+						<div class="col-md-12">
+							{data.bodytext -> f:format.html()}
+						</div>
+					</f:case>
+					<f:case value="bottom">
+						<div class="col-md-12">
+							{data.bodytext -> f:format.html()}
+						</div>
+						<div class="col-md-12">
+							<f:image image="{images.0}" class="img-responsive" />
+						</div>
+					</f:case>
+					<f:case value="right">
+						<div class="col-md-6">
+							{data.bodytext -> f:format.html()}
+						</div>
+						<div class="col-md-6">
+							<f:image image="{images.0}" class="img-responsive" />
+						</div>
+					</f:case>
+					<f:case value="left">
+						<div class="col-md-6">
+							<f:image image="{images.0}" class="img-responsive" />
+						</div>
+						<div class="col-md-6">
+							{data.bodytext -> f:format.html()}
+						</div>
+					</f:case>
+				</f:switch>
+			</div>
+		</div>
+	</f:section>
+</div>

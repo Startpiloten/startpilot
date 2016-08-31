@@ -13,10 +13,10 @@ $ce_startpilot_fields = array(
         'config' => array(
             'type' => 'select',
             'items' => array(
-                array('Oben', 'top'),
-                array('Unten', 'bottom'),
-                array('Rechts', 'right'),
-                array('Links', 'left'),
+                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown_option1.title', 'top'),
+                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown_option2.title', 'bottom'),
+                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown_option3.title', 'right'),
+                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown_option4.title', 'left'),
             )
         ),
     ),
