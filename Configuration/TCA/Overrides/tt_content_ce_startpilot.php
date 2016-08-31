@@ -6,7 +6,21 @@
 /***************
  * Register fields
  */
-$ce_startpilot_fields = array();
+$ce_startpilot_fields = array(
+    'imageposition' => array(
+        'exclude' => 0,
+        'label' => 'Image Orientation',
+        'config' => array(
+            'type' => 'select',
+            'items' => array(
+                array('Oben', 'top'),
+                array('Unten', 'bottom'),
+                array('Rechts', 'right'),
+                array('Links', 'left'),
+            )
+        ),
+    ),
+);
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $ce_startpilot_fields);
 
@@ -45,8 +59,12 @@ $GLOBALS['TCA']['tt_content']['types']['ce_startpilot'] = array_replace_recursiv
     [
         'showitem' => '
         --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-        --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,
+        header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_formlabel,
+        header_layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout_formlabel,
+        imageposition,
         image,
+        bodytext,
+              
         --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
             layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:layout_formlabel,
         --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,
@@ -55,6 +73,18 @@ $GLOBALS['TCA']['tt_content']['types']['ce_startpilot'] = array_replace_recursiv
         --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
         --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.extended,
         --div--;LLL:EXT:lang/locallang_tca.xlf:sys_category.tabs.category,categories
-        '
+        ',
+        'columnsOverrides' => [
+            'bodytext' => ['defaultExtras' => 'richtext:rte_transform[mode=ts_css]'],
+            'image' => array(
+                'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+                    'image',
+                    array(
+                        'collapseAll' => 1,
+                        'maxitems' => 1,
+                    )
+                ),
+            ),
+        ]
     ]
 );
