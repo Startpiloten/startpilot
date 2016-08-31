@@ -1,4 +1,11 @@
 tt_content.ce_startpilot =< lib.default
 tt_content.ce_startpilot {
     templateName = Ce_startpilot
+       dataProcessing {
+               20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+               20 {
+                   references.fieldName = image
+                   as = images
+               }
+           }
 }
