@@ -9,14 +9,14 @@
 $ce_startpilot_fields = array(
     'imageposition' => array(
         'exclude' => 0,
-        'label' => 'Image Orientation',
+        'label' => 'LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown.title',
         'config' => array(
             'type' => 'select',
             'items' => array(
-                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown_option1.title', 'top'),
-                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown_option2.title', 'bottom'),
-                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown_option3.title', 'right'),
-                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown_option4.title', 'left'),
+                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown.option1', 'top'),
+                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown.option2', 'bottom'),
+                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown.option3', 'right'),
+                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown.option4', 'left'),
             )
         ),
     ),

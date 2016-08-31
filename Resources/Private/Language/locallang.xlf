@@ -3,16 +3,19 @@
     <file source-language="en" datatype="plaintext" original="messages" date="2016-08-26T08:43:30Z">
 
         <body>
-            <trans-unit id="ce_startpilot_dropdown_option1.title">
+            <trans-unit id="ce_startpilot_dropdown.title">
                 <source>Top</source>
             </trans-unit>
-            <trans-unit id="ce_startpilot_dropdown_option2.title">
+            <trans-unit id="ce_startpilot_dropdown.option1">
+                <source>Top</source>
+            </trans-unit>
+            <trans-unit id="ce_startpilot_dropdown.option2">
                 <source>Bottom</source>
             </trans-unit>
-            <trans-unit id="ce_startpilot_dropdown_option3.title">
+            <trans-unit id="ce_startpilot_dropdown.option3">
                 <source>Right</source>
             </trans-unit>
-            <trans-unit id="ce_startpilot_dropdown_option4.title">
+            <trans-unit id="ce_startpilot_dropdown.option4">
                 <source>Left</source>
             </trans-unit>
         </body>
