@@ -5,7 +5,10 @@
 	<f:layout name="Default" />
 
 	<f:section name="Main">
-		<f:render partial="Favicon" section="Favicon" />
+		<f:comment>
+			// Favicon Set only works with Typo3 7 LTS, because of a Bug VHS's "additionalAttributes" cant be used in Typo3 8.x >> https://github.com/FluidTYPO3/vhs/issues/1100
+			<f:render partial="Favicon" section="Favicon" />
+		</f:comment>
 		<div class="container">
 			<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '1'}" />
 		</div>
