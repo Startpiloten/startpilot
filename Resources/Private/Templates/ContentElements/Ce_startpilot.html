@@ -6,44 +6,42 @@
 	<f:layout name="Default" />
 
 	<f:section name="Main">
-		<h1>{data.header}</h1>
-		<div class="container">
-			<div class="row">
-				<f:switch expression="{data.imageposition}">
-					<f:case value="top">
-						<div class="col-md-12">
-							<f:render partial="SrcsetImage" section="SrcsetImage" arguments="{image:images.0,maxWidth:2500}" />
-						</div>
-						<div class="col-md-12">
-							{data.bodytext -> f:format.html()}
-						</div>
-					</f:case>
-					<f:case value="bottom">
-						<div class="col-md-12">
-							{data.bodytext -> f:format.html()}
-						</div>
-						<div class="col-md-12">
-							<f:render partial="SrcsetImage" section="SrcsetImage" arguments="{image:images.0,maxWidth:2500}" />
-						</div>
-					</f:case>
-					<f:case value="right">
-						<div class="col-md-6">
-							{data.bodytext -> f:format.html()}
-						</div>
-						<div class="col-md-6">
-							<f:render partial="SrcsetImage" section="SrcsetImage" arguments="{image:images.0,maxWidth:2500}" />
-						</div>
-					</f:case>
-					<f:case value="left">
-						<div class="col-md-6">
-							<f:render partial="SrcsetImage" section="SrcsetImage" arguments="{image:images.0,maxWidth:2500}" />
-						</div>
-						<div class="col-md-6">
-							{data.bodytext -> f:format.html()}
-						</div>
-					</f:case>
-				</f:switch>
-			</div>
+		<f:render partial="Header" arguments="{header:data.header,layout:data.header_layout}" />
+		<div class="row">
+			<f:switch expression="{data.imageposition}">
+				<f:case value="top">
+					<div class="col-md-12">
+						<f:render partial="SrcsetImage" section="SrcsetImage" arguments="{image:images.0,maxWidth:2500}" />
+					</div>
+					<div class="col-md-12">
+						{data.bodytext -> f:format.html()}
+					</div>
+				</f:case>
+				<f:case value="bottom">
+					<div class="col-md-12">
+						{data.bodytext -> f:format.html()}
+					</div>
+					<div class="col-md-12">
+						<f:render partial="SrcsetImage" section="SrcsetImage" arguments="{image:images.0,maxWidth:2500}" />
+					</div>
+				</f:case>
+				<f:case value="right">
+					<div class="col-md-6">
+						{data.bodytext -> f:format.html()}
+					</div>
+					<div class="col-md-6">
+						<f:render partial="SrcsetImage" section="SrcsetImage" arguments="{image:images.0,maxWidth:2500}" />
+					</div>
+				</f:case>
+				<f:case value="left">
+					<div class="col-md-6">
+						<f:render partial="SrcsetImage" section="SrcsetImage" arguments="{image:images.0,maxWidth:2500}" />
+					</div>
+					<div class="col-md-6">
+						{data.bodytext -> f:format.html()}
+					</div>
+				</f:case>
+			</f:switch>
 		</div>
 	</f:section>
 </div>
