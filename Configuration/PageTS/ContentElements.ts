@@ -1,5 +1,5 @@
 ## Backend preview for ce_textimage ##
-mod.web_layout.tt_content.preview.ce_textimage = EXT:startpilot/Resources/Private/Templates/Preview/Ce_prev_startpilot.html
+mod.web_layout.tt_content.preview.ce_textimage = EXT:startpilot/Resources/Private/Templates/Preview/BE_Textimage.html
 
 mod.wizards {
     newContentElement {
