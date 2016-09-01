@@ -8,7 +8,7 @@ mod.wizards {
                 header = Custom Content Elements
                 elements {
                     ce_textimage {
-                        icon = EXT:startpilot/ext_icon.svg
+                        iconIdentifier = default-icon
                         title = Text with Image
                         description = Image positions: Top, Bottom, Left, Right
                         tt_content_defValues {
