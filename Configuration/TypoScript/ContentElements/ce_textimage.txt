@@ -1,6 +1,6 @@
-tt_content.ce_startpilot =< lib.default
-tt_content.ce_startpilot {
-    templateName = Ce_startpilot
+tt_content.ce_textimage =< lib.default
+tt_content.ce_textimage {
+    templateName = CE_Textimage
        dataProcessing {
                20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
                20 {

@@ -1,18 +1,18 @@
-## Backend preview for ce_startpilot ##
-mod.web_layout.tt_content.preview.ce_startpilot = EXT:startpilot/Resources/Private/Templates/Preview/Ce_prev_startpilot.html
+## Backend preview for ce_textimage ##
+mod.web_layout.tt_content.preview.ce_textimage = EXT:startpilot/Resources/Private/Templates/Preview/Ce_prev_startpilot.html
 
 mod.wizards {
     newContentElement {
         wizardItems {
             common {
-                header = Startpilot CE's
+                header = Custom Content Elements
                 elements {
-                    ce_startpilot {
+                    ce_textimage {
                         icon = EXT:startpilot/ext_icon.svg
-                        title = Startpilot Element
-                        description = Demo Element for Startpilot
+                        title = Text with Image
+                        description = Image positions: Top, Bottom, Left, Right
                         tt_content_defValues {
-                            CType = ce_startpilot
+                            CType = ce_textimage
                         }
                     }
                 }

@@ -1,34 +1,34 @@
 <?php
 /**
- * Startpilot Content Element | ce_startpilot
+ * Startpilot Content Element | ce_textimage
  */
 
 /***************
  * Register fields
  */
-$ce_startpilot_fields = array(
+$ce_textimage_fields = array(
     'imageposition' => array(
         'exclude' => 0,
-        'label' => 'LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown.title',
+        'label' => 'LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_textimage_dropdown.title',
         'config' => array(
             'type' => 'select',
             'items' => array(
-                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown.option1', 'top'),
-                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown.option2', 'bottom'),
-                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown.option3', 'right'),
-                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_startpilot_dropdown.option4', 'left'),
+                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_textimage_dropdown.option1', 'top'),
+                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_textimage_dropdown.option2', 'bottom'),
+                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_textimage_dropdown.option3', 'right'),
+                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_textimage_dropdown.option4', 'left'),
             )
         ),
     ),
 );
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $ce_startpilot_fields);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $ce_textimage_fields);
 
 /***************
- * Add Content Element: ce_startpilot
+ * Add Content Element: ce_textimage
  */
-if (!is_array($GLOBALS['TCA']['tt_content']['types']['ce_startpilot'])) {
-    $GLOBALS['TCA']['tt_content']['types']['ce_startpilot'] = [];
+if (!is_array($GLOBALS['TCA']['tt_content']['types']['ce_textimage'])) {
+    $GLOBALS['TCA']['tt_content']['types']['ce_textimage'] = [];
 }
 
 /***************
@@ -38,8 +38,8 @@ if (!is_array($GLOBALS['TCA']['tt_content']['types']['ce_startpilot'])) {
     'tt_content',
     'CType',
     [
-        'Startpilot Content Element',
-        'ce_startpilot',
+        'Text with Image',
+        'ce_textimage',
         'EXT:startpilot/ext_icon.png'
     ],
     '--div--',
@@ -49,13 +49,13 @@ if (!is_array($GLOBALS['TCA']['tt_content']['types']['ce_startpilot'])) {
 /***************
  * Assign Icon
  */
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['ce_startpilot'] = 'startpilot-icon';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['ce_textimage'] = 'default-icon';
 
 /***************
  * Configure element type
  */
-$GLOBALS['TCA']['tt_content']['types']['ce_startpilot'] = array_replace_recursive(
-    $GLOBALS['TCA']['tt_content']['types']['ce_startpilot'],
+$GLOBALS['TCA']['tt_content']['types']['ce_textimage'] = array_replace_recursive(
+    $GLOBALS['TCA']['tt_content']['types']['ce_textimage'],
     [
         'showitem' => '
         --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,

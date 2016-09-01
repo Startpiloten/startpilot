@@ -8,7 +8,7 @@ $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
     \TYPO3\CMS\Core\Imaging\IconRegistry::class
 );
 $iconRegistry->registerIcon(
-    'startpilot-icon',
+    'default-icon',
     \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
     ['source' => 'EXT:startpilot/ext_icon.svg']
 );
