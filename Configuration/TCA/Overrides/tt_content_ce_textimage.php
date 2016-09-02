@@ -13,12 +13,29 @@ $ce_textimage_fields = array(
         'config' => array(
             'type' => 'select',
             'items' => array(
-                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_textimage_dropdown.option1', 'top'),
-                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_textimage_dropdown.option2', 'bottom'),
-                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_textimage_dropdown.option3', 'right'),
-                array('LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_textimage_dropdown.option4', 'left'),
+                array(
+                    'LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_textimage_dropdown.option1',
+                    'top'
+                ),
+                array(
+                    'LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_textimage_dropdown.option2',
+                    'bottom'
+                ),
+                array(
+                    'LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_textimage_dropdown.option3',
+                    'right'
+                ),
+                array(
+                    'LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:ce_textimage_dropdown.option4',
+                    'left'
+                ),
             )
         ),
+    ),
+    'test' => array(
+        'exclude' => 0,
+        'label' => 'test',
+        'config' => $GLOBALS['TCA']['tt_content']['columns']['linkToTop']['config'],
     ),
 );
 
@@ -61,6 +78,7 @@ $GLOBALS['TCA']['tt_content']['types']['ce_textimage'] = array_replace_recursive
         --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
         header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_formlabel,
         header_layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout_formlabel,
+        test,
         imageposition,
         image,
         bodytext,
