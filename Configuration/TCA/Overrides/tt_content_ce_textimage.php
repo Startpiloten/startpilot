@@ -32,11 +32,6 @@ $ce_textimage_fields = array(
             )
         ),
     ),
-    'test' => array(
-        'exclude' => 0,
-        'label' => 'test',
-        'config' => $GLOBALS['TCA']['tt_content']['columns']['linkToTop']['config'],
-    ),
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $ce_textimage_fields);
@@ -78,11 +73,9 @@ $GLOBALS['TCA']['tt_content']['types']['ce_textimage'] = array_replace_recursive
         --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
         header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_formlabel,
         header_layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout_formlabel,
-        test,
         imageposition,
         image,
         bodytext,
-              
         --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
             layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:layout_formlabel,
         --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,
@@ -106,4 +99,3 @@ $GLOBALS['TCA']['tt_content']['types']['ce_textimage'] = array_replace_recursive
         ]
     ]
 );
-
