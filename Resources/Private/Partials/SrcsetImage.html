@@ -5,16 +5,16 @@
 
 	<f:section name="SrcsetImage">
 		<f:if condition="{image}">
-			<v:variable.set name="imgurl" value="{f:uri.image(image:'{image}',maxWidth: '{maxWidth}') -> v:format.substring(start: 1)}" />
+			<v:variable.set name="imgurl" value="{f:uri.image(image: image,maxWidth: '{maxWidth}') -> v:format.substring(start: 1)}" />
 			<v:variable.set name="imgsize" value="{v:media.image.width(src:'{imgurl}')}" />
-			<v:variable.set name="img480" value="{f:uri.image(image:'{image}',maxWidth:'480')} 480w," />
-			<v:variable.set name="img768" value="{f:uri.image(image:'{image}',maxWidth:'768')} 768w," />
-			<v:variable.set name="img992" value="{f:uri.image(image:'{image}',maxWidth:'992')} 992w," />
-			<v:variable.set name="img1200" value="{f:uri.image(image:'{image}',maxWidth:'1200')} 1200w," />
-			<v:variable.set name="img2500" value="{f:uri.image(image:'{image}',maxWidth:'2500')} 2x," />
+			<v:variable.set name="img480" value="{f:uri.image(image: image,maxWidth:'480')} 480w," />
+			<v:variable.set name="img768" value="{f:uri.image(image: image,maxWidth:'768')} 768w," />
+			<v:variable.set name="img992" value="{f:uri.image(image: image,maxWidth:'992')} 992w," />
+			<v:variable.set name="img1200" value="{f:uri.image(image: image,maxWidth:'1200')} 1200w," />
+			<v:variable.set name="img2500" value="{f:uri.image(image: image,maxWidth:'2500')} 2x," />
 			<figure>
 				<f:link.typolink parameter="{image.link}">
-					<img src="{f:uri.image(image:'{image}',maxWidth:'1200')}"
+					<img src="{f:uri.image(image: image,maxWidth:'1200')}"
 						 alt="{image.alternative}"
 						 class="img-responsive"
 						 srcset="	{f:if(condition:'{imgsize} > 480', then:'{img480}')}
