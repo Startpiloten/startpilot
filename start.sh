@@ -14,7 +14,7 @@ then
 else
 	git clone https://github.com/misterboe/startpilot.git $DIR --depth=1
 	echo "$DIR created."
-	cd $DIR && rm -rf .git && grep -rl "startpilot" ./* -R | xargs sed -i '' "s/startpilot/${PWD##*/}/" && grep -rl "startpilot" ./* -R | xargs sed -i '' "s/startpilot/${PWD##*/}/" && grep -rl "startpilot" ./* -R | xargs sed -i '' "s/startpilot/${PWD##*/}/" && grep -rl "Startpilot" ./* -R | xargs sed -i '' "s/Startpilot/${PWD##*/}/"
+	cd $DIR && rm -rf .git && grep -rl "startpilot" ./* -R | xargs sed -i '' "s/startpilot/${PWD##*/}/g" && grep -rl "Startpilot" ./* -R | xargs sed -i '' "s/Startpilot/${PWD##*/}/"
 	cd Resources/Public/ && bower install
 	echo "Your extension is now in $DIR."
 fi
