@@ -38,12 +38,6 @@ local_absRefPrefix =
 
 # customsubcategory=300=Meta
 page.meta {
-    # cat=startpilot: Meta/400/100; type=string; label=Description: Enter a short description of the page. It will be displayed in the result lists of most search engines.
-    description =
-    # cat=startpilot: Meta/400/110; type=string; label=Author: Enter the page author's name.
-    author =
-    # cat=startpilot: Meta/400/120; type=string; label=Keywords: Enter keywords for the page separated by commas. You may also use short phrases.
-    keywords =
     # cat=startpilot: Meta/400/100; type=string; label=viewport
     viewport = user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1
     # cat=startpilot: Meta/400/110; type=string; label=robots
@@ -54,4 +48,6 @@ page.meta {
     compatible = IE=edge
     # cat=startpilot: Meta/400/140; type=string; label=google
     google = notranslate
+    # cat=startpilot: Meta/400/150; type=boolean; label=Use Page Media as OG-Image (slide collect)
+    ogimage = 0
 }

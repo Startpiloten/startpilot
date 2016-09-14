@@ -1,22 +1,17 @@
 page {
     meta {
-        # New notation available since TYPO3 7.4
-        # see https://forge.typo3.org/issues/67360 for more details
         viewport = {$page.meta.viewport}
         robots = {$page.meta.robots}
         google = {$page.meta.google}
         apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
-        description = {$page.meta.description}
         description {
             override.field = description
         }
 
-        author = {$page.meta.author}
         author {
             override.field = author
         }
 
-        keywords = {$page.meta.keywords}
         keywords {
             override.field = keywords
         }
@@ -42,32 +37,42 @@ page {
             attribute = property
             field = description
         }
+    }
+}
 
-        og:image {
-            attribute = property
-            stdWrap.cObject = FILES
-            stdWrap.cObject {
-                references {
-                    data = levelfield:-1, media, slide
-                }
+[globalVar = TSFE:page|no_search = 1]
+    page.meta.robots = noindex,follow
+[end]
 
-                maxItems = 1
-                renderObj = COA
-                renderObj {
-                    10 = IMG_RESOURCE
-                    10 {
-                        file {
-                            import.data = file:current:uid
-                            treatIdAsReference = 1
-                            width = 1280c
-                            height = 720c
-                        }
+[globalVar = LIT:1 = {$page.meta.ogimage}]
+    page {
+        meta {
+            og:image {
+                attribute = property
+                stdWrap.cObject = FILES
+                stdWrap.cObject {
+                    references {
+                        data = levelfield:-1, media, slide
+                    }
 
-                        stdWrap {
-                            typolink {
-                                parameter.data = TSFE:lastImgResourceInfo|3
-                                returnLast = url
-                                forceAbsoluteUrl = 1
+                    maxItems = 1
+                    renderObj = COA
+                    renderObj {
+                        10 = IMG_RESOURCE
+                        10 {
+                            file {
+                                import.data = file:current:uid
+                                treatIdAsReference = 1
+                                width = 1280c
+                                height = 720c
+                            }
+
+                            stdWrap {
+                                typolink {
+                                    parameter.data = TSFE:lastImgResourceInfo|3
+                                    returnLast = url
+                                    forceAbsoluteUrl = 1
+                                }
                             }
                         }
                     }
@@ -75,8 +80,4 @@ page {
             }
         }
     }
-}
-
-[globalVar = TSFE:page|no_search = 1]
-    page.meta.robots = noindex,follow
 [end]
