@@ -5,7 +5,7 @@
 
 	<f:section name="SrcsetImage">
 		<f:if condition="{image}">
-			<v:variable.set name="imgurl" value="{f:uri.image(image: image,maxWidth: '{maxWidth}')}" />
+			<v:variable.set name="imgurl" value="{f:uri.image(image: image,maxWidth: '{maxWidth}') -> v:format.substring(start: 1)}" />
 			<v:variable.set name="imgsize" value="{v:media.image.width(src:'{imgurl}')}" />
 			<v:variable.set name="img480" value="{f:uri.image(image: image,maxWidth:'480')} 480w," />
 			<v:variable.set name="img768" value="{f:uri.image(image: image,maxWidth:'768')} 768w," />
