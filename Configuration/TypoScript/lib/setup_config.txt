@@ -47,3 +47,9 @@ config {
 ## Languge Settings - END ##
 
 config.enableContentLengthHeader = 0
+
+## http configuration
+config.additionalHeaders = x-frame-options: SAMEORIGIN | X-XSS-Protection: 1; mode=block | X-Content-Type-Options: nosniff | X-Powered-By: nothing
+
+## https configuration
+## config.additionalHeaders = strict-transport-security: maxage=31536000; includeSubdomains | x-frame-options: SAMEORIGIN | X-XSS-Protection: 1; mode=block | X-Content-Type-Options: nosniff | X-Powered-By: nothing
