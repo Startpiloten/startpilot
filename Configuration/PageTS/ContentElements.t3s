@@ -1,5 +1,5 @@
-## Backend preview for ce_textimage ##
-mod.web_layout.tt_content.preview.ce_textimage = EXT:startpilot/Resources/Private/Templates/Preview/BE_Textimage.html
+## Backend preview for startpilot_textimage ##
+mod.web_layout.tt_content.preview.startpilot_textimage = EXT:startpilot/Resources/Private/Templates/Preview/BE_Textimage.html
 
 mod.wizards {
     newContentElement {
@@ -7,12 +7,12 @@ mod.wizards {
             common {
                 header = Custom Content Elements
                 elements {
-                    ce_textimage {
+                    startpilot_textimage {
                         iconIdentifier = default-icon
                         title = Text with Image
                         description = Image positions: Top, Bottom, Left, Right
                         tt_content_defValues {
-                            CType = ce_textimage
+                            CType = startpilot_textimage
                         }
                     }
                 }
