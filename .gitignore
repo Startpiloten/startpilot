@@ -1,3 +1,11 @@
 .idea
 .DS_Store
 /Resources/Public/bower_components/
+/Resources/Gulp/node_modules/
+/Resources/Gulp/bower_components/
+/Resources/Public/Css/main.min.css.map
+/Resources/Public/Css/main.min.css
+/Resources/Public/JavaScript/vendor.min.js.map
+/Resources/Public/JavaScript/vendor.min.js
+/Resources/Public/JavaScript/main.min.js.map
+/Resources/Public/JavaScript/main.min.js

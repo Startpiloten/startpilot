@@ -1,6 +1,5 @@
 {
   "name": "startpilot",
-  "homepage": "https://github.com/misterboe/startpilot",
   "authors": [
     "Boris Schauer <me@bschauer.de>"
   ],
@@ -16,6 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap-sass": "^3.3.7"
   }
 }

@@ -1,5 +1,8 @@
 page.includeJSFooterlibs{
-    jquery = EXT:startpilot/Resources/Public/bower_components/jquery/dist/jquery.js
-    jquery.forceOnTop = true
-    boostrap = EXT:startpilot/Resources/Public/bower_components/bootstrap/dist/js/bootstrap.js
+    vendor = EXT:startpilot/Resources/Public/JavaScript/vendor.min.js
+    vendor.forceOnTop = true
+}
+
+page.includeJSFooter{
+    main = EXT:startpilot/Resources/Public/JavaScript/main.min.js
 }

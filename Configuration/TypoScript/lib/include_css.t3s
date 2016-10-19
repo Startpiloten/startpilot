@@ -1,3 +1,3 @@
 page.includeCSS{
-    boostrap = EXT:startpilot/Resources/Public/bower_components/bootstrap/dist/css/bootstrap.css
+    main = EXT:startpilot/Resources/Public/Css/main.min.css
 }
