@@ -11,21 +11,17 @@ var watch = require('gulp-watch');
 gulp.task('uglify-bower-js', function () {
     var filterJS = gulpFilter('**/*.js', {restore: true});
     return gulp.src('./bower.json')
-        .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(mainBowerFiles())
         .pipe(filterJS)
         .pipe(concat('vendor.min.js'))
         .pipe(uglify())
-        .pipe(sourcemaps.write('./', {addComment: true}))
         .pipe(gulp.dest('../Public/JavaScript/'));
 });
 
 gulp.task('uglify-main-js', function () {
     return gulp.src('../Public/JavaScript/main.js')
-        .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(concat('main.min.js'))
         .pipe(uglify())
-        .pipe(sourcemaps.write('./', {addComment: true}))
         .pipe(gulp.dest('../Public/JavaScript/'));
 });
 
