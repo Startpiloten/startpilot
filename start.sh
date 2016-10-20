@@ -15,7 +15,7 @@ else
 	git clone https://github.com/misterboe/startpilot.git $DIR --depth=1
 	echo "$DIR created."
 	cd $DIR && rm -rf .git && grep -rl "startpilot" ./* -R | xargs sed -i '' "s/startpilot/${PWD##*/}/g" && grep -rl "Startpilot" ./* -R | xargs sed -i '' "s/Startpilot/${PWD##*/}/"
-	pwd
+	rm start.sh
 	cd Resources/Gulp/ && bower install && npm install && gulp default
 	echo "Your extension is now in $DIR."
 fi
