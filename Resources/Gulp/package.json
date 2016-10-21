@@ -1,6 +1,7 @@
 {
   "name": "startpilot",
   "version": "1.0.0",
+  "description": "startpilot",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
