@@ -4,6 +4,9 @@ if (!defined('TYPO3_MODE')) {
     die('Access denied.');
 }
 
+// Define TypoScript as content rendering template
+$GLOBALS['TYPO3_CONF_VARS']['FE']['contentRenderingTemplates'][] = 'amtemplate/Configuration/TypoScript/';
+
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
     '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:'
     . $_EXTKEY . '/Configuration/PageTS/PageTS.t3s">'
