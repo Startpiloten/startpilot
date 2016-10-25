@@ -1,0 +1,4 @@
+tt_content.list =< lib.default
+tt_content.list {
+    templateName = CE_List
+}
