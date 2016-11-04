@@ -13,7 +13,6 @@ $EM_CONF[$_EXTKEY] = array(
     'constraints' => array(
         'depends' => array(
             'typo3' => '7.6.9-8.99.99',
-            'vhs' => '*'
         ),
         'conflicts' => array(
             'fluidpages' => '*',
