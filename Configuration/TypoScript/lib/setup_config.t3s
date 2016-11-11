@@ -31,18 +31,27 @@ config {
 
 ## Languge Settings ##
 config {
-    sys_language_mode = strict
+    sys_language_mode = content_fallback
     sys_language_overlay = 0
-    sys_language_uid = 0
     linkVars = L
 }
 
 config {
+    sys_language_uid = 0
     language = de
-    locale_all = de_DE
-    htmlTag_langKey = de
+    locale_all = de_DE.UTF-8
     htmlTag_setParams = lang="de"
 }
+
+### Mehrsprachigkeit ###
+[globalVar = GP:L=1]
+    config {
+        sys_language_uid = 1
+        language = en
+        locale_all = en_US.UTF-8
+        htmlTag_setParams = lang="en"
+    }
+[global]
 
 ## Languge Settings - END ##
 
