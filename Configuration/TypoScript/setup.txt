@@ -1,3 +1,4 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/Static/setup.txt">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/lib/">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/ContentElements/">
 
