@@ -1,17 +1,28 @@
 <?php
-namespace Bo\Startpilot\DataProcessing;
+namespace Vendor\Yourext\DataProcessing;
 
 /*
- * This file is part of the TYPO3 CMS project.
+ *  The MIT License (MIT)
  *
- * It is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License, either version 2
- * of the License, or any later version.
+ *  Copyright (c) 2015 Benjamin Kott, http://www.bk2k.info
  *
- * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
+ *  Permission is hereby granted, free of charge, to any person obtaining a copy
+ *  of this software and associated documentation files (the "Software"), to deal
+ *  in the Software without restriction, including without limitation the rights
+ *  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *  copies of the Software, and to permit persons to whom the Software is
+ *  furnished to do so, subject to the following conditions:
  *
- * The TYPO3 project - inspiring people to share!
+ *  The above copyright notice and this permission notice shall be included in
+ *  all copies or substantial portions of the Software.
+ *
+ *  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ *  THE SOFTWARE.
  */
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -38,7 +49,7 @@ use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
  *
  * Example TypoScript configuration:
  *
- * 10 = Bo\Startpilot\DataProcessing\MenuProcessor
+ * 10 = Vendor\Yourext\DataProcessing\MenuProcessor
  * 10 {
  *   special = list
  *   special.value.field = pages
@@ -48,12 +59,12 @@ use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
  *   includeSpacer = 1
  *   titleField = nav_title // title
  *   dataProcessing {
- *     10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
- *     10 {
+ *    10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+ *    10 {
  *        references.fieldName = media
- *     }
- *   }
- * }
+ *      }
+ *    }
+ *  }
  *
  */
 class MenuProcessor implements DataProcessorInterface
@@ -146,7 +157,7 @@ class MenuProcessor implements DataProcessorInterface
             'cObject.' => [
                 '10' => 'USER',
                 '10.' => [
-                    'userFunc' => 'Bo\Startpilot\DataProcessing\MenuProcessor->getDataAsJson',
+                    'userFunc' => 'Vendor\Yourext\DataProcessing\MenuProcessor->getDataAsJson',
                     'stdWrap.' => [
                         'wrap' => '"data":|'
                     ]
@@ -156,7 +167,7 @@ class MenuProcessor implements DataProcessorInterface
                     'field' => 'nav_title // title',
                     'trim' => '1',
                     'wrap' => ',"title":|',
-                    'preUserFunc' => 'Bo\Startpilot\DataProcessing\MenuProcessor->jsonEncodeUserFunc'
+                    'preUserFunc' => 'Vendor\Yourext\DataProcessing\MenuProcessor->jsonEncodeUserFunc'
                 ],
                 '21' => 'TEXT',
                 '21.' => [
@@ -337,7 +348,7 @@ class MenuProcessor implements DataProcessorInterface
     {
         for ($i = 1; $i <= $this->menuLevels; $i++) {
             $this->menuConfig[$i] = 'TMENU';
-            $this->menuConfig[$i . '.']['IProcFunc'] = 'Bo\Startpilot\DataProcessing\MenuProcessor->replacePlaceholderInRenderedMenuItem';
+            $this->menuConfig[$i . '.']['IProcFunc'] = 'Vendor\Yourext\DataProcessing\MenuProcessor->replacePlaceholderInRenderedMenuItem';
             if ($i > 1) {
                 $this->menuConfig[$i . '.']['stdWrap.']['wrap'] = ',"children": [|]';
             }
@@ -405,6 +416,7 @@ class MenuProcessor implements DataProcessorInterface
         $renderedMenu = $menuContentObject->render($this->menuConfig);
         if (!$renderedMenu) {
             return $processedData;
+            var_dump($processedData);
         }
 
         // Process menu
@@ -415,9 +427,11 @@ class MenuProcessor implements DataProcessorInterface
             $processedMenu[$key] = $this->processAdditionalDataProcessors($page, $processorConfiguration);
         }
 
+
         // Return processed data
         $processedData[$this->menuTargetVariableName] = $processedMenu;
         return $processedData;
+
     }
 
     /**
@@ -492,3 +506,4 @@ class MenuProcessor implements DataProcessorInterface
         return $menuItem;
     }
 }
+

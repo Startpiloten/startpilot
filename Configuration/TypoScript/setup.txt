@@ -36,12 +36,12 @@ page.10 {
     }
 
     dataProcessing {
-        10 = Bo\Startpilot\DataProcessing\MenuProcessor
-        10 {
-            includeSpacer = 1
-            expandAll = 1
-            as = mainnavigation
-        }
+#        10 = Vendor\Yourext\DataProcessing\MenuProcessor
+#        10 {
+#            includeSpacer = 1
+#            expandAll = 1
+#            as = mainnavigation
+#        }
 
         20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
         20 {
