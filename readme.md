@@ -15,13 +15,6 @@ System environment:
 * gulp
 * bower
 
-## To Do after install:
-
-Search and recursive to use the MenuProcessor:
- 
-* Vendor > with your Vendor name
-* Yourext > with your Extension name 
-
 #### Thanks
 * To Benjamin Kott and his Bootstrap Package 
 	*  https://github.com/benjaminkott/bootstrap_package
