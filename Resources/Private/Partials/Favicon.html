@@ -4,7 +4,7 @@
 	 data-namespace-typo3-fluid="true">
 
 	<f:section name="Favicon">
-		<v:variable.set name="iconurl" value="{v:variable.typoscript(path: 'startpilot.settings.favicon')}" />
+		<v:variable.set name="iconurl" value="{v:variable.typoscript(path: 'kscwikis.settings.favicon')}" />
 
 		{f:uri.image(src:'{iconurl}', width: '57', height: '57') -> v:format.substring(start: 0) -> v:variable.set(name:'icon57')}
 		{f:uri.image(src:'{iconurl}', width: '114', height: '114') -> v:format.substring(start: 0) -> v:variable.set(name:'icon114')}
@@ -36,10 +36,10 @@
 		<v:page.header.link additionalAttributes="{sizes: '152x152'}" rel="apple-touch-icon-precomposed" href="{icon152}"/>
 
 		<v:page.header.link additionalAttributes="{sizes: '196x196'}" rel="icon" href="{icon196}" type="image/png"/>
-		<v:page.header.link additionalAttributes="{sizes: '196x196'}" rel="icon" href="{icon96}" type="image/png"/>
-		<v:page.header.link additionalAttributes="{sizes: '196x196'}" rel="icon" href="{icon32}" type="image/png"/>
-		<v:page.header.link additionalAttributes="{sizes: '196x196'}" rel="icon" href="{icon16}" type="image/png"/>
-		<v:page.header.link additionalAttributes="{sizes: '196x196'}" rel="icon" href="{icon128}" type="image/png"/>
+		<v:page.header.link additionalAttributes="{sizes: '96x96'}" rel="icon" href="{icon96}" type="image/png"/>
+		<v:page.header.link additionalAttributes="{sizes: '32x32'}" rel="icon" href="{icon32}" type="image/png"/>
+		<v:page.header.link additionalAttributes="{sizes: '16x16'}" rel="icon" href="{icon16}" type="image/png"/>
+		<v:page.header.link additionalAttributes="{sizes: '128x128'}" rel="icon" href="{icon128}" type="image/png"/>
 
 		<v:page.header.meta name="application-name" content="&nbsp;" />
 		<v:page.header.meta name="msapplication-TileColor" content="#FFFFFF" />
