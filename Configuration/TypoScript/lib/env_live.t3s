@@ -7,6 +7,7 @@
         concatenateJs = 1
         concatenateJsAndCss = 1
         inlineStyle2TempFile = 1
+        moveJsFromHeaderToFooter = 1
     }
 
     config.absRefPrefix = {$live_absRefPrefix}
