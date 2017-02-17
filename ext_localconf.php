@@ -103,5 +103,5 @@ if (!class_exists('TYPO3\CMS\Frontend\DataProcessing\MenuProcessor')) {
 $GLOBALS['TYPO3_CONF_VARS']['BE']['versionNumberInFilename'] = 'true';
 $GLOBALS['TYPO3_CONF_VARS']['FE']['versionNumberInFilename'] = 'embed';
 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] = 'jpg,jpeg,tiff,png,pdf,svg';
-$GLOBALS['TYPO3_CONF_VARS']['BE']['lockSSL'] = 'false';
+// $GLOBALS['TYPO3_CONF_VARS']['BE']['lockSSL'] = 'false';
 $GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = '';
