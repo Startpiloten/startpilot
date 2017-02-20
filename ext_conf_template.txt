@@ -3,56 +3,63 @@
 ############################
 
 # customsubcategory=120_settings=Settings
-
 # cat=General/120_settings/50; type=boolean; label=Boostrap RTE
 disablePageTsRTE = 0
 
 # customsubcategory=130_constants=Constants
-
 # cat=General/130_constants/50; type=boolean; label=Disable Hide at Copy
 hideAtCopy = 0
-
 # cat=General/130_constants/60; type=boolean; label=Disable Copy flag
 disableCopyFlag = 0
 
-
 # customsubcategory=140_ce=Disable default Content Elements
-
 # cat=Contentelements/140_ce/10; type=boolean; label=Header
 disable_header = 1
-
 # cat=Contentelements/140_ce/20; type=boolean; label=Text
 disable_text = 1
-
 # cat=Contentelements/140_ce/30; type=boolean; label=Textpic
 disable_textpic = 1
-
 # cat=Contentelements/140_ce/40; type=boolean; label=Bullets
 disable_bullets = 1
-
 # cat=Contentelements/140_ce/50; type=boolean; label=Table
 disable_table = 1
-
 # cat=Contentelements/140_ce/60; type=boolean; label=Uploads
 disable_uploads = 1
-
 # cat=Contentelements/140_ce/70; type=boolean; label=Menu
 disable_menu = 1
-
 # cat=Contentelements/140_ce/80; type=boolean; label=HTML
 disable_html = 1
-
 # cat=Contentelements/140_ce/90; type=boolean; label=Divider
 disable_div = 1
-
 # cat=Contentelements/140_ce/100; type=boolean; label=Shortcut
 disable_shortcut = 1
-
 # cat=Contentelements/140_ce/110; type=boolean; label=Mailform
 disable_mailform = 1
-
 # cat=Contentelements/140_ce/120; type=boolean; label=Login
 disable_login = 1
-
 # cat=Contentelements/140_ce/130; type=boolean; label=Image Only
 disable_image = 1
+
+# customsubcategory=150_ce=Disable default Menu Elements
+# cat=Menu/150_ce/10; type=boolean; label=Abstracts
+disable_menu_abstract = 1
+# cat=Menu/150_ce/20; type=boolean; label=Categorized content
+disable_menu_categorized_content = 1
+# cat=Menu/150_ce/30; type=boolean; label=Categorized pages
+disable_menu_categorized_pages = 1
+# cat=Menu/150_ce/40; type=boolean; label=Pages
+disable_menu_pages = 1
+# cat=Menu/150_ce/50; type=boolean; label=Recently updated pages
+disable_menu_recently_updated = 1
+# cat=Menu/150_ce/60; type=boolean; label=Related pages
+disable_menu_related_pages = 1
+# cat=Menu/150_ce/70; type=boolean; label=Section index
+disable_menu_section = 1
+# cat=Menu/150_ce/80; type=boolean; label=Section index of subpages from selected pages
+disable_menu_section_pages = 1
+# cat=Menu/150_ce/90; type=boolean; label=Sitemap
+disable_menu_sitemap = 1
+# cat=Menu/150_ce/100; type=boolean; label=Sitemaps of selected pages
+disable_menu_sitemap_pages = 1
+# cat=Menu/150_ce/110; type=boolean; label=Subpages
+disable_menu_subpages = 1
