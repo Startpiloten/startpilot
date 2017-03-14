@@ -10,5 +10,5 @@
         moveJsFromHeaderToFooter = 1
     }
 
-    config.absRefPrefix = {$live_absRefPrefix}
+    config.absRefPrefix = auto
 [END]

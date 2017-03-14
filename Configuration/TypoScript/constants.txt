@@ -1,4 +1,11 @@
 ## Constants ##
+[compatVersion = 7]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/Static/constants.txt">
+[END]
+
+[compatVersion = 8]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.txt">
+[END]
 
 # customsubcategory=100=General
 page {
@@ -25,16 +32,10 @@ googleanalytics =
 # customsubcategory=300=Domains
 # cat=startpilot: Environment/300/100; type=string; label= Live Domain - (mytld.de)
 live_domain =
-# cat=startpilot: Environment/300/101; type=string; label= Live absRefPrefix - (/)
-live_absRefPrefix = /
 # cat=startpilot: Environment/300/110; type=string; label= Develop Domain - (mytld.de)
 develop_domain =
-# cat=startpilot: Environment/300/111; type=string; label= Develop absRefPrefix - (/)
-develop_absRefPrefix = /
 # cat=startpilot: Environment/300/120; type=string; label= Local Domain - (mytld.local)
 local_domain =
-# cat=startpilot: Environment/300/121; type=string; label= Local absRefPrefix - (/)
-local_absRefPrefix = /
 
 # customsubcategory=300=Meta
 page.meta {

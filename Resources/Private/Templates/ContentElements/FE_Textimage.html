@@ -6,7 +6,7 @@
 	<f:layout name="Default" />
 
 	<f:section name="Main">
-		<f:render partial="Header" arguments="{header:data.header,layout:data.header_layout}" />
+		<f:render partial="ContentElements/Headline" arguments="{header:data.header,layout:data.header_layout}" />
 		<div class="row">
 			<f:switch expression="{data.imageposition}">
 				<f:case value="top">
