@@ -69,22 +69,13 @@ $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['startpilot_textimage'
 $GLOBALS['TCA']['tt_content']['types']['startpilot_textimage'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['types']['startpilot_textimage'],
     [
-        'showitem' => '
-        --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
+        'showitem' => $showitem_default_01 . '
         header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_formlabel,
         header_layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout_formlabel,
         imageposition,
         image,
         bodytext,
-        --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
-            layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:layout_formlabel,
-        --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,
-        --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
-            hidden;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:field.default.hidden,
-        --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
-        --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.extended,
-        --div--;LLL:EXT:lang/locallang_tca.xlf:sys_category.tabs.category,categories
-        ',
+        ' . $showitem_default_02,
         'columnsOverrides' => [
             'bodytext' => ['defaultExtras' => 'richtext:rte_transform[mode=ts_css]'],
             'image' => array(
