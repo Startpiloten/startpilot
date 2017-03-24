@@ -8,6 +8,11 @@ var sass = require('gulp-sass');
 var rename = require("gulp-rename");
 var watch = require('gulp-watch');
 
+function handleError(err) {
+    console.log(err.toString());
+    this.emit('end');
+}
+
 gulp.task('uglify-bower-js', function () {
     var filterJS = gulpFilter('**/*.js', {restore: true});
     return gulp.src('./bower.json')
@@ -15,6 +20,7 @@ gulp.task('uglify-bower-js', function () {
         .pipe(filterJS)
         .pipe(concat('vendor.min.js'))
         .pipe(uglify())
+        .on('error', handleError)
         .pipe(gulp.dest('../Public/JavaScript/'));
 });
 
@@ -22,6 +28,7 @@ gulp.task('uglify-main-js', function () {
     return gulp.src('../Public/JavaScript/main.js')
         .pipe(concat('main.min.js'))
         .pipe(uglify())
+        .on('error', handleError)
         .pipe(gulp.dest('../Public/JavaScript/'));
 });
 
@@ -29,6 +36,7 @@ gulp.task('minify-sass', function () {
     return gulp.src('../Public/Css/main.scss')
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sass({outputStyle: 'compressed'}))
+        .on('error', handleError)
         .pipe(rename('main.min.css'))
         .pipe(sourcemaps.write('./', {addComment: true}))
         .pipe(gulp.dest('../Public/Css/'));
