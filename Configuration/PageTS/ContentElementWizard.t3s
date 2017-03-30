@@ -1,0 +1,16 @@
+## Backend preview for startpilot_textimage ##
+mod.web_layout.tt_content.preview.startpilot_textimage = EXT:startpilot/Resources/Private/Templates/Preview/BE_Textimage.html
+
+mod.wizards {
+    newContentElement {
+        wizardItems {
+            common {
+                header = Custom Content Elements
+            }
+
+            common.show = *
+        }
+    }
+}
+
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/PageTS/ContentElements">

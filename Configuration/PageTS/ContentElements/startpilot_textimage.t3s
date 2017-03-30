@@ -1,11 +1,7 @@
-## Backend preview for startpilot_textimage ##
-mod.web_layout.tt_content.preview.startpilot_textimage = EXT:startpilot/Resources/Private/Templates/Preview/BE_Textimage.html
-
 mod.wizards {
     newContentElement {
         wizardItems {
             common {
-                header = Custom Content Elements
                 elements {
                     startpilot_textimage {
                         iconIdentifier = default-icon
@@ -17,8 +13,8 @@ mod.wizards {
                     }
                 }
             }
-
-            common.show = *
         }
     }
 }
+
+mod.web_layout.tt_content.preview.startpilot_textimage = EXT:startpilot/Resources/Private/BackendPreviews/BE_Textimage.html
