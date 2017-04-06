@@ -11,5 +11,10 @@
       "name": "Boris Schauer",
       "email": "me@bschauer.de"
     }
-  ]
+  ],
+  "autoload": {
+    "psr-4": {
+      "Vendor\\Yourext\\": "Classes"
+    }
+  }
 }
