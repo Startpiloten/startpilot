@@ -27,6 +27,7 @@ config {
     ## Enable RealUrl
     tx_realurl_enable = 1
     simulateStaticDocuments = 0
+    absRefPrefix = auto
 }
 
 ## Languge Settings ##
@@ -52,7 +53,6 @@ config {
         htmlTag_setParams = lang="en"
     }
 [global]
-
 ## Languge Settings - END ##
 
 config.enableContentLengthHeader = 0

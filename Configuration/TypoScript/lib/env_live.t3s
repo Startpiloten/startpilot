@@ -9,6 +9,4 @@
         inlineStyle2TempFile = 1
         moveJsFromHeaderToFooter = 1
     }
-
-    config.absRefPrefix = auto
 [END]
