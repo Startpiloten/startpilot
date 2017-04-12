@@ -5,7 +5,7 @@ imports:
 
 editor:
     config:
-        contentsCss: "EXT:bootstrap_package/Resources/Public/Css/rte.min.css"
+        contentsCss: "EXT:bootstrap_package/Resources/Public/Css/RTE/ckeditor_bootstrap.min.css"
 
         stylesSet:
             - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
