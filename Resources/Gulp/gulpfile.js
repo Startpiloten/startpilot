@@ -25,19 +25,19 @@ gulp.task('uglify-bower-js', function () {
 });
 
 gulp.task('uglify-main-js', function () {
-    return gulp.src('../Public/JavaScript/main.js')
-        .pipe(concat('main.min.js'))
+    return gulp.src('../Public/JavaScript/config.js')
+        .pipe(concat('config.min.js'))
         .pipe(uglify())
         .on('error', handleError)
         .pipe(gulp.dest('../Public/JavaScript/'));
 });
 
 gulp.task('minify-sass', function () {
-    return gulp.src('../Public/Css/main.scss')
+    return gulp.src('../Public/Css/style.scss')
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sass({outputStyle: 'compressed'}))
         .on('error', handleError)
-        .pipe(rename('main.min.css'))
+        .pipe(rename('style.min.css'))
         .pipe(sourcemaps.write('./', {addComment: true}))
         .pipe(gulp.dest('../Public/Css/'));
 });

@@ -4,5 +4,5 @@ page.includeJSFooterlibs{
 }
 
 page.includeJSFooter{
-    main = EXT:startpilot/Resources/Public/JavaScript/main.min.js
+    config = EXT:startpilot/Resources/Public/JavaScript/config.min.js
 }
