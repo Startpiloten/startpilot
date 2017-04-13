@@ -133,5 +133,5 @@ if (!class_exists('TYPO3\CMS\Frontend\DataProcessing\MenuProcessor')) {
  * Install Tool Settings
  */
 
-$GLOBALS['TYPO3_CONF_VARS']['BE']['versionNumberInFilename'] = 'true';
+$GLOBALS['TYPO3_CONF_VARS']['FE']['versionNumberInFilename'] = 'embed';
 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] = 'jpg,jpeg,tiff,png,pdf,svg';
