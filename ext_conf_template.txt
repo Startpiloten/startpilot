@@ -11,6 +11,8 @@ disablePageTsRTE = 0
 hideAtCopy = 0
 # cat=General/130_constants/60; type=boolean; label=Disable Copy flag
 disableCopyFlag = 0
+# cat=General/130_constants/70; type=boolean; label=CKEditor Bootstrap Config
+enable_bootstrap_ckeditor=0
 
 # customsubcategory=140_ce=Disable default Content Elements
 # cat=Contentelements/140_ce/10; type=boolean; label=Header
@@ -63,3 +65,4 @@ disable_menu_sitemap = 1
 disable_menu_sitemap_pages = 1
 # cat=Menu/150_ce/110; type=boolean; label=Subpages
 disable_menu_subpages = 1
+
