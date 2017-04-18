@@ -11,7 +11,6 @@ config {
     disablePrefixComment = 1
     inlineStyle2TempFile = 1
     removeDefaultJS = external
-    moveJsFromHeaderToFooter = 0
     meaningfulTempFilePrefix = 100
 
     simulateStaticDocuments = 0
