@@ -22,6 +22,8 @@ page {
 # customsubcategory=200=Favicon
 # cat=startpilot: Settings/100/100; type=string; label= Path to Favicon (PNG)
 favicon = EXT:startpilot/Resources/Public/Icons/Device/Icon.png
+# cat=startpilot: Settings/100/110; type=string; label= Srcset Image Max Size
+maxImgWidth = 2500
 
 # customsubcategory=120=Google Webmaster/Analytics
 # cat=startpilot: Google Tools/200/100; type=string; label= Google Webmaster ID - (content="xxxxxxxx")
