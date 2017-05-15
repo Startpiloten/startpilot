@@ -7,6 +7,7 @@ var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var rename = require("gulp-rename");
 var watch = require('gulp-watch');
+const imagemin = require('gulp-imagemin');
 
 function handleError(err) {
     console.log(err.toString());
@@ -42,10 +43,24 @@ gulp.task('minify-sass', function () {
         .pipe(gulp.dest('../Public/Css/'));
 });
 
+gulp.task('image-min', function () {
+    return gulp.src(['../**/*.jpg','../**/*.png', '**/**/.gif' , '!./node_modules/**'])
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5})
+        ], {
+            verbose: true
+        }))
+        .pipe(gulp.dest('../'));
+});
+
+
 gulp.task('default', function () {
     gulp.start('uglify-bower-js');
     gulp.start('uglify-main-js');
     gulp.start('minify-sass');
+    gulp.start('image-min');
 });
 
 gulp.task('watch', function () {
