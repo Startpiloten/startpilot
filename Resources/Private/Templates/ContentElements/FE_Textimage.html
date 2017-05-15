@@ -48,7 +48,7 @@
 	<f:section name="ImageRender">
 		<f:if condition="{settings.typo3version} == 8">
 			<f:then>
-				<f:render partial="PictureSrcset" arguments="{_all}" />
+				<f:render partial="ImageRender" section="{settings.imagerendering}" arguments="{_all}" />
 			</f:then>
 			<f:else>
 				<f:render partial="SrcsetImage" section="SrcsetImage" arguments="{image:images.0,maxWidth:2500}" />

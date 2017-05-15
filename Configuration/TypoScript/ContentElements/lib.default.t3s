@@ -13,6 +13,7 @@ lib.default {
         10 = EXT:startpilot/Resources/Private/Layouts/
     }
     settings {
+        imagerendering = {$imagerendering}
         maxImgWidth = {$maxImgWidth}
     }
 }

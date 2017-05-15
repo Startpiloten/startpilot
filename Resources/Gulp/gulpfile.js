@@ -26,7 +26,7 @@ gulp.task('uglify-bower-js', function () {
 });
 
 gulp.task('uglify-main-js', function () {
-    return gulp.src('../Public/JavaScript/config.js')
+    return gulp.src(['../Public/JavaScript/jquery.responsiveimages.js', '../Public/JavaScript/config.js'])
         .pipe(concat('config.min.js'))
         .pipe(uglify())
         .on('error', handleError)
