@@ -12,7 +12,7 @@ hideAtCopy = 0
 # cat=General/130_constants/60; type=boolean; label=Disable Copy flag
 disableCopyFlag = 0
 # cat=General/130_constants/70; type=boolean; label=CKEditor Bootstrap Config
-enable_bootstrap_ckeditor=0
+enable_bootstrap_ckeditor=1
 
 # customsubcategory=140_ce=Disable default Content Elements
 # cat=Contentelements/140_ce/10; type=boolean; label=Header
