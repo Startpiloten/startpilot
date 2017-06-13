@@ -65,6 +65,6 @@ gulp.task('default', function () {
 
 gulp.task('watch', function () {
     gulp.watch('../Public/Css/**/*.scss', {debounceDelay: 2000}, ['minify-sass']);
-    gulp.watch('../Public/JavaScript/main.js', {debounceDelay: 2000}, ['uglify-main-js']);
+    gulp.watch('../Public/JavaScript/config.js', {debounceDelay: 2000}, ['uglify-main-js']);
     gulp.watch('./bower.json', {debounceDelay: 2000}, ['uglify-bower-js']);
 });
