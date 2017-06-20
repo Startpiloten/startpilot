@@ -65,7 +65,9 @@
 	</f:if>
 
 	<f:comment>
+		<!---Render Image with custom sizes--->
 		<f:render partial="PictureSrcset" arguments="{file:image, min1480:1920,max1479:1479,max1279:1279,max991:991,max767:767,max480:480,max375:375,fallbackWidth:1480}" />
+		<!---Render Image with default sizes--->
 		<f:render partial="PictureSrcset" arguments="{file:image}" />
 	</f:comment>
 </f:section>
