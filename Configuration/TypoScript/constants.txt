@@ -1,11 +1,5 @@
 ## Constants ##
-[compatVersion = 7]
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/Static/constants.txt">
-[END]
-
-[compatVersion = 8]
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.txt">
-[END]
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.txt">
 
 # customsubcategory=100=General
 page {

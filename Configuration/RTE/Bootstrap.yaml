@@ -28,8 +28,7 @@ editor:
         toolbarGroups:
             - { name: styles, groups: [ format, styles ] }
             - { name: basicstyles, groups: [ basicstyles ] }
-            - { name: paragraph, groups: [ list, indent, blocks, align ] }
-            - "/"
+            - { name: paragraph, groups: [ list, indent, blocks] }
             - { name: links, groups: [ links ] }
             - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
             - { name: editing, groups: [ spellchecker ] }
@@ -37,7 +36,7 @@ editor:
             - { name: tools, groups: [ table, specialchar ] }
             - { name: document, groups: [ mode ] }
 
-        format_tags: "p;h1;h2;h3;h4;h5;pre"
+        format_tags: "p;h2;h3;h4;h5"
 
         justifyClasses:
             - text-left
@@ -52,6 +51,12 @@ editor:
             - image
 
         removeButtons:
+            - Blockquote
+            - Horizontalrule
+            - Indent
+            - Outdent
+            - Superscript
+            - Subscript
             - Anchor
             - Underline
             - Strike
