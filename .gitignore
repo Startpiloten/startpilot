@@ -1,8 +1,4 @@
 .idea
 .DS_Store
-/Resources/Gulp/node_modules/
-/Resources/Gulp/bower_components/
-/Resources/Public/Css/style.min.css.map
-/Resources/Public/Css/style.min.css
-/Resources/Public/JavaScript/config.min.js
-/Resources/Public/JavaScript/vendor.min.js
+/Build/node_modules/
+/Resources/Public/
