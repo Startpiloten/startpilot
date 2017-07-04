@@ -1,15 +1,29 @@
 /**
  * Gulp
  */
-
 const gulp = require('gulp');
 const plumber = require('gulp-plumber');
+const imagemin = require('gulp-imagemin');
 const packageJson = require('../package.json');
+
 
 /**
  * Compress and copy images destination
  */
 gulp.task('image', function () {
-    return gulp.src(packageJson.config.path.src + '/Images/**/*')
+    'use strict';
+    return gulp.src([
+        packageJson.config.path.src + '/Images/**/*.gif',
+        packageJson.config.path.src + '/Images/**/*.jpg',
+        packageJson.config.path.src + '/Images/**/*.png',
+        packageJson.config.path.src + '/Images/**/*.svg'])
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.svgo({plugins: [{removeViewBox: true}]}),
+            imagemin.optipng({optimizationLevel: 5})
+        ], {
+            verbose: true
+        }))
         .pipe(gulp.dest(packageJson.config.path.dest + './Images'))
 });
