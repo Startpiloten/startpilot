@@ -44,6 +44,6 @@ gulp.task('watch', function () {
 });
 
 
-gulp.task('build', gulp.parallel('clean', 'css', 'fonts', 'misc', 'image', 'javascript'));
+gulp.task('build', gulp.series('clean', 'css', 'fonts', 'misc', 'image', 'javascript'));
 gulp.task('ci', gulp.parallel('css-lint', 'build'));
 gulp.task('default', gulp.series('build', gulp.parallel('watch')));
