@@ -6,6 +6,10 @@
 You can use the `start.sh` script to clone `startpilot` as extension with any name. Simply use the following shell command in the root of your project where your composer.json file is located. Replace "myext" at the end of the line with the name of the extension you want to create. 
 
 ```
+Feature
+curl https://raw.githubusercontent.com/programiro/startpilot/feature/new-gulp-structure/start.sh > start.sh && sh start.sh --extname myprovider --vendor myvendor --package mypackage && rm -rf start.sh
+
+Master
 curl https://raw.githubusercontent.com/misterboe/startpilot/master/start.sh > start.sh && sh start.sh --extname myprovider --vendor myvendor --package mypackage
 ```
 This script is tested on MAC OSX.
