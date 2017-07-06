@@ -11,6 +11,7 @@ const eslint = require('gulp-eslint');
 const concat = require('gulp-concat');
 
 gulp.task('javascript:lint', function () {
+    'use strict';
     return gulp.src([packageJson.config.path.src + '/JavaScript/**/*.js', '!node_modules/**', '!'])
         .pipe(eslint({
             configFile: '.eslintrc.json'
@@ -19,10 +20,12 @@ gulp.task('javascript:lint', function () {
 });
 
 gulp.task('javascript:copy-json', function() {
+    'use strict';
     return gulp.src(packageJson.config.path.src + '/JavaScript/**/*.json').pipe(gulp.dest(packageJson.config.path.dest + '/JavaScript'));
 });
 
 gulp.task('javascript:compile', function () {
+    'use strict';
     return gulp.src([packageJson.config.path.src + '/JavaScript/**/*.js'])
         .pipe(buffer())
         .pipe(gulp.dest(packageJson.config.path.dest + '/JavaScript'))

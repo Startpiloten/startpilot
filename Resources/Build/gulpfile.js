@@ -20,26 +20,57 @@ require('./Gulp/misc');
  * Task
  */
 gulp.task('watch', function () {
-    gulp.watch(packageJson.config.path.src + '/Scss/**/*.scss', gulp.series('css'));
-    gulp.watch(packageJson.config.path.src + '/Images/**/*', gulp.series('image'));
-    gulp.watch(packageJson.config.path.src + '/Fonts/**/*', gulp.series('fonts'));
-    const miscWatcher = gulp.watch(packageJson.config.path.src + '/Misc/**/*', gulp.series('misc'));
-    gulp.watch([packageJson.config.path.src + '/JavaScript/**/*.js', packageJson.config.path.src + '/JavaScript/**/*.json'], gulp.series('javascript'));
+    'use strict';
+    const syncDelImages = function(src) {
+        if(path.basename(src) != '.DS_Store' || path.extname(src) == '.jpg' || path.extname(src) == '.svg' || path.extname(src) == '.png' || path.extname(src) == '.gif') {
+            const file = src.replace('Assets/', '');
+            log('red', 'File ' + file + ' was removed.');
 
+            let destFilePath = path.relative(path.resolve(packageJson.config.path.dest), src);
+            destFilePath = '../' + destFilePath.replace('Build/Assets/', 'Resources/Public/')
+            log('blue', 'File ' + destFilePath + ' deleted.');
+            del.sync(destFilePath, { force: true });
+        }
+    }
 
-    /*
-        @TODO add watcher to delete files in dist…
-    */
-    miscWatcher.on('unlink', function(src) {
+    const syncDel = function(src) {
         if(path.basename(src) != '.DS_Store') {
             const file = src.replace('Assets/', '');
             log('red', 'File ' + file + ' was removed.');
 
             let destFilePath = path.relative(path.resolve(packageJson.config.path.dest), src);
-                destFilePath = '../' + destFilePath.replace('Build/Assets/', 'Resources/Public/')
-            log('blue', 'File ' + destFilePath + ' should be removed…');
+            destFilePath = '../' + destFilePath.replace('Build/Assets/', 'Resources/Public/')
+            log('blue', 'File ' + destFilePath + ' deleted.');
             del.sync(destFilePath, { force: true });
         }
+    }
+
+
+    // watch styles
+    const watchScss = gulp.watch(packageJson.config.path.src + '/Scss/**/*.scss', gulp.series('css'));
+
+    // watch images
+    const watchImages = gulp.watch(packageJson.config.path.src + '/Images/**/*', gulp.series('image'));
+    watchImages.on('unlink', function(src) {
+        syncDelImages(src);
+    });
+
+    // watch fonts
+    const watchFonts = gulp.watch(packageJson.config.path.src + '/Fonts/**/*', gulp.series('fonts'));
+    watchFonts.on('unlink', function(src) {
+        syncDel(src);
+    });
+
+    // watch misc
+    const watchMisc = gulp.watch(packageJson.config.path.src + '/Misc/**/*', gulp.series('misc'));
+    watchMisc.on('unlink', function(src) {
+        syncDel(src);
+    });
+
+    // watch scripts
+    const watchJavaScript = gulp.watch([packageJson.config.path.src + '/JavaScript/**/*.js', packageJson.config.path.src + '/JavaScript/**/*.json'], gulp.series('javascript'));
+    watchJavaScript.on('unlink', function(src) {
+        syncDel(src);
     });
 });
 
