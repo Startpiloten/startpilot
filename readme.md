@@ -7,7 +7,7 @@ You can use the `start.sh` script to clone `startpilot` as extension with any na
 
 ```
 Feature
-curl https://raw.githubusercontent.com/programiro/startpilot/feature/new-gulp-structure/start.sh > start.sh && sh start.sh --extname myprovider --vendor myvendor --package mypackage && rm -rf start.sh
+curl https://raw.githubusercontent.com/medienagenten/startpilot/feature/new-gulp-structure/start.sh > start.sh && sh start.sh --extname myprovider --vendor myvendor --package mypackage && rm -rf start.sh
 
 Master
 curl https://raw.githubusercontent.com/misterboe/startpilot/master/start.sh > start.sh && sh start.sh --extname myprovider --vendor myvendor --package mypackage

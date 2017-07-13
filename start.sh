@@ -55,7 +55,7 @@ else
     echo "Your Package will be: $package"
     echo
     echo ${DIR}
-	git clone git@github.com:programiro/startpilot.git $DIR --depth=1
+	git clone git@github.com:medienagenten/startpilot.git $DIR --depth=1
 	echo "change origin"
     cd $DIR
 	git pull origin feature/new-gulp-structure
