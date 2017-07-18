@@ -51,17 +51,19 @@
 				<f:variable name="max375" value="375" />
 			</f:else>
 		</f:if>
-		<picture>
-			<source srcset="{f:uri.image(image: file, maxWidth: max375, cropVariant: 'mobile')}" media="(max-width: 375px)">
-			<source srcset="{f:uri.image(image: file, maxWidth: max480, cropVariant: 'mobile')}" media="(max-width: 480px)">
-			<source srcset="{f:uri.image(image: file, maxWidth: max767, cropVariant: 'tablet')}" media="(max-width: 767px)">
-			<source srcset="{f:uri.image(image: file, maxWidth: max991, cropVariant: 'tablet')}" media="(max-width: 991px)">
-			<source srcset="{f:uri.image(image: file, maxWidth: max1279, cropVariant: 'default')}" media="(max-width: 1279px)">
-			<source srcset="{f:uri.image(image: file, maxWidth: max1479, cropVariant: 'default')}" media="(max-width: 1479px)">
-			<source srcset="{f:uri.image(image: file, maxWidth: min1480, cropVariant: 'default')}" media="(min-width: 1480px)">
+		<f:link.typolink parameter="{file.link}" class="picturelink">
+			<picture>
+				<source srcset="{f:uri.image(image: file, maxWidth: max375, cropVariant: 'mobile')}" media="(max-width: 375px)">
+				<source srcset="{f:uri.image(image: file, maxWidth: max480, cropVariant: 'mobile')}" media="(max-width: 480px)">
+				<source srcset="{f:uri.image(image: file, maxWidth: max767, cropVariant: 'tablet')}" media="(max-width: 767px)">
+				<source srcset="{f:uri.image(image: file, maxWidth: max991, cropVariant: 'tablet')}" media="(max-width: 991px)">
+				<source srcset="{f:uri.image(image: file, maxWidth: max1279, cropVariant: 'default')}" media="(max-width: 1279px)">
+				<source srcset="{f:uri.image(image: file, maxWidth: max1479, cropVariant: 'default')}" media="(max-width: 1479px)">
+				<source srcset="{f:uri.image(image: file, maxWidth: min1480, cropVariant: 'default')}" media="(min-width: 1480px)">
 
-			<img class="img-responsive" src="{f:uri.image(image: file, maxWidth: fallbackWidth, cropVariant: 'default')}" alt="{file.alternative}" title="{file.title}">
-		</picture>
+				<img class="img-responsive" src="{f:uri.image(image: file, maxWidth: fallbackWidth, cropVariant: 'default')}" alt="{file.alternative}" title="{file.title}">
+			</picture>
+		</f:link.typolink>
 	</f:if>
 
 	<f:comment>
