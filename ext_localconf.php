@@ -125,5 +125,5 @@ if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY])) {
  * Install Tool Settings
  */
 
-$GLOBALS['TYPO3_CONF_VARS']['FE']['versionNumberInFilename'] = 'embed';
+$GLOBALS['TYPO3_CONF_VARS']['FE']['versionNumberInFilename'] = '';
 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] = 'jpg,jpeg,tiff,png,pdf,svg';
