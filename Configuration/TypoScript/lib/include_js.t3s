@@ -1,6 +1,6 @@
 page.includeJSFooterlibs{
     responsiveimages = EXT:startpilot/Resources/Public/Misc/jquery.responsiveimages.js
-    responsiveimages.forceOnTop = true
+    responsiveimages.forceOnTop = false
 }
 
 page.includeJSFooter{
