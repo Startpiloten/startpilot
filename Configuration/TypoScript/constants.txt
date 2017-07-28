@@ -1,11 +1,5 @@
 ## Constants ##
-[compatVersion = 7]
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/Static/constants.txt">
-[END]
-
-[compatVersion = 8]
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.txt">
-[END]
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.txt">
 
 # customsubcategory=100=General
 page {
@@ -25,7 +19,7 @@ favicon = EXT:startpilot/Resources/Public/Icons/Device/Icon.png
 # cat=startpilot: Settings/100/110; type=string; label= Srcset Image Max Size
 maxImgWidth = 1140
 # cat=startpilot: Settings/100/110; type=options[LazyLoadImage,PictureSrcset]; label= Image rendering
-imagerendering = LazyLoadImage
+imagerendering = PictureSrcset
 
 # customsubcategory=120=Google Webmaster/Analytics
 # cat=startpilot: Google Tools/200/100; type=string; label= Google Webmaster ID - (content="xxxxxxxx")

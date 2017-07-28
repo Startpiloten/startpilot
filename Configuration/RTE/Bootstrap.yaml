@@ -4,20 +4,19 @@ imports:
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
 
 editor:
+    externalPlugins:
+      wordcount: { resource: "EXT:ksc/Resources/Public/cheditor/wordcount/", showParagraphs: true, showCharCount: true, showWordCount: true, pasteWarningDuration: 3000 }
+      notification: { resource: "EXT:ksc/Resources/Public/cheditor/notification/" }
+
     config:
-        contentsCss: "EXT:startpilot/Resources/Public/Css/RTE/ckeditor_bootstrap.min.css"
+        defaultContentLanguage: "de"
+        contentsCss: "EXT:ksc/Resources/Public/Css/RTE/ckeditor.min.css"
 
         stylesSet:
-            - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
             - { name: "Table", element: "table", attributes: { 'class': 'table table-hover' } }
             - { name: "Table Striped", element: "table", attributes: { 'class': 'table table-hover table-striped' } }
             - { name: "Table Bordered", element: "table", attributes: { 'class': 'table table-hover table-bordered' } }
             - { name: "Table Condensed", element: "table", attributes: { 'class': 'table table-hover table-condensed' } }
-            - { name: "Row Active", element: "tr", attributes: { 'class': 'active' } }
-            - { name: "Row Success", element: "tr", attributes: { 'class': 'success' } }
-            - { name: "Row Info", element: "tr", attributes: { 'class': 'info' } }
-            - { name: "Row Warning", element: "tr", attributes: { 'class': 'warning' } }
-            - { name: "Row Danger", element: "tr", attributes: { 'class': 'danger' } }
             - { name: "Button Default", element: "a", attributes: { 'class': 'btn btn-default' } }
             - { name: "Button Primary", element: "a", attributes: { 'class': 'btn btn-primary' } }
             - { name: "Button Success", element: "a", attributes: { 'class': 'btn btn-success' } }
@@ -28,8 +27,7 @@ editor:
         toolbarGroups:
             - { name: styles, groups: [ format, styles ] }
             - { name: basicstyles, groups: [ basicstyles ] }
-            - { name: paragraph, groups: [ list, indent, blocks, align ] }
-            - "/"
+            - { name: paragraph, groups: [ list, indent, blocks] }
             - { name: links, groups: [ links ] }
             - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
             - { name: editing, groups: [ spellchecker ] }
@@ -37,7 +35,7 @@ editor:
             - { name: tools, groups: [ table, specialchar ] }
             - { name: document, groups: [ mode ] }
 
-        format_tags: "p;h1;h2;h3;h4;h5;pre"
+        format_tags: "p;h2;h3;h4;h5"
 
         justifyClasses:
             - text-left
@@ -52,6 +50,11 @@ editor:
             - image
 
         removeButtons:
+            - Horizontalrule
+            - Indent
+            - Outdent
+            - Superscript
+            - Subscript
             - Anchor
             - Underline
             - Strike

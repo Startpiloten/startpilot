@@ -11,7 +11,6 @@ TCEFORM.tt_content.header_layout.altLabels {
 }
 ## Headlines - END ##
 
-[compatVersion = 8]
 ## Default Image cropping ##
 TCEFORM.sys_file_reference.crop.config.cropVariants {
     default {
@@ -106,4 +105,3 @@ TCEFORM.sys_file_reference.crop.config.cropVariants {
     }
 }
 ## Default Image cropping  - END ##
-[END]
