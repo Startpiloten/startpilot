@@ -17,10 +17,3 @@ lib.default {
         maxImgWidth = {$maxImgWidth}
     }
 }
-
-[compatVersion = 7]
-    lib.default.settings.typo3version = 7
-[END]
-[compatVersion = 8]
-    lib.default.settings.typo3version = 8
-[END]

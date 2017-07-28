@@ -27,13 +27,20 @@ googlewebmaster =
 # cat=startpilot: Google Tools/200/110; type=string; label= Google Analytics ID - (content="UA-xxx-x")
 googleanalytics =
 
-# customsubcategory=300=Domains
-# cat=startpilot: Environment/300/100; type=string; label= Live Domain - (mytld.de)
+# customsubcategory=300=Environment
+# cat=startpilot: Environment-Domains/300/100; type=string; label= Live Domain - (mytld.de)
 live_domain =
-# cat=startpilot: Environment/300/110; type=string; label= Develop Domain - (mytld.de)
+# cat=startpilot: Environment-Domains/300/110; type=string; label= Develop Domain - (mytld.de)
 develop_domain =
-# cat=startpilot: Environment/300/120; type=string; label= Local Domain - (mytld.local)
+# cat=startpilot: Environment-Domains/300/120; type=string; label= Local Domain - (mytld.local)
 local_domain =
+# customsubcategory=400=baseURLs
+# cat=startpilot: Environment-Domains/400/130; type=string; label= Live baseURL
+live_baseURL =
+# cat=startpilot: Environment-Domains/400/140; type=string; label= Develop baseURL
+develop_baseURL =
+# cat=startpilot: Environment-Domains/400/150; type=string; label= Local baseURL
+local_baseURL =
 
 # customsubcategory=300=Meta
 page.meta {

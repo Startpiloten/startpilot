@@ -58,3 +58,13 @@ config {
         no_cache = 1
     }
 [global]
+
+[globalString = IENV:HTTP_HOST = {$local_domain}]
+    config.baseURL = {$local_baseURL}
+[END]
+[globalString = IENV:HTTP_HOST = {$develop_domain}]
+    config.baseURL = {$develop_baseURL}
+[END]
+[globalString = IENV:HTTP_HOST = {$live_domain}]
+    config.baseURL = {$live_baseURL}
+[END]

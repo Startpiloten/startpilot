@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: bschauer
- * Date: 23.08.16
- * Time: 12:59
- */
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
@@ -38,3 +32,72 @@ $showitem_default_02 = '--div--;LLL:EXT:frontend/Resources/Private/Language/loca
                                 rowDescription,
                         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
                         ';
+
+$GLOBALS['TCA']['sys_file_reference']['columns']['crop']['config']['cropVariants'] = [
+    'default' => [
+        'title' => 'Desktop',
+        'allowedAspectRatios' => [
+            'NaN' => [
+                'title' => 'Free',
+                'value' => 0.0
+            ],
+            '3:2' => [
+                'title' => '3:2',
+                'value' => 3 / 2
+            ],
+            '1:1' => [
+                'title' => '1:1',
+                'value' => 1 / 1
+            ],
+            'person' => [
+                'title' => 'Portrait',
+                'value' => 0.6666
+            ],
+        ],
+        'selectedRatio' => 'NaN',
+    ],
+    'tablet' => [
+        'title' => 'Tablet',
+        'allowedAspectRatios' => [
+            'NaN' => [
+                'title' => 'Free',
+                'value' => 0.0
+            ],
+            '3:2' => [
+                'title' => '3:2',
+                'value' => 3 / 2
+            ],
+            '1:1' => [
+                'title' => '1:1',
+                'value' => 1 / 1
+            ],
+            'person' => [
+                'title' => 'Portrait',
+                'value' => 0.6666
+            ],
+        ],
+        'selectedRatio' => 'NaN',
+    ],
+    'mobile' => [
+        'title' => 'Mobile',
+        'allowedAspectRatios' => [
+            'NaN' => [
+                'title' => 'Free',
+                'value' => 0.0
+            ],
+            '3:2' => [
+                'title' => '3:2',
+                'value' => 3 / 2
+            ],
+            '1:1' => [
+                'title' => '1:1',
+                'value' => 1 / 1
+            ],
+            'person' => [
+                'title' => 'Portrait',
+                'value' => 0.6666
+            ],
+        ],
+        'selectedRatio' => 'NaN',
+    ],
+];
