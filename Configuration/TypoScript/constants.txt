@@ -19,7 +19,7 @@ favicon = EXT:startpilot/Resources/Public/Icons/Device/Icon.png
 # cat=startpilot: Settings/100/110; type=string; label= Srcset Image Max Size
 maxImgWidth = 1140
 # cat=startpilot: Settings/100/110; type=options[LazyLoadImage,PictureSrcset]; label= Image rendering
-imagerendering = LazyLoadImage
+imagerendering = PictureSrcset
 
 # customsubcategory=120=Google Webmaster/Analytics
 # cat=startpilot: Google Tools/200/100; type=string; label= Google Webmaster ID - (content="xxxxxxxx")

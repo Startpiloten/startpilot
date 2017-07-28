@@ -5,6 +5,7 @@
 	<f:layout name="Default" />
 
 	<f:section name="Main">
+		<f:render partial="HTML-Dummy/HTML" section="HTML" arguments="{_all}" />
 		<div class="container">
 			<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '1'}" />
 		</div>
