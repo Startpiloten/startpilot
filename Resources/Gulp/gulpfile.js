@@ -8,6 +8,8 @@ var sass = require('gulp-sass');
 var rename = require("gulp-rename");
 var watch = require('gulp-watch');
 const imagemin = require('gulp-imagemin');
+const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css');
 
 function handleError(err) {
     console.log(err.toString());
@@ -39,12 +41,16 @@ gulp.task('minify-sass', function () {
         .pipe(sass({outputStyle: 'compressed'}))
         .on('error', handleError)
         .pipe(rename('style.min.css'))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(sourcemaps.write('./', {addComment: true}))
         .pipe(gulp.dest('../Public/Css/'));
 });
 
 gulp.task('image-min', function () {
-    return gulp.src(['../**/*.jpg','../**/*.png', '**/**/.gif' , '!./node_modules/**'])
+    return gulp.src(['../**/*.jpg', '../**/*.png', '**/**/.gif', '!./node_modules/**'])
         .pipe(imagemin([
             imagemin.gifsicle({interlaced: true}),
             imagemin.jpegtran({progressive: true}),
@@ -60,7 +66,6 @@ gulp.task('default', function () {
     gulp.start('uglify-bower-js');
     gulp.start('uglify-main-js');
     gulp.start('minify-sass');
-    gulp.start('image-min');
 });
 
 gulp.task('watch', function () {
