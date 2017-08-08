@@ -2,10 +2,6 @@
 ### CUSTOM SUBCATEGORIES ###
 ############################
 
-# customsubcategory=120_settings=Settings
-# cat=General/120_settings/50; type=boolean; label=Boostrap RTE
-disablePageTsRTE = 0
-
 # customsubcategory=130_constants=Constants
 # cat=General/130_constants/50; type=boolean; label=Disable Hide at Copy
 hideAtCopy = 0
