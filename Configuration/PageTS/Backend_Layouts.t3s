@@ -6,13 +6,13 @@ mod.web_layout.BackendLayouts {
         config {
             backend_layout {
                 colCount = 1
-                rowCount = 2
+                rowCount = 1
                 rows {
                     1 {
                         columns {
                             1 {
                                 name = Main Area
-                                colPos = 1
+                                colPos = 0
                                 colspan = 1
                             }
                         }
