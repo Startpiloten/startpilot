@@ -5,12 +5,12 @@ imports:
 
 editor:
     externalPlugins:
-      wordcount: { resource: "EXT:ksc/Resources/Public/cheditor/wordcount/", showParagraphs: true, showCharCount: true, showWordCount: true, pasteWarningDuration: 3000 }
-      notification: { resource: "EXT:ksc/Resources/Public/cheditor/notification/" }
+      wordcount: { resource: "EXT:startpilot/Resources/Public/ckeditor/wordcount/", showParagraphs: true, showCharCount: true, showWordCount: true, pasteWarningDuration: 3000 }
+      notification: { resource: "EXT:startpilot/Resources/Public/ckeditor/notification/" }
 
     config:
         defaultContentLanguage: "de"
-        contentsCss: "EXT:ksc/Resources/Public/Css/RTE/ckeditor.min.css"
+        contentsCss: "EXT:startpilot/Resources/Public/Css/RTE/ckeditor.min.css"
 
         stylesSet:
             - { name: "Table", element: "table", attributes: { 'class': 'table table-hover' } }

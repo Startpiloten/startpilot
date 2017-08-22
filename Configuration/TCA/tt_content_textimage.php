@@ -77,7 +77,12 @@ $GLOBALS['TCA']['tt_content']['types']['startpilot_textimage'] = array_replace_r
         bodytext,
         ' . $showitem_default_02,
         'columnsOverrides' => [
-            'bodytext' => ['defaultExtras' => 'richtext:rte_transform[mode=ts_css]'],
+            'bodytext' => [
+                'config' => [
+                    'enableRichtext' => true,
+                    'richtextConfiguration' => 'default'
+                ]
+            ],
             'image' => array(
                 'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                     'image',
