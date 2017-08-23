@@ -9,4 +9,11 @@
         inlineStyle2TempFile = 0
         moveJsFromHeaderToFooter = 1
     }
+
+    page {
+        meta {
+            robots >
+            robots = noindex,nofollow,noarchive
+        }
+    }
 [end]

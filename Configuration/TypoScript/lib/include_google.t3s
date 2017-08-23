@@ -1,17 +1,22 @@
 [globalString = IENV:HTTP_HOST = {$live_domain}]
+    ### Google Webmaster Header Code ###
+    page.meta {
+        google-site-verification = TEXT
+        google-site-verification {
+            if.isTrue = {$googlewebmaster}
+            stdWrap.cObject = COA
+            stdWrap.cObject {
+                10 = TEXT
+                10.value = {$googlewebmaster}
+            }
+        }
+    }
+    ### Google Webmaster Header Code - END ###
 
-### Google Webmaster Header Code ###
-page.headerData.700.if.isTrue = {$googlewebmaster}
-page.headerData.700 = TEXT
-page.headerData.700.value (
-    <meta name="google-site-verification" content="{$googlewebmaster}" />
-)
-### Google Webmaster Header Code - END ###
-
-### Google Analytics Header Code ###
-page.headerData.710.if.isTrue = {$googleanalytics}
-page.headerData.710 = TEXT
-page.headerData.710.value (
+    ### Google Analytics Header Code ###
+    page.headerData.710.if.isTrue = {$googleanalytics}
+    page.headerData.710 = TEXT
+    page.headerData.710.value (
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -23,7 +28,6 @@ page.headerData.710.value (
       ga('send', 'pageview');
 
     </script>
-)
-### Google Analytics Header Code - END ###
-
+    )
+    ### Google Analytics Header Code - END ###
 [END]
