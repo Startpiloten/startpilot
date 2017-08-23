@@ -1,19 +1,13 @@
 config {
-    metaCharset = utf-8
-    renderCharset = utf-8
     extTarget = _blank
     disableImgBorderAttr = 1
 
     doctype = html5
-    doctypeSwitch = 0
     pageTitleFirst = 1
-    xhtml_cleaning = all
     disablePrefixComment = 1
     inlineStyle2TempFile = 1
     removeDefaultJS = external
     meaningfulTempFilePrefix = 100
-
-    simulateStaticDocuments = 0
 
     spamProtectEmailAddresses = 2
     spamProtectEmailAddresses_atSubst = (at)
@@ -25,7 +19,6 @@ config {
 
     ## Enable RealUrl
     tx_realurl_enable = 1
-    simulateStaticDocuments = 0
     absRefPrefix = auto
 }
 
