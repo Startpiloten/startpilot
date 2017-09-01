@@ -35,7 +35,7 @@ mod.web_layout.BackendLayouts {
                         columns {
                             1 {
                                 name = Dummy Area
-                                colPos = 1
+                                colPos = 0
                                 colspan = 1
                             }
                         }
