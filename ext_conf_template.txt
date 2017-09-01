@@ -8,7 +8,7 @@ hideAtCopy = 0
 # cat=General/130_constants/60; type=boolean; label=Disable Copy flag
 disableCopyFlag = 0
 # cat=General/130_constants/70; type=boolean; label=CKEditor Bootstrap Config
-enable_bootstrap_ckeditor=1
+enable_bootstrap_ckeditor = 1
 
 # customsubcategory=140_ce=Disable default Content Elements
 # cat=Contentelements/140_ce/10; type=boolean; label=Header
@@ -17,6 +17,8 @@ disable_header = 1
 disable_text = 1
 # cat=Contentelements/140_ce/30; type=boolean; label=Textpic
 disable_textpic = 1
+# cat=Contentelements/140_ce/30; type=boolean; label=Textmedia
+disable_textmedia = 1
 # cat=Contentelements/140_ce/40; type=boolean; label=Bullets
 disable_bullets = 1
 # cat=Contentelements/140_ce/50; type=boolean; label=Table
@@ -33,6 +35,8 @@ disable_div = 1
 disable_shortcut = 1
 # cat=Contentelements/140_ce/110; type=boolean; label=Mailform
 disable_mailform = 1
+# cat=Contentelements/140_ce/110; type=boolean; label=Forms
+disable_form = 1
 # cat=Contentelements/140_ce/120; type=boolean; label=Login
 disable_login = 1
 # cat=Contentelements/140_ce/130; type=boolean; label=Image Only
