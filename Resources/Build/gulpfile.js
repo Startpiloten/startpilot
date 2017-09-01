@@ -4,7 +4,6 @@
 const gulp = require('gulp');
 const del = require('del');
 const path = require('path');
-const gutil = require('gulp-util');
 const log = require('gutil-color-log');
 const packageJson = require('./package.json');
 
@@ -15,6 +14,7 @@ require('./Gulp/scripts');
 require('./Gulp/fonts');
 require('./Gulp/clean');
 require('./Gulp/misc');
+require('./Gulp/ckeditor');
 
 /**
  * Task
@@ -66,6 +66,12 @@ gulp.task('watch', function () {
     watchMisc.on('unlink', function(src) {
         syncDel(src);
     });
+  
+    // watch misc
+    const watchCKEditor = gulp.watch(packageJson.config.path.src + '/CKEditor/**/*', gulp.series('ckeditor'));
+    watchCKEditor.on('unlink', function(src) {
+      syncDel(src);
+    });
 
     // watch scripts
     const watchJavaScript = gulp.watch([packageJson.config.path.src + '/JavaScript/**/*.js', packageJson.config.path.src + '/JavaScript/**/*.json'], gulp.series('javascript'));
@@ -75,6 +81,6 @@ gulp.task('watch', function () {
 });
 
 
-gulp.task('build', gulp.series('clean', 'css', 'fonts', 'misc', 'image', 'javascript'));
+gulp.task('build', gulp.series('clean', 'css', 'fonts', 'misc', 'ckeditor', 'image', 'javascript'));
 gulp.task('ci', gulp.parallel('css-lint', 'build'));
 gulp.task('default', gulp.series('build', gulp.parallel('watch')));

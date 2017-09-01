@@ -1,14 +1,12 @@
 /**
- * Gulp
+ * Dependencies
  */
 const gulp = require('gulp');
-const plumber = require('gulp-plumber');
 const imagemin = require('gulp-imagemin');
 const packageJson = require('../package.json');
 
-
 /**
- * Compress and copy images destination
+ * Compress and copy images
  */
 gulp.task('image', function () {
     'use strict';

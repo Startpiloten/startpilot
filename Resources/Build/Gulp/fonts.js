@@ -1,9 +1,11 @@
+/**
+ * Dependencies
+ */
 const gulp = require('gulp');
-const plumber = require('gulp-plumber');
 const packageJson = require('../package.json');
 
 /**
- * Copy Fonts
+ * Copy fonts
  */
 gulp.task('fonts', function () {
     'use strict';
