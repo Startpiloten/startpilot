@@ -8,8 +8,16 @@
   },
   "authors": [
     {
+      "name": "Boris Schauer",
+      "email": "me@bschauer.de"
+    },
+    {
+      "name": "Analog",
+      "email": "info@analog.de"
+    },
+    {
       "name": "Medienagenten",
-      "email": "name@medienagenten.de"
+      "email": "info@medienagenten.de"
     }
   ],
   "autoload": {

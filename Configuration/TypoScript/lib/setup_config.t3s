@@ -14,7 +14,7 @@ config {
     sendCacheHeaders = 1
 
     headerComment (
-         medienagenten.de
+         https://github.com/misterboe/startpilot
     )
 
     ## Enable RealUrl

@@ -2,8 +2,4 @@
 .DS_Store
 /Resources/Build/node_modules/
 /Resources/Public/
-/Resources/Public/Css/style.min.css.map
-/Resources/Public/Css/style.min.css
-/Resources/Public/JavaScript/config.min.js
-/Resources/Public/JavaScript/vendor.min.js
 /Resources/Gulp/package-lock.json
