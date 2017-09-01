@@ -5,7 +5,7 @@ const gulp = require('gulp');
 const del = require('del');
 const path = require('path');
 const gutil = require('gulp-util');
-const log = require('gutil-color-log')
+const log = require('gutil-color-log');
 const packageJson = require('./package.json');
 
 
