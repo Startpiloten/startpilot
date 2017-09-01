@@ -15,7 +15,7 @@ page {
 
 # customsubcategory=200=Favicon
 # cat=startpilot: Settings/100/100; type=string; label= Path to Favicon (PNG)
-favicon = EXT:startpilot/Resources/Public/Icons/Device/Icon.png
+favicon = EXT:startpilot/Resources/Public/Images/Icons/Device/Icon.png
 # cat=startpilot: Settings/100/110; type=string; label= Srcset Image Max Size
 maxImgWidth = 1140
 # cat=startpilot: Settings/100/110; type=options[LazyLoadImage,PictureSrcset]; label= Image rendering
@@ -45,7 +45,7 @@ local_baseURL =
 # customsubcategory=300=Meta
 page.meta {
     # cat=startpilot: Meta/400/100; type=string; label=viewport
-    viewport = user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1
+    viewport = user-scalable=yes, width=device-width, initial-scale=1
     # cat=startpilot: Meta/400/110; type=string; label=robots
     robots = index,follow
     # cat=startpilot: Meta/400/120; type=string; label=apple-mobile-web-app-capable

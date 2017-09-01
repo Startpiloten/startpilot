@@ -1,0 +1,13 @@
+// FUNCTIONS
+@function calculate_pixel($sizeInRem) {
+    $pixelSize: round($sizeInRem * $remPixelFactor) + px;
+
+    @return $pixelSize;
+}
+
+@function calculate_rem($sizeInPixel) {
+    $exactRemSize: ($sizeInPixel / $remPixelFactor);
+    $roundedRemSize: round($exactRemSize * $remPostDecimalPositionNumber) / $remPostDecimalPositionNumber;
+
+    @return $roundedRemSize +rem;
+}

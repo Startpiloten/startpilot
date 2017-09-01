@@ -14,7 +14,7 @@ config {
     sendCacheHeaders = 1
 
     headerComment (
-         bschauer
+         medienagenten.de
     )
 
     ## Enable RealUrl

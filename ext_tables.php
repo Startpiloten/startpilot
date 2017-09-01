@@ -7,7 +7,7 @@ if (!defined('TYPO3_MODE')) {
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     $_EXTKEY,
     'Configuration/TypoScript',
-    'Typo3 Provider Extension'
+    'TYPO3 Provider Extension'
 );
 
 $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
