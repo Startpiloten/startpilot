@@ -14,7 +14,8 @@ config {
     sendCacheHeaders = 1
 
     headerComment (
-         bschauer
+        This Website is created with the TYPO3 Startpilot
+        https://github.com/Startpiloten/startpilot
     )
 
     ## Enable RealUrl

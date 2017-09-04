@@ -1,10 +1,10 @@
-/* ========================================================================
+/**
  * Responsive Image
  *
  * Inspired by:
  * http://luis-almeida.github.com/unveil
  * http://verge.airve.com/
- * ======================================================================== */
+ */
 
 +function($) {
 
@@ -77,7 +77,7 @@
     ResponsiveImage.DEFAULTS = {
         threshold: 0,
         attrib: "src",
-        skip_invisible: false,
+        skipInvisible: false,
         preload: false
     };
 
@@ -104,7 +104,10 @@
     };
 
     ResponsiveImage.prototype.unveil = function(force) {
-        if (this.loaded || !force && !this.options.preload && this.options.skip_invisible && this.$element.is(":hidden")) return;
+        if(this.loaded || !force) {
+            if (!this.options.preload && this.options.skipInvisible && this.$element.is(":hidden")) return;
+        }
+
         var inview = force || this.options.preload || this.inviewport();
         if (inview) {
             var source = this.options[this.attrib] || this.options["src"];
@@ -112,7 +115,7 @@
                 this.$element.attr("src", source);
                 this.$element.css("opacity", 1);
                 $(window).trigger('loaded.test.responsiveimage');
-                this.loaded	= true;
+                this.loaded = true;
             }
         }
     };
@@ -123,8 +126,9 @@
 
     // RESPONSIVE IMAGES PLUGIN DEFINITION
     // ===================================
-    function Plugin(option) {
-        $lazyload = this;
+    var Plugin = function(option) {
+        var that = this;
+        $lazyload = that;
         return this.each(function() {
             var $this = $(this);
             var data = $this.data('test.responsiveimage');
@@ -140,7 +144,7 @@
             }
             if (typeof option === 'string') data[option]();
         });
-    };
+    }
 
     var old = $.fn.responsiveimages;
     $.fn.responsiveimage = Plugin;

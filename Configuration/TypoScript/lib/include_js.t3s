@@ -1,8 +1,4 @@
-page.includeJSFooterlibs{
-    vendor = EXT:startpilot/Resources/Public/JavaScript/vendor.min.js
-    vendor.forceOnTop = true
-}
-
-page.includeJSFooter{
-    config = EXT:startpilot/Resources/Public/JavaScript/config.min.js
+page.includeJSFooter {
+    main = EXT:startpilot/Resources/Public/JavaScript/main.min.js
+    responsiveimages = EXT:startpilot/Resources/Public/Misc/jquery.responsiveimages.js
 }

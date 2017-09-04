@@ -11,7 +11,7 @@ if (!defined('TYPO3_MODE')) {
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
     '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:'
-    . $_EXTKEY . '/Configuration/PageTS/Backend_Layouts.t3s">'
+    . $_EXTKEY . '/Configuration/PageTS/BackendLayouts.t3s">'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
@@ -127,5 +127,5 @@ if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY])) {
  * Install Tool Settings
  */
 
-$GLOBALS['TYPO3_CONF_VARS']['FE']['versionNumberInFilename'] = 'embed';
+$GLOBALS['TYPO3_CONF_VARS']['FE']['versionNumberInFilename'] = '';
 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] = 'jpg,jpeg,tiff,png,pdf,svg';

@@ -1,6 +1,6 @@
 {
   "name": "Vendor/Yourext",
-  "description": "Typo3 Provider Extension",
+  "description": "TYPO3 Provider Extension",
   "type": "typo3-cms-extension",
   "version": "1.0.0",
   "require": {
@@ -10,6 +10,14 @@
     {
       "name": "Boris Schauer",
       "email": "me@bschauer.de"
+    },
+    {
+      "name": "Analog",
+      "email": "info@analog.de"
+    },
+    {
+      "name": "Medienagenten",
+      "email": "info@medienagenten.de"
     }
   ],
   "autoload": {
