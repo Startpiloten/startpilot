@@ -5,18 +5,8 @@ if (!defined('TYPO3_MODE')) {
 }
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-    '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:'
-    . $_EXTKEY . '/Configuration/PageTS/PageTS.t3s">'
-);
-
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-    '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:'
-    . $_EXTKEY . '/Configuration/PageTS/BackendLayouts.t3s">'
-);
-
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-    '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:'
-    . $_EXTKEY . '/Configuration/PageTS/ContentElementWizard.t3s">'
+    '<INCLUDE_TYPOSCRIPT: source="DIR:EXT:'
+    . $_EXTKEY . '/Configuration/TSconfig">'
 );
 
 if (!is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY])) {

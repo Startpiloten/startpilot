@@ -1,6 +1,3 @@
-## Page TS ##
-
-## Headlines ##
 TCEFORM.tt_content.header_layout.altLabels {
     1 = Headline H1
     2 = Headline H2
@@ -9,11 +6,3 @@ TCEFORM.tt_content.header_layout.altLabels {
     5 = Headline H5
     6 = Headline H6
 }
-
-## Headlines - END ##
-
-## https as default ##
-
-#TCAdefaults.pages.url_scheme = 2
-
-## https as default - END ##

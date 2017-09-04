@@ -1,7 +1,12 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
 
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/lib/">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/ContentElements/">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/config">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/lib">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/page">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/settings">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/tt_content">
+
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/ContentElements">
 
 config {
     no_cache = 0
@@ -17,9 +22,11 @@ config {
 [globalString = IENV:HTTP_HOST = {$local_domain}]
     config.baseURL = {$local_baseURL}
 [END]
+
 [globalString = IENV:HTTP_HOST = {$develop_domain}]
     config.baseURL = {$develop_baseURL}
 [END]
+
 [globalString = IENV:HTTP_HOST = {$live_domain}]
     config.baseURL = {$live_baseURL}
 [END]
