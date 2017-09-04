@@ -1,3 +1,6 @@
+###
+## Basic Settings
+###
 config {
     extTarget = _blank
     disableImgBorderAttr = 1
@@ -23,7 +26,9 @@ config {
     absRefPrefix = auto
 }
 
-## Languge Settings ##
+###
+## Languge Settings
+###
 config {
     sys_language_mode = content_fallback
     sys_language_overlay = 0
@@ -37,7 +42,6 @@ config {
     htmlTag_setParams = lang="de"
 }
 
-### Mehrsprachigkeit ###
 [globalVar = GP:L=1]
     config {
         sys_language_uid = 1
@@ -46,12 +50,16 @@ config {
         htmlTag_setParams = lang="en"
     }
 [global]
-## Languge Settings - END ##
 
+###
+## Disable ContentLengthHeader
+###
 config.enableContentLengthHeader = 0
 
+###
+## Security Settings
+###
 ## http configuration
 ## config.additionalHeaders = x-frame-options: SAMEORIGIN | X-XSS-Protection: 1; mode=block | X-Content-Type-Options: nosniff | X-Powered-By: nothing
-
 ## https configuration
 ## config.additionalHeaders = strict-transport-security: maxage=31536000; includeSubdomains | x-frame-options: SAMEORIGIN | X-XSS-Protection: 1; mode=block | X-Content-Type-Options: nosniff | X-Powered-By: nothing

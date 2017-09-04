@@ -1,0 +1,179 @@
+###
+## Page Template and Pathes
+###
+page = PAGE
+page.10 = FLUIDTEMPLATE
+page.10 {
+    templateName = TEXT
+    templateName.stdWrap {
+        cObject = TEXT
+        cObject {
+            data = levelfield:-2,backend_layout_next_level,slide
+            override.field = backend_layout
+            split {
+                token = pagets__
+                1.current = 1
+                1.wrap = |
+            }
+        }
+
+        ifEmpty = Default
+    }
+
+    templateRootPaths {
+        10 = {$page.template.templateRootPath}
+    }
+
+    partialRootPaths {
+        10 = {$page.template.partialRootPath}
+    }
+
+    layoutRootPaths {
+        10 = {$page.template.layoutRootPath}
+    }
+}
+
+###
+## MenuProcessor
+###
+page.10 {
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        10 {
+            includeSpacer = 1
+            expandAll = 1
+            as = mainnavigation
+        }
+    }
+}
+
+###
+## Header Data
+###
+page.headerData {
+    20 = TEXT
+    20.value (
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    )
+}
+
+###
+## Page Meta
+###
+page {
+    meta {
+        viewport = {$page.meta.viewport}
+        robots = {$page.meta.robots}
+        google = {$page.meta.google}
+        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+        description {
+            override.field = description
+        }
+
+        author {
+            override.field = author
+        }
+
+        keywords {
+            override.field = keywords
+        }
+
+        X-UA-Compatible = {$page.meta.compatible}
+        X-UA-Compatible {
+            attribute = http-equiv
+        }
+
+        # OpenGraph Tags
+        og:title {
+            attribute = property
+            field = title
+        }
+
+        og:site_name {
+            attribute = property
+            data = TSFE:tmpl|setup|sitetitle
+        }
+
+        og:description = {$page.meta.description}
+        og:description {
+            attribute = property
+            field = description
+        }
+    }
+}
+
+[globalVar = LIT:1 = {$page.meta.ogimage}]
+    page {
+        meta {
+            og:image {
+                attribute = property
+                stdWrap.cObject = FILES
+                stdWrap.cObject {
+                    references {
+                        data = levelfield:-1, media, slide
+                    }
+
+                    maxItems = 1
+                    renderObj = COA
+                    renderObj {
+                        10 = IMG_RESOURCE
+                        10 {
+                            file {
+                                import.data = file:current:uid
+                                treatIdAsReference = 1
+                                width = 1280c
+                                height = 720c
+                            }
+
+                            stdWrap {
+                                typolink {
+                                    parameter.data = TSFE:lastImgResourceInfo|3
+                                    returnLast = url
+                                    forceAbsoluteUrl = 1
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+[end]
+
+###
+## Disable indexing
+###
+[globalVar = TSFE:page|no_search = 1]
+    page.meta.robots = noindex,follow
+[end]
+
+###
+## includeCSS
+###
+page.includeCSS {
+    style = EXT:startpilot/Resources/Public/Css/main.min.css
+}
+
+###
+## includeJSFooter
+###
+page.includeJSFooter {
+    main = EXT:startpilot/Resources/Public/JavaScript/main.min.js
+    responsiveimages = EXT:startpilot/Resources/Public/Misc/jquery.responsiveimages.js
+}
