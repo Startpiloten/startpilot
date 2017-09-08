@@ -39,7 +39,7 @@ gulp.task('watch', function () {
             log('red', 'File ' + file + ' was removed.');
 
             let destFilePath = path.relative(path.resolve(packageJson.config.path.dest), src);
-            destFilePath = '../' + destFilePath.replace('Build/Assets/', 'Resources/Public/')
+                destFilePath = '../' + destFilePath.replace('Build/Assets/', 'Resources/Public/');
             log('blue', 'File ' + destFilePath + ' deleted.');
             del.sync(destFilePath, { force: true });
         }
@@ -48,7 +48,10 @@ gulp.task('watch', function () {
 
     // watch styles
     const watchScss = gulp.watch(packageJson.config.path.src + '/Scss/**/*.scss', gulp.series('css'));
-
+    watchScss.on('unlink', function(src) {
+        syncDelImages(src);
+    });
+    
     // watch images
     const watchImages = gulp.watch(packageJson.config.path.src + '/Images/**/*', gulp.series('image'));
     watchImages.on('unlink', function(src) {
@@ -74,13 +77,13 @@ gulp.task('watch', function () {
     });
 
     // watch scripts
-    const watchJavaScript = gulp.watch([packageJson.config.path.src + '/JavaScript/**/*.js', packageJson.config.path.src + '/JavaScript/**/*.json'], gulp.series('javascript'));
+    const watchJavaScript = gulp.watch(packageJson.config.path.src + '/JavaScript/**/*.js', gulp.series('javascript'));
     watchJavaScript.on('unlink', function(src) {
         syncDel(src);
     });
 });
 
 
-gulp.task('build', gulp.series('clean', 'css', 'fonts', 'misc', 'ckeditor', 'image', 'javascript'));
+gulp.task('build', gulp.series('clean', 'css', 'fonts', 'misc', 'ckeditor', 'image', 'javascript', 'javascript:modernizr'));
 gulp.task('ci', gulp.parallel('css-lint', 'build'));
 gulp.task('default', gulp.series('build', gulp.parallel('watch')));

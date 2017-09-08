@@ -1,7 +1,5 @@
 const gulp = require('gulp');
 const browserify = require('browserify');
-
-// eslint-disable-next-line no-unused-consts
 const babelify = require('babelify');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
@@ -9,8 +7,9 @@ const uglify = require('gulp-uglify');
 const packageJson = require('../package.json');
 const rename = require('gulp-rename');
 const eslint = require('gulp-eslint');
-const concat = require('gulp-concat');
-const rjs = require('gulp-requirejs');
+const log = require('gutil-color-log');
+const modernizr = require('gulp-modernizr-build');
+const del = require('del');
 
 gulp.task('javascript:lint', function () {
     'use strict';
@@ -21,9 +20,28 @@ gulp.task('javascript:lint', function () {
         .pipe(eslint.format());
 });
 
-gulp.task('javascript:copy-json', function() {
+gulp.task('javascript:modernizr', function() {
     'use strict';
-    return gulp.src(packageJson.config.path.src + '/JavaScript/**/*.json').pipe(gulp.dest(packageJson.config.path.dest + '/JavaScript'));
+    if(!packageJson.config.modernizr.deactivated) {
+      log('blue', 'modernizr activated');
+      return gulp.src([packageJson.config.path.dest + '/JavaScript/main.js', packageJson.config.path.dest  + '/Css/main.css', '!./**/modernizr*.js'])
+      .pipe( modernizr('modernizr-custom.js', {
+        cssPrefix: packageJson.config.modernizr.cssPrefix,
+        addFeatures: packageJson.config.modernizr.addFeatures,
+        quiet: packageJson.config.modernizr.quiet
+      }))
+      .pipe(gulp.dest(packageJson.config.path.dest + '/JavaScript'))
+      .pipe(uglify())
+      .pipe(rename({
+        suffix: '.min'
+      }))
+      .pipe(gulp.dest(packageJson.config.path.dest + '/JavaScript'));
+    }
+    else {
+      log('blue', 'modernizr activated');
+      return del(packageJson.config.path.dest + '/Javascript/modernizr.*', {force: true});
+    }
+    
 });
 
 gulp.task('javascript:compile', function () {
@@ -53,5 +71,5 @@ gulp.task('javascript:compile', function () {
 /**
  * Uglify javascript and copy to destination
  */
-gulp.task('javascript', gulp.series('javascript:lint', 'javascript:compile', 'javascript:copy-json'));
+gulp.task('javascript', gulp.series('javascript:lint', 'javascript:compile'));
 

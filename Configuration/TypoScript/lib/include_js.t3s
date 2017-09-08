@@ -2,3 +2,8 @@ page.includeJSFooter {
     main = EXT:startpilot/Resources/Public/JavaScript/main.min.js
     responsiveimages = EXT:startpilot/Resources/Public/Misc/jquery.responsiveimages.js
 }
+
+page.includeJSHeader {
+    main = EXT:startpilot/Resources/Public/JavaScript/main.min.js
+    responsiveimages = EXT:startpilot/Resources/Public/Misc/jquery.responsiveimages.js
+}

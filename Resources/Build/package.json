@@ -34,18 +34,24 @@
     "gutil-color-log": "^1.0.2",
     "path": "^0.12.7",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "gulp-modernizr-build": "0.0.5"
   },
   "config": {
     "path": {
       "src": "./Assets/",
       "vendor_source": "./node_modules/",
       "dest": "../../Resources/Public/"
+    },
+    "modernizr": {
+      "deactivated": false,
+      "cssPrefix": "test-",
+      "addFeatures": ["es6/promises"],
+      "quiet": false
     }
   },
   "scripts": {
     "build": "./node_modules/gulp/bin/gulp.js build",
-    "start": "./node_modules/gulp/bin/gulp.js default",
-    "ci": "./node_modules/gulp/bin/gulp.js ci"
+    "start": "./node_modules/gulp/bin/gulp.js default"
   }
 }
