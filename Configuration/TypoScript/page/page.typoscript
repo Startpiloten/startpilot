@@ -2,8 +2,10 @@
 ## Page Template and Pathes
 ###
 page = PAGE
-page.10 = FLUIDTEMPLATE
-page.10 {
+page{
+    # Pagetemplate
+    10 = FLUIDTEMPLATE
+    10 {
     templateName = TEXT
     templateName.stdWrap {
         cObject = TEXT
@@ -31,13 +33,9 @@ page.10 {
     layoutRootPaths {
         10 = {$page.template.layoutRootPath}
     }
-}
-
-###
-## MenuProcessor
-###
-page.10 {
+    ## DataProcessing
     dataProcessing {
+        # Mainmenu Processing
         10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
         10 {
             includeSpacer = 1
@@ -45,12 +43,8 @@ page.10 {
             as = mainnavigation
         }
     }
-}
-
-###
-## Header Data
-###
-page.headerData {
+    # Include headerdata
+    headerData {
     20 = TEXT
     20.value (
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -71,12 +65,7 @@ page.headerData {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
     )
-}
-
-###
-## Page Meta
-###
-page {
+    }
     meta {
         viewport = {$page.meta.viewport}
         robots = {$page.meta.robots}
@@ -116,6 +105,17 @@ page {
             field = description
         }
     }
+    ###
+    ## includeCSS
+    ###
+    includeCSS {
+        style = EXT:startpilot/Resources/Public/Css/main.min.css
+    }
+    includeJSFooter {
+    main = EXT:startpilot/Resources/Public/JavaScript/main.min.js
+    responsiveimages = EXT:startpilot/Resources/Public/Misc/jquery.responsiveimages.js
+    }
+
 }
 
 [globalVar = LIT:1 = {$page.meta.ogimage}]
@@ -162,18 +162,3 @@ page {
 [globalVar = TSFE:page|no_search = 1]
     page.meta.robots = noindex,follow
 [end]
-
-###
-## includeCSS
-###
-page.includeCSS {
-    style = EXT:startpilot/Resources/Public/Css/main.min.css
-}
-
-###
-## includeJSFooter
-###
-page.includeJSFooter {
-    main = EXT:startpilot/Resources/Public/JavaScript/main.min.js
-    responsiveimages = EXT:startpilot/Resources/Public/Misc/jquery.responsiveimages.js
-}
