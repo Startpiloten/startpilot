@@ -2,60 +2,47 @@
 ## Basic Settings
 ###
 config {
-    extTarget = _blank
-    disableImgBorderAttr = 1
-
     doctype = html5
     pageTitleFirst = 1
-    disablePrefixComment = 1
-    inlineStyle2TempFile = 1
-    removeDefaultJS = external
-    meaningfulTempFilePrefix = 100
-
-    spamProtectEmailAddresses = 2
-    spamProtectEmailAddresses_atSubst = (at)
-    sendCacheHeaders = 1
 
     headerComment (
         This Website is created with the TYPO3 Startpilot
         https://github.com/Startpiloten/startpilot
     )
 
+    no_cache = 0
+    sendCacheHeaders = 1
+    enableContentLengthHeader = 0
+
+    extTarget = _blank
+    disableImgBorderAttr = 1
+
+    spamProtectEmailAddresses = 2
+    spamProtectEmailAddresses_atSubst = &#64;<span class="d-none">no-spam</span>
+
     ## Enable RealUrl
     tx_realurl_enable = 1
-    absRefPrefix = auto
-}
+    absRefPrefix = /
 
-## CSS and JS Compression ##
-config {
+    disablePrefixComment = 1
+    inlineStyle2TempFile = 1
+    removeDefaultJS = external
+    meaningfulTempFilePrefix = 100
+
+    ## CSS and JS Compression
     compressJs = 1
     compressCss = 1
     concatenateCss = 1
     concatenateJs = 1
     concatenateJsAndCss = 1
-    inlineStyle2TempFile = 1
-    moveJsFromHeaderToFooter = 0
 }
 
-[globalString = IENV:HTTP_HOST = {$develop_domain}]
-    ## CSS and JS Compression ##
+## Disable Cache when logged in BE
+[globalVar = TSFE:beUserLogin > 0]
     config {
-        compressJs = 1
-        compressCss = 1
-        concatenateCss = 1
-        concatenateJs = 1
-        concatenateJsAndCss = 1
-        inlineStyle2TempFile = 1
-        moveJsFromHeaderToFooter = 1
+        no_cache = 1
     }
-
-    page {
-        meta {
-            robots >
-            robots = noindex,nofollow,noarchive
-        }
-    }
-[END]
+[global]
 
 [globalString = IENV:HTTP_HOST = {$local_domain}]
     ## CSS and JS Compression ##
@@ -66,7 +53,6 @@ config {
         concatenateJs = 0
         concatenateJsAndCss = 0
         inlineStyle2TempFile = 0
-        moveJsFromHeaderToFooter = 1
     }
 
     page {
@@ -76,41 +62,3 @@ config {
         }
     }
 [end]
-
-###
-## Languge Settings
-###
-config {
-    sys_language_mode = content_fallback
-    sys_language_overlay = 0
-    linkVars = L
-}
-
-config {
-    sys_language_uid = 0
-    language = de
-    locale_all = de_DE.UTF-8
-    htmlTag_setParams = lang="de"
-}
-
-[globalVar = GP:L=1]
-    config {
-        sys_language_uid = 1
-        language = en
-        locale_all = en_US.UTF-8
-        htmlTag_setParams = lang="en"
-    }
-[global]
-
-###
-## Disable ContentLengthHeader
-###
-config.enableContentLengthHeader = 0
-
-###
-## Security Settings
-###
-## http configuration
-## config.additionalHeaders = x-frame-options: SAMEORIGIN | X-XSS-Protection: 1; mode=block | X-Content-Type-Options: nosniff | X-Powered-By: nothing
-## https configuration
-## config.additionalHeaders = strict-transport-security: maxage=31536000; includeSubdomains | x-frame-options: SAMEORIGIN | X-XSS-Protection: 1; mode=block | X-Content-Type-Options: nosniff | X-Powered-By: nothing

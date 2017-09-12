@@ -34,13 +34,6 @@ live_domain =
 develop_domain =
 # cat=startpilot: Environment-Domains/300/120; type=string; label= Local Domain - (mytld.local)
 local_domain =
-# customsubcategory=400=baseURLs
-# cat=startpilot: Environment-Domains/400/130; type=string; label= Live baseURL
-live_baseURL =
-# cat=startpilot: Environment-Domains/400/140; type=string; label= Develop baseURL
-develop_baseURL =
-# cat=startpilot: Environment-Domains/400/150; type=string; label= Local baseURL
-local_baseURL =
 
 # customsubcategory=300=Meta
 page.meta {
