@@ -11,6 +11,15 @@ config {
     language = de
     locale_all = de_DE.UTF-8
     htmlTag_setParams = lang="de"
+
+    # ViewHelper: Format Date
+    # http://php.net/manual/en/function.strftime.php
+    format {
+        date.short = %d.%m.%Y
+        date.medium = %d. %b %Y
+        date.long = %A, %d.%m.%Y
+        time = %H:%M
+    }
 }
 
 # English
@@ -20,6 +29,13 @@ config {
         language = en
         locale_all = en_US.UTF-8
         htmlTag_setParams = lang="en"
+
+        format {
+            date.short = %m/%d/%Y
+            date.medium = %b %d, %Y
+            date.long = %B %d, %Y
+            time = %H:%M
+        }
     }
 [global]
 
