@@ -1,8 +1,69 @@
-TCEFORM.tt_content.header_layout.altLabels {
-    1 = Headline H1
-    2 = Headline H2
-    3 = Headline H3
-    4 = Headline H4
-    5 = Headline H5
-    6 = Headline H6
+TCEFORM {
+    pages {
+        // General
+        nav_title.disabled = 1
+        subtitle.disabled = 1
+
+        // Metadata
+        abstract.disabled = 1
+        author.disabled = 1
+        author_email.disabled = 1
+        lastUpdated.disabled = 1
+
+        // Appearance
+        layout.disabled = 1
+        newUntil.disabled = 1
+        content_from_pid.disabled = 1
+
+        // Behavior
+        cache_timeout.disabled = 1
+        cache_tags.disabled = 1
+        no_cache.disabled = 1
+        no_search.disabled = 1
+
+        // Resources
+        TSconfig.disabled = 1
+
+        // Categories
+        categories.disabled = 1
+
+        // Access
+        fe_group.disabled = 1
+        fe_login_mode.disabled = 1
+    }
+
+    tt_content {
+        header_layout {
+            altLabels {
+                1 = Headline H1
+                2 = Headline H2
+                3 = Headline H3
+                4 = Headline H4
+                5 = Headline H5
+                6 = Headline H6
+            }
+            types {
+                gridelements_pi1 {
+                    altLabels {
+                        0 = Headline Large
+                        1 = Headline Medium
+                        2 = Headline Small
+                    }
+                    removeItems = 3,4,5,6
+                }
+            }
+        }
+
+        header_position {
+            types {
+                gridelements_pi1 {
+                    disabled = 1
+                }
+            }
+        }
+    }
+
+    tx_news_domain_model_news {
+
+    }
 }
