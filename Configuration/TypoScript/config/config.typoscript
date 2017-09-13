@@ -30,11 +30,10 @@ config {
     meaningfulTempFilePrefix = 100
 
     ## CSS and JS Compression
-    compressJs = 1
     compressCss = 1
     concatenateCss = 1
+    compressJs = 1
     concatenateJs = 1
-    concatenateJsAndCss = 1
 }
 
 ## Disable Cache when logged in BE
@@ -49,11 +48,10 @@ config {
 ###
 [applicationContext = Development*]
     config {
-        compressJs = 0
         compressCss = 0
         concatenateCss = 0
+        compressJs = 0
         concatenateJs = 0
-        concatenateJsAndCss = 0
         inlineStyle2TempFile = 0
     }
 [end]
