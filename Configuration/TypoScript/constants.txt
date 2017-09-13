@@ -27,14 +27,6 @@ googlewebmaster =
 # cat=startpilot: Google Tools/200/110; type=string; label= Google Analytics ID - (content="UA-xxx-x")
 googleanalytics =
 
-# customsubcategory=300=Environment
-# cat=startpilot: Environment-Domains/300/100; type=string; label= Live Domain - (mytld.de)
-live_domain =
-# cat=startpilot: Environment-Domains/300/110; type=string; label= Develop Domain - (mytld.de)
-develop_domain =
-# cat=startpilot: Environment-Domains/300/120; type=string; label= Local Domain - (mytld.local)
-local_domain =
-
 # customsubcategory=300=Meta
 page.meta {
     # cat=startpilot: Meta/400/100; type=string; label=viewport

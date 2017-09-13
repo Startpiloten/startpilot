@@ -1,4 +1,4 @@
-[globalString = IENV:HTTP_HOST = {$live_domain}]
+[applicationContext = Production/Live]
     ### Google Webmaster Header Code ###
     page.meta {
         google-site-verification = TEXT

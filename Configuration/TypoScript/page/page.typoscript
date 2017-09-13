@@ -161,10 +161,26 @@ page {
     page.meta.robots = noindex,follow
 [end]
 
-[globalString = IENV:HTTP_HOST = {$develop_domain}]
+###
+## applicationContext
+###
+[applicationContext = Development*]
+    page {
+        # Override min files
+        includeCSS {
+            style = EXT:startpilot/Resources/Public/Css/main.css
+        }
+
+        # Override min files
+        includeJSFooter {
+            main = EXT:startpilot/Resources/Public/JavaScript/main.js
+        }
+    }
+[END]
+
+[applicationContext = Production/Staging]
     page {
         meta {
-            robots >
             robots = noindex,nofollow,noarchive
         }
     }

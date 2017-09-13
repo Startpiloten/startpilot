@@ -44,8 +44,10 @@ config {
     }
 [global]
 
-[globalString = IENV:HTTP_HOST = {$local_domain}]
-    ## CSS and JS Compression ##
+###
+## applicationContext
+###
+[applicationContext = Development*]
     config {
         compressJs = 0
         compressCss = 0
@@ -53,12 +55,5 @@ config {
         concatenateJs = 0
         concatenateJsAndCss = 0
         inlineStyle2TempFile = 0
-    }
-
-    page {
-        meta {
-            robots >
-            robots = noindex,nofollow,noarchive
-        }
     }
 [end]
