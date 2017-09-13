@@ -46,7 +46,7 @@ config {
         concatenateJs = 1
         concatenateJsAndCss = 1
         inlineStyle2TempFile = 1
-        moveJsFromHeaderToFooter = 1
+        moveJsFromHeaderToFooter = 0
     }
 
     page {
@@ -66,7 +66,7 @@ config {
         concatenateJs = 0
         concatenateJsAndCss = 0
         inlineStyle2TempFile = 0
-        moveJsFromHeaderToFooter = 1
+        moveJsFromHeaderToFooter = 0
     }
 
     page {
