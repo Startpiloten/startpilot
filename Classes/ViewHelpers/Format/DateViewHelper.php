@@ -45,6 +45,11 @@ class DateViewHelper extends AbstractViewHelper
     protected $escapingInterceptorEnabled = false;
 
     /**
+     * @var \TYPO3\CMS\Extbase\Configuration\FrontendConfigurationManager
+     */
+    protected $frontendConfigurationManager;
+
+    /**
      * Render the supplied DateTime object as a formatted date.
      *
      * @param mixed $date either a DateTime object or a string that is accepted by DateTime constructor
@@ -54,9 +59,10 @@ class DateViewHelper extends AbstractViewHelper
      */
     public function render($date = null, $type = null)
     {
-
         $type = (empty($type)) ? 'short' : $type;
-        $format = $GLOBALS['TSFE']->config['config']['format.']['date.'][$type];
+        $this->frontendConfigurationManager = new \TYPO3\CMS\Extbase\Configuration\FrontendConfigurationManager;
+        $config = $this->frontendConfigurationManager->getTypoScriptSetup();
+        $format = $config['config.']['format.']['date.'][$type];
 
         if (empty($format)) {
             return;
