@@ -9,5 +9,3 @@ mod.wizards {
         }
     }
 }
-
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/PageTS/ContentElements">

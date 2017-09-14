@@ -17,33 +17,34 @@ const sourcemaps = require('gulp-sourcemaps');
  * Linter: stylelint
  * Compressor: clean-css
  */
-gulp.task('css-compile', function () {
+gulp.task('css:compile', function () {
     return gulp.src(packageJson.config.path.src + '/Scss/**/*.scss')
-        .pipe(plumber())
-        .pipe(gulpStylelint({
-            reporters: [
-                {formatter: 'string', console: true}
-            ]
-        }))
-        .pipe(sourcemaps.init())
-        .pipe(sass.sync())
-        .pipe(gulp.dest(packageJson.config.path.dest + './Css'))
-        .pipe(cleanCSS({level: 2}))
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(plumber.stop())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(sourcemaps.write({
-            sourceRoot: '../../../Build/Assets/Scss/'
-        }))
-        .pipe(gulp.dest(packageJson.config.path.dest + './Css'))
+      .pipe(plumber())
+      .pipe(gulpStylelint({
+        reporters: [
+          {formatter: 'string', console: true}
+        ]
+      }))
+      .pipe(sourcemaps.init())
+      .pipe(sass.sync())
+      .pipe(cleanCSS({level: 2}))
+      .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+      }))
+      .pipe(plumber.stop())
+      .pipe(sourcemaps.write('./',{
+        addComment: true,
+        sourceRoot: '../../../Build/Assets/Scss/'
+      }))
+      .pipe(gulp.dest(packageJson.config.path.dest + './Css'))
+      .pipe(rename({
+        suffix: '.min'
+      }))
+      .pipe(gulp.dest(packageJson.config.path.dest + './Css'))
 });
 
-gulp.task('css-lint', function lintCssTask() {
+gulp.task('css:lint', function lintCssTask() {
     return gulp.src(packageJson.config.path.src + '/Scss/**/*.scss')
         .pipe(gulpStylelint({
             reporters: [
@@ -53,7 +54,7 @@ gulp.task('css-lint', function lintCssTask() {
 });
 
 
-gulp.task('css-format', function () {
+gulp.task('css:format', function () {
     return gulp.src(packageJson.config.path.src + '/Scss/**/*.scss')
         .pipe(plumber())
         .pipe(stylefmt())
@@ -61,4 +62,4 @@ gulp.task('css-format', function () {
         .pipe(gulp.dest(packageJson.config.path.src + '/Scss/'));
 });
 
-gulp.task('css', gulp.series('css-compile'));
+gulp.task('css', gulp.series('css:compile'));

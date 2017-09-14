@@ -2,7 +2,17 @@
  * Load jQuery into global `$` for plugin usage
  * @type {jQuery}
  */
-window.$ = window.jQuery = require('jquery');
+window.$ = window.jQuery = require('jquery/dist/jquery');
+
+/**
+ * Load Popper into global for plugin usage
+ * @type {Popper}
+ */
+window.Popper = require('popper.js');
+
+/**
+ * Load Bootstrap
+ */
 require('bootstrap');
 
 /**

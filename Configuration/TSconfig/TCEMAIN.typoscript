@@ -1,0 +1,18 @@
+TCEMAIN {
+    permissions {
+        # Owner be_users UID for new pages:
+        userid = 2
+
+        # Owner be_groups UID for new pages:
+        groupid = 1
+
+        # User can do anything (default):
+        user = show,edit,delete,new,editcontent
+
+        # Group can do anything
+        group = show,edit,delete,new,editcontent
+
+        # Everybody can see nothing
+        everybody =
+    }
+}
