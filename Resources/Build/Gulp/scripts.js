@@ -22,13 +22,13 @@ gulp.task('javascript:lint', function () {
 
 gulp.task('javascript:modernizr', function() {
     'use strict';
-    if(!packageJson.config.modernizr.deactivated) {
-      log('blue', 'modernizr activated');
-      return gulp.src([packageJson.config.path.dest + '/JavaScript/main.js', packageJson.config.path.dest  + '/Css/main.css', '!./**/modernizr*.js'])
+    if(packageJson.config.modernizr.active) {
+      log('magenta', 'modernizr activated.');
+      return gulp.src([packageJson.config.path.src  + '**/*.js', packageJson.config.path.dest  + '**/*.css', '!./**/modernizr*.js'])
       .pipe( modernizr('modernizr-custom.js', {
-        cssPrefix: packageJson.config.modernizr.cssPrefix,
-        addFeatures: packageJson.config.modernizr.addFeatures,
-        quiet: packageJson.config.modernizr.quiet
+        cssPrefix: packageJson.config.modernizr.settings.cssPrefix,
+        addFeatures: packageJson.config.modernizr.settings.addFeatures,
+        quiet: packageJson.config.modernizr.settings.quiet
       }))
       .pipe(gulp.dest(packageJson.config.path.dest + '/JavaScript'))
       .pipe(uglify())
@@ -38,10 +38,8 @@ gulp.task('javascript:modernizr', function() {
       .pipe(gulp.dest(packageJson.config.path.dest + '/JavaScript'));
     }
     else {
-      log('blue', 'modernizr activated');
       return del(packageJson.config.path.dest + '/Javascript/modernizr.*', {force: true});
     }
-    
 });
 
 gulp.task('javascript:compile', function () {
@@ -55,10 +53,7 @@ gulp.task('javascript:compile', function () {
             .pipe(source('main.js'))
             .pipe(buffer())
             .pipe(gulp.dest(packageJson.config.path.dest + '/JavaScript'))
-            // .pipe(sourcemaps.init({loadMaps: true})) // Debug
-            // Add transformation tasks to the pipeline here.
             .pipe(uglify())
-            // .pipe(sourcemaps.write()) // Debug
             .pipe(rename({
                 suffix: '.min'
             }))
@@ -71,5 +66,5 @@ gulp.task('javascript:compile', function () {
 /**
  * Uglify javascript and copy to destination
  */
-gulp.task('javascript', gulp.series('javascript:lint', 'javascript:compile'));
+gulp.task('javascript', gulp.series('javascript:lint', 'javascript:modernizr', 'javascript:compile'));
 

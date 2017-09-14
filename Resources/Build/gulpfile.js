@@ -7,7 +7,6 @@ const path = require('path');
 const log = require('gutil-color-log');
 const packageJson = require('./package.json');
 
-
 require('./Gulp/styles');
 require('./Gulp/images');
 require('./Gulp/scripts');
@@ -84,6 +83,6 @@ gulp.task('watch', function () {
 });
 
 
-gulp.task('build', gulp.series('clean', 'css', 'fonts', 'misc', 'ckeditor', 'image', 'javascript', 'javascript:modernizr'));
-gulp.task('ci', gulp.parallel('css-lint', 'build'));
+gulp.task('build', gulp.series('clean', 'css', 'fonts', 'misc', 'ckeditor', 'image', 'javascript'));
+gulp.task('ci', gulp.series('css:lint', 'javascript:lint'));
 gulp.task('default', gulp.series('build', gulp.parallel('watch')));

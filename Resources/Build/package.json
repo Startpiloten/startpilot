@@ -5,7 +5,8 @@
   "main": "Gulpfile.js",
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.0"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1",
@@ -22,6 +23,7 @@
     "gulp-eslint": "^3.0.1",
     "gulp-file-include": "^1.1.0",
     "gulp-imagemin": "^3.3.0",
+    "gulp-modernizr-build": "0.0.5",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-requirejs": "^1.0.0-rc2",
@@ -34,8 +36,7 @@
     "gutil-color-log": "^1.0.2",
     "path": "^0.12.7",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "gulp-modernizr-build": "0.0.5"
+    "vinyl-source-stream": "^1.1.0"
   },
   "config": {
     "path": {
@@ -44,14 +45,20 @@
       "dest": "../../Resources/Public/"
     },
     "modernizr": {
-      "deactivated": false,
-      "cssPrefix": "test-",
-      "addFeatures": ["es6/promises"],
-      "quiet": false
+      "active": false,
+      "settings": {
+        "quiet": true,
+        "cssPrefix": "",
+        "addFeatures": [
+          "css/opacity",
+          "es6/promises"
+        ]
+      }
     }
   },
   "scripts": {
-    "build": "./node_modules/gulp/bin/gulp.js build",
-    "start": "./node_modules/gulp/bin/gulp.js default"
+    "ci": "./node_modules/gulp/bin/gulp.js ci",
+    "start": "./node_modules/gulp/bin/gulp.js default",
+    "build": "./node_modules/gulp/bin/gulp.js build"
   }
 }
