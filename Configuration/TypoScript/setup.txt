@@ -1,70 +1,9 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
 
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/lib/">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/ContentElements/">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/config">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/lib">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/page">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/settings">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/tt_content">
 
-
-## PAGE
-page = PAGE
-page.10 = FLUIDTEMPLATE
-page.10 {
-    templateName = TEXT
-    templateName.stdWrap {
-        cObject = TEXT
-        cObject {
-            data = levelfield:-2,backend_layout_next_level,slide
-            override.field = backend_layout
-            split {
-                token = pagets__
-                1.current = 1
-                1.wrap = |
-            }
-        }
-
-        ifEmpty = Default
-    }
-
-    templateRootPaths {
-        10 = {$page.template.templateRootPath}
-    }
-
-    partialRootPaths {
-        10 = {$page.template.partialRootPath}
-    }
-
-    layoutRootPaths {
-        10 = {$page.template.layoutRootPath}
-    }
-}
-
-page.10 {
-    dataProcessing {
-        10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-        10 {
-            includeSpacer = 1
-            expandAll = 1
-            as = mainnavigation
-        }
-    }
-}
-
-config {
-    no_cache = 0
-}
-
-## Disable Cache when logged in BE ##
-[globalVar = TSFE : beUserLogin > 0]
-    config {
-        no_cache = 1
-    }
-[global]
-
-[globalString = IENV:HTTP_HOST = {$local_domain}]
-    config.baseURL = {$local_baseURL}
-[END]
-[globalString = IENV:HTTP_HOST = {$develop_domain}]
-    config.baseURL = {$develop_baseURL}
-[END]
-[globalString = IENV:HTTP_HOST = {$live_domain}]
-    config.baseURL = {$live_baseURL}
-[END]
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/ContentElements">

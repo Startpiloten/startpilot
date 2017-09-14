@@ -17,4 +17,4 @@ mod.wizards {
     }
 }
 
-mod.web_layout.tt_content.preview.startpilot_textimage = EXT:startpilot/Resources/Private/BackendPreviews/BE_Textimage.html
+mod.web_layout.tt_content.preview.startpilot_textimage = EXT:startpilot/Resources/Private/ContentElements/BackendPreviews/BE_Textimage.html

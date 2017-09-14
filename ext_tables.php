@@ -7,7 +7,7 @@ if (!defined('TYPO3_MODE')) {
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     $_EXTKEY,
     'Configuration/TypoScript',
-    'TYPO3 Provider Extension'
+    'Startpilot'
 );
 
 $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(

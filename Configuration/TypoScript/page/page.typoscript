@@ -1,0 +1,187 @@
+###
+## Page Template and Pathes
+###
+page = PAGE
+page {
+    # Pagetemplate
+    10 = FLUIDTEMPLATE
+    10 {
+        templateName = TEXT
+        templateName.stdWrap {
+            cObject = TEXT
+            cObject {
+                data = levelfield:-2,backend_layout_next_level,slide
+                override.field = backend_layout
+                split {
+                    token = pagets__
+                    1.current = 1
+                    1.wrap = |
+                }
+            }
+            ifEmpty = Default
+        }
+
+        templateRootPaths {
+            10 = {$page.template.templateRootPath}
+        }
+
+        partialRootPaths {
+            10 = {$page.template.partialRootPath}
+        }
+
+        layoutRootPaths {
+            10 = {$page.template.layoutRootPath}
+        }
+
+        ## DataProcessing
+        dataProcessing {
+            # Mainmenu Processing
+            10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            10 {
+                includeSpacer = 1
+                expandAll = 1
+                as = mainnavigation
+            }
+        }
+    }
+
+    # Include favicons here
+    # Visit https://realfavicongenerator.net to generate your favicons
+    headerData {
+        20 = TEXT
+        20.value (
+            <!-- favicon code -->
+        )
+    }
+
+    ###
+    ## Meta
+    ###
+    meta {
+        viewport = {$page.meta.viewport}
+        robots = {$page.meta.robots}
+        google = {$page.meta.google}
+        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+
+        description {
+            override.field = description
+        }
+
+        author {
+            override.field = author
+        }
+
+        keywords {
+            override.field = keywords
+        }
+
+        X-UA-Compatible = {$page.meta.compatible}
+        X-UA-Compatible {
+            attribute = http-equiv
+        }
+
+        # OpenGraph Tags
+        og:title {
+            attribute = property
+            field = title
+        }
+
+        og:site_name {
+            attribute = property
+            data = TSFE:tmpl|setup|sitetitle
+        }
+
+        og:description = {$page.meta.description}
+        og:description {
+            attribute = property
+            field = description
+        }
+    }
+
+
+    ###
+    ## includeCSS
+    ###
+    includeCSS {
+        style = EXT:startpilot/Resources/Public/Css/main.min.css
+    }
+
+    ###
+    ## includeJS
+    ###
+    includeJSFooter {
+        main = EXT:startpilot/Resources/Public/JavaScript/main.min.js
+        responsiveimages = EXT:startpilot/Resources/Public/Misc/jquery.responsiveimages.js
+    }
+}
+
+
+[globalVar = LIT:1 = {$page.meta.ogimage}]
+    page {
+        meta {
+            og:image {
+                attribute = property
+                stdWrap.cObject = FILES
+                stdWrap.cObject {
+                    references {
+                        data = levelfield:-1, media, slide
+                    }
+
+                    maxItems = 1
+                    renderObj = COA
+                    renderObj {
+                        10 = IMG_RESOURCE
+                        10 {
+                            file {
+                                import.data = file:current:uid
+                                treatIdAsReference = 1
+                                width = 1280c
+                                height = 720c
+                            }
+
+                            stdWrap {
+                                typolink {
+                                    parameter.data = TSFE:lastImgResourceInfo|3
+                                    returnLast = url
+                                    forceAbsoluteUrl = 1
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+[end]
+
+###
+## Disable indexing
+###
+[globalVar = TSFE:page|no_search = 1]
+    page.meta.robots = noindex,follow
+[end]
+
+###
+## applicationContext
+###
+[applicationContext = Development*]
+    page {
+        # Override min files
+        includeCSS {
+            style = EXT:startpilot/Resources/Public/Css/main.css
+        }
+
+        # Override min files
+        includeJSFooter {
+            main = EXT:startpilot/Resources/Public/JavaScript/main.js
+        }
+    }
+[END]
+
+[applicationContext = Production/Staging]
+    page {
+        meta {
+            robots = noindex,nofollow,noarchive
+        }
+    }
+[END]
