@@ -5,11 +5,11 @@
 page {
     template {
         # cat=startpilot: Settings/100/150; type=string; label=Layout Root Path: Path to layouts
-        layoutRootPath = EXT:startpilot/Resources/Private/Layouts/
+        layoutRootPath = EXT:startpilot/Resources/Private/Page/Layouts/
         # cat=startpilot: Settings/100/160; type=string; label=Partial Root Path: Path to partials
-        partialRootPath = EXT:startpilot/Resources/Private/Partials/
+        partialRootPath = EXT:startpilot/Resources/Private/Page/Partials/
         # cat=startpilot: Settings/100/170; type=string; label=Template Root Path: Path to templates
-        templateRootPath = EXT:startpilot/Resources/Private/Templates/
+        templateRootPath = EXT:startpilot/Resources/Private/Page/Templates/
     }
 }
 
