@@ -19,6 +19,7 @@ const sourcemaps = require('gulp-sourcemaps');
  */
 gulp.task('css:compile', function () {
     return gulp.src(packageJson.config.path.src + '/Scss/**/*.scss')
+      .pipe(plumber())
       .pipe(gulpStylelint({
         reporters: [
           {formatter: 'string', console: true}
@@ -31,6 +32,7 @@ gulp.task('css:compile', function () {
         browsers: ['last 2 versions'],
         cascade: false
       }))
+      .pipe(plumber.stop())
       .pipe(sourcemaps.write('./',{
         addComment: true,
         sourceRoot: '../../../Build/Assets/Scss/'
