@@ -14,6 +14,7 @@ $startpilot_textimage_fields = [
         'label' => 'LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:startpilot_textimage_dropdown.title',
         'config' => [
             'type' => 'select',
+            'renderType' => 'selectSingle',
             'items' => [
                 [
                     'LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:startpilot_textimage_dropdown.option1',
