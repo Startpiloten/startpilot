@@ -5,15 +5,12 @@ lib.default {
     templateName = Default
     templateRootPaths {
         10 = EXT:startpilot/Resources/Private/ContentElements/Templates/
-        20 = EXT:startpilot/Resources/Private/Page/Templates/
     }
     partialRootPaths {
         10 = EXT:startpilot/Resources/Private/ContentElements/Partials/
-        20 = EXT:startpilot/Resources/Private/Page/Partials/
     }
     layoutRootPaths {
         10 = EXT:startpilot/Resources/Private/ContentElements/Layouts/
-        20 = EXT:startpilot/Resources/Private/Page/Layouts/
     }
     settings {
         imagerendering = {$imagerendering}
