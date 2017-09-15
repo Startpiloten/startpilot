@@ -1,12 +1,12 @@
 <?php
-namespace Vendor\Startpilot\ViewHelpers\Format;
+namespace Vendor\Yourext\ViewHelpers\Format;
 
 /**
  * Formats a \DateTime object.
  *
  * = Examples =
  *
- * {namespace s=Vendor\Startpilot\ViewHelpers}
+ * {namespace s=Vendor\Yourext\ViewHelpers}
  *
  * Default Date
  * {dateObject -> s:format.date()}
@@ -34,7 +34,7 @@ use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 /**
  * Class DateViewHelper
  *
- * @package Vendor\Startpilot\ViewHelpers\Format
+ * @package Vendor\Yourext\ViewHelpers\Format
  */
 class DateViewHelper extends AbstractViewHelper
 {
