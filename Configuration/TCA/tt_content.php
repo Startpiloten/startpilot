@@ -1,6 +1,8 @@
 <?php
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
+ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [
@@ -13,7 +15,7 @@
 
 $global_fields = array();
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $global_fields);
+ExtensionManagementUtility::addTCAcolumns('tt_content', $global_fields);
 
 $showitem_default_01 = '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
@@ -27,9 +29,9 @@ $showitem_default_02 = '--div--;LLL:EXT:frontend/Resources/Private/Language/loca
                             --palette--;;hidden,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
                         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
-                                categories,
+                            categories,
                         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
-                                rowDescription,
+                            rowDescription,
                         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
                         ';
 
