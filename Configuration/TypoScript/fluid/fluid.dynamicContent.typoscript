@@ -4,13 +4,13 @@
 #
 #  EXAMPLE
 #  ---------------
-#  <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0', wrap: '<div class=\"hero\">|</div>'}" />
+#  <f:cObject typoscriptObjectPath="fluid.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0', wrap: '<div class=\"hero\">|</div>'}" />
 #
 #  This lib is from the Bootstrap Package by Benjamin Kott >> https://github.com/benjaminkott/bootstrap_package
 #
 #################
-lib.dynamicContent = COA
-lib.dynamicContent {
+fluid.dynamicContent = COA
+fluid.dynamicContent {
     5 = LOAD_REGISTER
     5 {
         colPos.cObject = TEXT
@@ -62,5 +62,5 @@ lib.dynamicContent {
     90 = RESTORE_REGISTER
 }
 
-lib.dynamicContentSlide =< lib.dynamicContent
-lib.dynamicContentSlide.20.slide = -1
+fluid.dynamicContentSlide =< fluid.dynamicContent
+fluid.dynamicContentSlide.20.slide = -1
