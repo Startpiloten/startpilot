@@ -1,5 +1,9 @@
 #! /bin/bash
 
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
 while [[ $# -gt 1 ]]
 do
 key="$1"
@@ -17,6 +21,10 @@ case $key in
     PACKAGE="$2"
     shift # past argument
     ;;
+    -b|--branch)
+    BRANCH="$2"
+    shift # past argument
+    ;;
     *)
           # unknown option
     ;;
@@ -29,36 +37,61 @@ DIR=${path}/$EXTNAME
 
 vendor=`echo ${VENDOR:0:1} | tr  '[a-z]' '[A-Z]'`${VENDOR:1}
 package=`echo ${PACKAGE:0:1} | tr  '[a-z]' '[A-Z]'`${PACKAGE:1}
-
-echo "Directory: $DIR"
-echo "Vendor: $vendor"
-echo "Package: $PACKAGE_upper"
+branch=$BRANCH
 
 if [ -d "$DIR" ]
 then
+    printf ${RED}
 	echo "Directory/extension '$DIR' exists already!"
+	printf ${NC}
 else
-    if [ -z ${vendor} ];
+    if [ -z ${VENDOR} ];
     then
+        printf ${RED}
         echo "Please enter Vendor Name (first character uppercase): "
-        read VENDOR
+        printf ${NC}
+        while [[ $VENDOR = "" ]]; do
+            read VENDOR
+        done
         vendor=`echo ${VENDOR:0:1} | tr  '[a-z]' '[A-Z]'`${VENDOR:1}
     fi
-    echo "Your Vendor will be: $vendor"
-    echo
-    if [ -z ${package} ];
+
+    if [ -z ${PACKAGE} ];
     then
+        printf ${RED}
         echo "Please enter Package Name (first character uppercase): "
-        read PACKAGE
+        printf ${NC}
+        while [[ $PACKAGE = "" ]]; do
+            read PACKAGE
+        done
         package=`echo ${PACKAGE:0:1} | tr  '[a-z]' '[A-Z]'`${PACKAGE:1}
     fi
-    echo "Your Package will be: $package"
+
+    if [ -z ${BRANCH} ];
+    then
+        printf ${RED}
+        echo "Please enter Branch to start from: "
+        printf ${NC}
+        while [[ $BRANCH = "" ]]; do
+            read BRANCH
+        done
+        branch=$BRANCH
+    fi
+
+    printf ${GREEN}
     echo
+    echo "Your Extension will be placed in:     $DIR"
+    echo "Your Vendor will be:                  $vendor"
+    echo "Your Package Name will be:            $package"
+    echo "You start from Branch:                $branch"
+    echo
+    printf ${NC}
+
     echo ${DIR}
 	git clone https://github.com/Startpiloten/startpilot.git $DIR --depth=1
 	echo "change origin"
     cd $DIR
-	git pull origin feature/develop
+	git pull origin feature/$branch
 	echo "$DIR created."
 	rm -rf .git && grep -rl "startpilot" ./* -R | xargs sed -i '' "s/startpilot/${PWD##*/}/g" && grep -rl "Startpilot" ./* -R | xargs sed -i '' "s/Startpilot/${PWD##*/}/"
 	grep -rl "Vendor" ./* -R | xargs sed -i '' "s/Vendor/${vendor##*/}/g"
