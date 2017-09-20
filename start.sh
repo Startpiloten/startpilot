@@ -28,16 +28,17 @@ esac
 shift # past argument or value
 done
 
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-NC='\033[0m' # No Color
-
 path=($(find . -name "typo3conf")/ext)
 DIR=${path}/$EXTNAME
 
 vendor=`echo ${VENDOR:0:1} | tr  '[a-z]' '[A-Z]'`${VENDOR:1}
 package=`echo ${PACKAGE:0:1} | tr  '[a-z]' '[A-Z]'`${PACKAGE:1}
 branch=$BRANCH
+
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
 
 if [ -d "$DIR" ]
 then
