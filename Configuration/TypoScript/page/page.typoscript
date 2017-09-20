@@ -3,6 +3,8 @@
 ###
 page = PAGE
 page {
+    bodyTag = <body class="l-body" itemscope="" itemtype="http://schema.org/WebPage">
+
     # Pagetemplate
     10 = FLUIDTEMPLATE
     10 {
@@ -35,12 +37,23 @@ page {
 
         ## DataProcessing
         dataProcessing {
-            # Mainmenu Processing
+            # Main Menu Processing
             10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
             10 {
-                includeSpacer = 1
+                levels = 1
                 expandAll = 1
-                as = mainnavigation
+                includeSpacer = 0
+                as = menuMain
+            }
+
+            # Footer Menu Processing
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                special = directory
+                special.value = 4
+                levels = 1
+                includeSpacer = 0
+                as = menuFooter
             }
         }
     }

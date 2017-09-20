@@ -1,1 +1,16 @@
-<f:render section="Main"/>
+<header class="l-header" role="banner">
+    <div class="container">
+        <f:render partial="Menu/Main" arguments="{menuMain:menuMain}" />
+    </div>
+</header>
+
+<main class="container l-main" role="main" itemprop="mainContentOfPage" itemscope="" itemtype="http://schema.org/WebPageElement">
+    <h1>Startpilot</h1>
+    <f:render section="Main"/>
+</main>
+
+<footer class="l-footer" role="contentinfo">
+    <div class="container">
+        <f:render partial="Menu/Footer" arguments="{menuFooter:menuFooter}" />
+    </div>
+</footer>

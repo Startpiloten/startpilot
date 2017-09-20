@@ -5,5 +5,6 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/page">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/settings">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/tt_content">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/fluid">
 
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/ContentElements">

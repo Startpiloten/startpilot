@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:f="http://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+
+    <f:if condition="{menuMain}">
+        <nav class="navbar navbar-expand-lg navbar-inverse bg-inverse bd-navbar" role="navigation">
+            <f:link.typolink parameter="/" class="navbar-brand">
+                <f:render partial="Logo" />
+            </f:link.typolink>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <f:for each="{menuMain}" as="item">
+                        <li class="nav-item">
+                            <f:link.typolink parameter="{item.link}"
+                                             target="{item.target}"
+                                             class="nav-link{f:if(condition: item.active, then: ' active')}">
+                                {item.title}
+                            </f:link.typolink>
+                        </li>
+                    </f:for>
+                </ul>
+            </div>
+        </nav>
+    </f:if>
+
+</html>
