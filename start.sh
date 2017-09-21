@@ -98,6 +98,10 @@ else
 	grep -rl "Vendor" ./* -R | xargs sed -i '' "s/Vendor/${vendor##*/}/g"
 	grep -rl "Yourext" ./* -R | xargs sed -i '' "s/Yourext/${package##*/}/g"
 	pwd
-	cd Resources/Build/ && npm install && gulp
+	cd Resources/Build/ && npm install && gulp build
+	printf ${GREEN}
+	echo
 	echo "Your extension is now in $DIR."
+	echo
+	printf ${NC}
 fi
