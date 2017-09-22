@@ -6,15 +6,14 @@
 You can use the `start.sh` script to clone `startpilot` as extension with any name. Simply use the following shell command in the root of your project where your composer.json file is located. Replace "myext" at the end of the line with the name of the extension you want to create. 
 
 ```
-Master
-curl https://raw.githubusercontent.com/Startpiloten/startpilot/master/start.sh > start.sh && sh start.sh --extname myprovider --vendor myvendor --package mypackage
+Develop
+curl https://raw.githubusercontent.com/Startpiloten/startpilot/develop/start.sh > start.sh && sh start.sh --extname startpilot --branch develop --vendor Startpiloten --package Startpilot
+
 ```
 This script is tested on MAC OSX.
 
 System environment:
-* npm 
-* gulp
-* bower
+* npm@8
 
 #### Thanks
 * To Benjamin Kott and his Bootstrap Package 
