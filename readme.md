@@ -7,7 +7,7 @@ You can use the `start.sh` script to clone `startpilot` as extension with any na
 
 ```
 Develop
-curl https://raw.githubusercontent.com/Startpiloten/startpilot/develop/start.sh | sh start.sh -e startpilot -b develop -v Startpiloten -p Startpilot
+curl https://raw.githubusercontent.com/Startpiloten/startpilot/develop/start.sh > start.sh && sh start.sh --extname startpilot --branch develop --vendor Startpiloten --package Startpilot
 
 ```
 This script is tested on MAC OSX.
