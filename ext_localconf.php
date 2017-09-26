@@ -21,6 +21,8 @@ if (TYPO3_MODE === 'BE') {
         '<INCLUDE_TYPOSCRIPT: source="DIR:EXT:' . $_EXTKEY . '/Configuration/TSconfig">'
     );
 
+    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['default'] = 'EXT:startpilot/Configuration/RTE/Bootstrap.yaml';
+
     /***************
      * Extension Manager Settings
      */
@@ -120,10 +122,6 @@ if (TYPO3_MODE === 'BE') {
     if ($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY]['disable_menu_subpages']) {
         ExtensionManagementUtility::addPageTSConfig('TCEFORM.tt_content.CType.removeItems := addToList(menu_subpages)');
     }
-    if ($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY]['enable_bootstrap_ckeditor'] && ExtensionManagementUtility::isLoaded("rte_ckeditor")) {
-        $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['default'] = 'EXT:startpilot/Configuration/RTE/Bootstrap.yaml';
-    }
-
     if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY])) {
         $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] = serialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY]);
     }
