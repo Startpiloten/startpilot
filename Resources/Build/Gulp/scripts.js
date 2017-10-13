@@ -4,12 +4,18 @@ const babelify = require('babelify');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const uglify = require('gulp-uglify');
+const gutil = require('gulp-util');
 const packageJson = require('../package.json');
 const rename = require('gulp-rename');
 const eslint = require('gulp-eslint');
 const log = require('gutil-color-log');
 const modernizr = require('gulp-modernizr-build');
 const del = require('del');
+
+function swallowError (error) {
+  gutil.log(error.SyntaxError);
+  this.emit('end')
+}
 
 gulp.task('javascript:lint', function () {
     'use strict';
@@ -50,6 +56,7 @@ gulp.task('javascript:compile', function () {
     const bundle = function () {
         return bundler
             .bundle()
+            .on('error', swallowError)
             .pipe(source('main.js'))
             .pipe(buffer())
             .pipe(gulp.dest(packageJson.config.path.dest + '/JavaScript'))
