@@ -170,9 +170,9 @@ page {
 ###
 ## Disable indexing
 ###
-[globalVar = TSFE:page|no_search = 1]
-    page.meta.robots = noindex,follow
-[end]
+# [globalVar = TSFE:page|no_search = 1]
+#    page.meta.robots = noindex,follow
+# [end]
 
 ###
 ## applicationContext
