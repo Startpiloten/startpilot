@@ -21,27 +21,4 @@ mod.web_layout.BackendLayouts {
             }
         }
     }
-
-    HTML-Dummy {
-        title = HTML-Dummy
-        name = HTML-Dummy
-        icon = EXT:startpilot/ext_icon.png
-        config {
-            backend_layout {
-                colCount = 1
-                rowCount = 2
-                rows {
-                    1 {
-                        columns {
-                            1 {
-                                name = Dummy Area
-                                colPos = 0
-                                colspan = 1
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
