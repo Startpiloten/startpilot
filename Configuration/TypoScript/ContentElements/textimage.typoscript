@@ -1,4 +1,4 @@
-tt_content.startpilot_textimage =< lib.default
+tt_content.startpilot_textimage =< lib.ce_startpilot
 tt_content.startpilot_textimage {
     templateName = FE_Textimage
     dataProcessing {
