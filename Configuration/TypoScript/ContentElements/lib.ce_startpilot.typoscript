@@ -1,7 +1,7 @@
 # Default configuration for content elements which are using FLUIDTEMPLATE directly
-lib.default >
-lib.default = FLUIDTEMPLATE
-lib.default {
+lib.ce_startpilot >
+lib.ce_startpilot = FLUIDTEMPLATE
+lib.ce_startpilot {
     templateName = Default
     templateRootPaths {
         10 = EXT:startpilot/Resources/Private/ContentElements/Templates/
