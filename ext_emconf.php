@@ -10,6 +10,7 @@ $EM_CONF[$_EXTKEY] = array(
     'author' => 'Boris Schauer, Analog, Medienagenten',
     'author_email' => 'me@bschauer.de, info@analog.de, info@medienagenten.de',
     'author_company' => '',
+    'generator' => 'startpilot',
     'constraints' => array(
         'depends' => array(
             'typo3' => '8.7.*',
