@@ -3,38 +3,41 @@
  * Startpilot Content Element | startpilot_textimage
  */
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 /***************
  * Register fields
  */
-$startpilot_textimage_fields = array(
-    'imageposition' => array(
+$startpilot_textimage_fields = [
+    'imageposition' => [
         'exclude' => 0,
         'label' => 'LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:startpilot_textimage_dropdown.title',
-        'config' => array(
+        'config' => [
             'type' => 'select',
-            'items' => array(
-                array(
+            'renderType' => 'selectSingle',
+            'items' => [
+                [
                     'LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:startpilot_textimage_dropdown.option1',
                     'top'
-                ),
-                array(
+                ],
+                [
                     'LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:startpilot_textimage_dropdown.option2',
                     'bottom'
-                ),
-                array(
+                ],
+                [
                     'LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:startpilot_textimage_dropdown.option3',
                     'right'
-                ),
-                array(
+                ],
+                [
                     'LLL:EXT:startpilot/Resources/Private/Language/locallang.xlf:startpilot_textimage_dropdown.option4',
                     'left'
-                ),
-            )
-        ),
-    ),
-);
+                ],
+            ]
+        ],
+    ],
+];
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $startpilot_textimage_fields);
+ExtensionManagementUtility::addTCAcolumns('tt_content', $startpilot_textimage_fields);
 
 /***************
  * Add Content Element: startpilot_textimage
@@ -46,7 +49,7 @@ if (!is_array($GLOBALS['TCA']['tt_content']['types']['startpilot_textimage'])) {
 /***************
  * Add content element to seletor list
  */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [
@@ -83,15 +86,15 @@ $GLOBALS['TCA']['tt_content']['types']['startpilot_textimage'] = array_replace_r
                     'richtextConfiguration' => 'default'
                 ]
             ],
-            'image' => array(
-                'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+            'image' => [
+                'config' => ExtensionManagementUtility::getFileFieldTCAConfig(
                     'image',
-                    array(
+                    [
                         'collapseAll' => 1,
                         'maxitems' => 1,
-                    )
+                    ]
                 ),
-            ),
+            ],
         ]
     ]
 );

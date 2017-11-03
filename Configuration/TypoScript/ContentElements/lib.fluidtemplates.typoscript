@@ -1,0 +1,19 @@
+# Default configuration for content elements which are using FLUIDTEMPLATE directly
+lib.ce_startpilot >
+lib.ce_startpilot = FLUIDTEMPLATE
+lib.ce_startpilot {
+    templateName = Default
+    templateRootPaths {
+        10 = EXT:startpilot/Resources/Private/ContentElements/Templates/
+    }
+    partialRootPaths {
+        10 = EXT:startpilot/Resources/Private/ContentElements/Partials/
+    }
+    layoutRootPaths {
+        10 = EXT:startpilot/Resources/Private/ContentElements/Layouts/
+    }
+    settings {
+        imagerendering = {$imagerendering}
+        maxImgWidth = {$maxImgWidth}
+    }
+}

@@ -1,0 +1,21 @@
+// Footer
+.l-footer {
+    @extend .l-header;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    // Set the fixed height of the footer here
+    height: 60px;
+
+    // Vertically center the text there
+    line-height: 44px;
+
+    &--svg {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        vertical-align: text-top;
+    }
+}

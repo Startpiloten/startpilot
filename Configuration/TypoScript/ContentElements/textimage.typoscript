@@ -1,0 +1,11 @@
+tt_content.startpilot_textimage =< lib.ce_startpilot
+tt_content.startpilot_textimage {
+    templateName = FE_Textimage
+    dataProcessing {
+        20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        20 {
+            references.fieldName = image
+            as = images
+        }
+    }
+}

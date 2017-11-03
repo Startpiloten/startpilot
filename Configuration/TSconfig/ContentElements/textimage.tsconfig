@@ -1,0 +1,20 @@
+mod.wizards {
+    newContentElement {
+        wizardItems {
+            common {
+                elements {
+                    startpilot_textimage {
+                        iconIdentifier = default-icon
+                        title = Text with Image
+                        description = Image positions: Top, Bottom, Left, Right
+                        tt_content_defValues {
+                            CType = startpilot_textimage
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+mod.web_layout.tt_content.preview.startpilot_textimage = EXT:startpilot/Resources/Private/ContentElements/BackendPreviews/BE_Textimage.html

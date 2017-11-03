@@ -1,18 +1,20 @@
 <?php
 
 $EM_CONF[$_EXTKEY] = array(
-    'title' => 'Typo3 Provider Extension',
+    'title' => 'TYPO3 Provider Extension',
     'description' => '',
     'category' => 'templates',
     'version' => '1.0.0',
     'state' => 'stable',
     'clearcacheonload' => 1,
-    'author' => 'Boris Schauer',
-    'author_email' => 'me@bschauer.de',
+    'author' => 'Boris Schauer, Analog, Medienagenten',
+    'author_email' => 'me@bschauer.de, info@analog.de, info@medienagenten.de',
     'author_company' => '',
+    'generator' => 'startpilot',
     'constraints' => array(
         'depends' => array(
-            'typo3' => '7.6.9-8.99.99'
+            'typo3' => '8.7.*',
+            'rte_ckeditor' => '8.7.*'
         ),
         'conflicts' => array(
             'fluidpages' => '*',
