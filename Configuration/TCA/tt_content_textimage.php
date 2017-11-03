@@ -86,15 +86,15 @@ $GLOBALS['TCA']['tt_content']['types']['startpilot_textimage'] = array_replace_r
                     'richtextConfiguration' => 'default'
                 ]
             ],
-            'image' => array(
+            'image' => [
                 'config' => ExtensionManagementUtility::getFileFieldTCAConfig(
                     'image',
-                    array(
+                    [
                         'collapseAll' => 1,
                         'maxitems' => 1,
-                    )
+                    ]
                 ),
-            ),
+            ],
         ]
     ]
 );
