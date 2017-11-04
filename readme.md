@@ -1,4 +1,4 @@
-# Startpilot - Typo3 provider extension with some basics
+# Startpilot - TYPO3 provider extension with some basics
 
 
 ## How to use:
