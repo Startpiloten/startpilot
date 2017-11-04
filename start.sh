@@ -92,7 +92,7 @@ else
 	git clone https://github.com/Startpiloten/startpilot.git $DIR --depth=1
 	echo "change origin"
     cd $DIR
-	git pull origin feature/$branch
+	git pull origin $branch
 	echo "$DIR created."
 	rm -rf .git && grep -rl "startpilot" ./* -R | xargs sed -i '' "s/startpilot/${PWD##*/}/g" && grep -rl "Startpilot" ./* -R | xargs sed -i '' "s/Startpilot/${PWD##*/}/"
 	grep -rl "Vendor" ./* -R | xargs sed -i '' "s/Vendor/${vendor##*/}/g"
