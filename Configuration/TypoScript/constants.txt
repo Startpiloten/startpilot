@@ -30,7 +30,7 @@ googleanalytics =
 # customsubcategory=300=Meta
 page.meta {
     # cat=startpilot: Meta/400/100; type=string; label=viewport
-    viewport = user-scalable=yes, width=device-width, initial-scale=1
+    viewport = width=device-width, initial-scale=1, shrink-to-fit=no
     # cat=startpilot: Meta/400/110; type=string; label=robots
     robots = index,follow
     # cat=startpilot: Meta/400/120; type=string; label=apple-mobile-web-app-capable
