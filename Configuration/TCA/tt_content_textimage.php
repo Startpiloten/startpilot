@@ -2,7 +2,6 @@
 /**
  * Startpilot Content Element | startpilot_textimage
  */
-
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 /***************

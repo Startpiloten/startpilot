@@ -13,7 +13,7 @@ ExtensionManagementUtility::addTcaSelectItem(
     'before'
 );
 
-$global_fields = array();
+$global_fields = [];
 
 ExtensionManagementUtility::addTCAcolumns('tt_content', $global_fields);
 
