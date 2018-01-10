@@ -14,7 +14,7 @@ namespace Vendor\Yourext\ViewHelpers\Format;
  * With Type Config
  * {dateObject -> s:format.date(type:'medium')}
  *
- * <s:format.date type="long">{dateObject}</ma:format.date>
+ * <s:format.date type="long">{dateObject}</s:format.date>
  *
  *
  * = Required TypoScript-Configuration =
@@ -28,13 +28,11 @@ namespace Vendor\Yourext\ViewHelpers\Format;
  *    }
  * }
  */
-
 use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
  * Class DateViewHelper
  *
- * @package Vendor\Yourext\ViewHelpers\Format
  */
 class DateViewHelper extends AbstractViewHelper
 {
@@ -78,11 +76,12 @@ class DateViewHelper extends AbstractViewHelper
 
         if (!$date instanceof \DateTime) {
             try {
-                $date = is_integer($date) ? new \DateTime('@' . $date) : new \DateTime($date);
+                $date = is_int($date) ? new \DateTime('@' . $date) : new \DateTime($date);
                 $date->setTimezone(new \DateTimeZone(date_default_timezone_get()));
             } catch (\Exception $exception) {
                 throw new \Exception(
-                    '"' . $date . '" could not be parsed by \DateTime constructor.', 1241722579
+                    '"' . $date . '" could not be parsed by \DateTime constructor.',
+                    1241722579
                 );
             }
         }

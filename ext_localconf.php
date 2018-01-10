@@ -7,7 +7,6 @@ if (!defined('TYPO3_MODE')) {
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 if (TYPO3_MODE === 'BE') {
-
     $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \TYPO3\CMS\Core\Imaging\IconRegistry::class
     );
@@ -125,9 +124,7 @@ if (TYPO3_MODE === 'BE') {
     if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY])) {
         $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] = serialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY]);
     }
-
 }
-
 
 /***************
  * Install Tool Settings

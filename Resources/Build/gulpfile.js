@@ -30,7 +30,7 @@ gulp.task('watch', function () {
             log('blue', 'File ' + destFilePath + ' deleted.');
             del.sync(destFilePath, { force: true });
         }
-    }
+    };
 
     const syncDel = function(src) {
         if(path.basename(src) != '.DS_Store') {
@@ -42,7 +42,7 @@ gulp.task('watch', function () {
             log('blue', 'File ' + destFilePath + ' deleted.');
             del.sync(destFilePath, { force: true });
         }
-    }
+    };
 
 
     // watch styles
@@ -84,5 +84,5 @@ gulp.task('watch', function () {
 
 
 gulp.task('build', gulp.series('clean', 'css', 'fonts', 'misc', 'ckeditor', 'image', 'javascript'));
-gulp.task('ci', gulp.series('css:lint', 'javascript:lint'));
+gulp.task('ci', gulp.series('css:format', 'css:lint', 'javascript:lint'));
 gulp.task('default', gulp.series('build', gulp.parallel('watch')));
