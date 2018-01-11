@@ -58,3 +58,5 @@ editor:
             - Anchor
             - Underline
             - Strike
+        scayt_autoStartup: false
+        scayt_sLang: "de_DE"
