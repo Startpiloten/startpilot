@@ -2,6 +2,8 @@
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
+$GLOBALS['TCA']['tt_content']['ctrl']['searchFields'] .= ',imageposition';
+
 ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
