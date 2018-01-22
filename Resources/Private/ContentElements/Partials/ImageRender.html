@@ -1,62 +1,33 @@
 <f:if condition="{file}">
-	<f:if condition="{fallbackWidth}">
-		<f:else>
-			<f:variable name="fallbackWidth" value="1480" />
-		</f:else>
-	</f:if>
-	<f:if condition="{min1480}">
-		<f:else>
-			<f:variable name="min1480" value="1920" />
-		</f:else>
-	</f:if>
-	<f:if condition="{max1479}">
-		<f:else>
-			<f:variable name="max1479" value="1479" />
-		</f:else>
-	</f:if>
-	<f:if condition="{max1279}">
-		<f:else>
-			<f:variable name="max1279" value="1279" />
-		</f:else>
-	</f:if>
-	<f:if condition="{max991}">
-		<f:else>
-			<f:variable name="max991" value="991" />
-		</f:else>
-	</f:if>
-	<f:if condition="{max767}">
-		<f:else>
-			<f:variable name="max767" value="767" />
-		</f:else>
-	</f:if>
-	<f:if condition="{max480}">
-		<f:else>
-			<f:variable name="max480" value="480" />
-		</f:else>
-	</f:if>
-	<f:if condition="{max375}">
-		<f:else>
-			<f:variable name="max375" value="375" />
-		</f:else>
-	</f:if>
+	<f:variable name="breakpoints" value="{
+							0:{media:'max-width', size:375, maxWidth:375, cropVariant:'mobile'},
+							1:{media:'max-width', size:480, maxWidth:480, cropVariant:'mobile'},
+							2:{media:'max-width', size:767, maxWidth:767, cropVariant:'tablet'},
+							3:{media:'max-width', size:991, maxWidth:991, cropVariant:'tablet'},
+							4:{media:'max-width', size:1279, maxWidth:1279, cropVariant:'default'},
+							5:{media:'max-width', size:1479, maxWidth:1479, cropVariant:'default'},
+							6:{media:'min-width', size:1480, maxWidth:1920, cropVariant:'default'}
+						}"/>
 	<f:link.typolink parameter="{file.link}" class="picturelink">
 		<picture>
-			<source srcset="{f:uri.image(image: file, maxWidth: max375, cropVariant: 'mobile')}" media="(max-width: 375px)">
-			<source srcset="{f:uri.image(image: file, maxWidth: max480, cropVariant: 'mobile')}" media="(max-width: 480px)">
-			<source srcset="{f:uri.image(image: file, maxWidth: max767, cropVariant: 'tablet')}" media="(max-width: 767px)">
-			<source srcset="{f:uri.image(image: file, maxWidth: max991, cropVariant: 'tablet')}" media="(max-width: 991px)">
-			<source srcset="{f:uri.image(image: file, maxWidth: max1279, cropVariant: 'default')}" media="(max-width: 1279px)">
-			<source srcset="{f:uri.image(image: file, maxWidth: max1479, cropVariant: 'default')}" media="(max-width: 1479px)">
-			<source srcset="{f:uri.image(image: file, maxWidth: min1480, cropVariant: 'default')}" media="(min-width: 1480px)">
-
-			<img class="img-fluid" src="{f:uri.image(image: file, maxWidth: fallbackWidth, cropVariant: 'default')}" alt="{file.alternative}" title="{file.title}">
+			<f:for each="{breakpoints}" as="breakpoint" iteration="i_breakpoints">
+				<f:if condition="{i_breakpoints.isLast}">
+					<f:else>
+						<source srcset="{f:uri.image(image: file, maxWidth: breakpoint.maxWidth, cropVariant: breakpoint.cropVariant)}" media="({breakpoint.media}: {breakpoint.size}px)">
+					</f:else>
+					<f:then>
+						<source srcset="{f:uri.image(image: file, maxWidth: breakpoint.maxWidth, cropVariant: breakpoint.cropVariant)}" media="({breakpoint.media}: {breakpoint.size}px)">
+						<img class="img-fluid" src="{f:uri.image(image: file, maxWidth: breakpoint.maxWidth, cropVariant: breakpoint.cropVariant)}" alt="{file.alternative}" title="{file.title}">
+					</f:then>
+				</f:if>
+			</f:for>
 		</picture>
 	</f:link.typolink>
 </f:if>
 
 <f:comment>
 	<!---Render Image with custom sizes--->
-	<f:render partial="ImageRender" arguments="{file:image, min1480:1920,max1479:1479,max1279:1279,max991:991,max767:767,max480:480,max375:375,fallbackWidth:1480}" />
+	<f:render partial="ImageRender" arguments="{file:image, breakpoints:breakpoints}" />
 	<!---Render Image with default sizes--->
 	<f:render partial="ImageRender" arguments="{file:image}" />
 </f:comment>
