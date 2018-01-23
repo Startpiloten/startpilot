@@ -1,13 +1,17 @@
 <f:if condition="{file}">
-	<f:variable name="breakpoints" value="{
+	<f:if condition="{breakpoints}">
+		<f:else>
+			<f:variable name="breakpoints" value="{
 							0:{media:'max-width', size:375, maxWidth:375, cropVariant:'mobile'},
 							1:{media:'max-width', size:480, maxWidth:480, cropVariant:'mobile'},
 							2:{media:'max-width', size:767, maxWidth:767, cropVariant:'tablet'},
 							3:{media:'max-width', size:991, maxWidth:991, cropVariant:'tablet'},
 							4:{media:'max-width', size:1279, maxWidth:1279, cropVariant:'default'},
 							5:{media:'max-width', size:1479, maxWidth:1479, cropVariant:'default'},
-							6:{media:'min-width', size:1480, maxWidth:1920, cropVariant:'default'}
+							6:{media:'min-width', size:1480, maxWidth:1110, cropVariant:'default'}
 						}"/>
+		</f:else>
+	</f:if>
 	<f:link.typolink parameter="{file.link}" class="picturelink">
 		<picture>
 			<f:for each="{breakpoints}" as="breakpoint" iteration="i_breakpoints">
@@ -26,8 +30,25 @@
 </f:if>
 
 <f:comment>
-	<!---Render Image with custom sizes--->
+
+	<!---Render Image with custom sizes from TS settings--->
+	<f:render partial="ImageRender" arguments="{file:file, breakpoints:settings.breakpoints}" />
+
+	<!---Render Image with custom sizes -- START --->
+	<f:variable name="breakpoints" value="{
+							0:{media:'max-width', size:375, maxWidth:375, cropVariant:'mobile'},
+							1:{media:'max-width', size:480, maxWidth:480, cropVariant:'mobile'},
+							2:{media:'max-width', size:767, maxWidth:767, cropVariant:'tablet'},
+							3:{media:'max-width', size:991, maxWidth:991, cropVariant:'tablet'},
+							4:{media:'max-width', size:1279, maxWidth:1279, cropVariant:'default'},
+							5:{media:'max-width', size:1479, maxWidth:1479, cropVariant:'default'},
+							6:{media:'min-width', size:1480, maxWidth:2000, cropVariant:'default'}
+						}"/>
+
 	<f:render partial="ImageRender" arguments="{file:image, breakpoints:breakpoints}" />
-	<!---Render Image with default sizes--->
+	<!---Render Image with custom sizes -- END --->
+
+	<!---Render Image with default sizes -- START --->
 	<f:render partial="ImageRender" arguments="{file:image}" />
+
 </f:comment>
