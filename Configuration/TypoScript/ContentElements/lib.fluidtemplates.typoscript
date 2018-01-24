@@ -62,7 +62,7 @@ lib.ce_startpilot {
             6 {
                 media = max-width
                 size = 1480
-                maxWidth = 1800
+                maxWidth = 1950
                 cropVariant = default
             }
         }

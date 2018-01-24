@@ -1,15 +1,7 @@
 <f:if condition="{file}">
 	<f:if condition="{breakpoints}">
 		<f:else>
-			<f:variable name="breakpoints" value="{
-							0:{media:'max-width', size:375, maxWidth:375, cropVariant:'mobile'},
-							1:{media:'max-width', size:480, maxWidth:480, cropVariant:'mobile'},
-							2:{media:'max-width', size:767, maxWidth:767, cropVariant:'tablet'},
-							3:{media:'max-width', size:991, maxWidth:991, cropVariant:'tablet'},
-							4:{media:'max-width', size:1279, maxWidth:1279, cropVariant:'default'},
-							5:{media:'max-width', size:1479, maxWidth:1479, cropVariant:'default'},
-							6:{media:'min-width', size:1480, maxWidth:1110, cropVariant:'default'}
-						}"/>
+			<f:variable name="breakpoints" value="{settings.breakpoints}" />
 		</f:else>
 	</f:if>
 	<f:link.typolink parameter="{file.link}" class="picturelink">
