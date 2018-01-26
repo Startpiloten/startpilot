@@ -2,7 +2,6 @@
   "name": "Vendor/Yourext",
   "description": "TYPO3 Provider Extension",
   "type": "typo3-cms-extension",
-  "version": "1.0.3",
   "require": {
     "typo3/cms": "^8.7.7"
   },
