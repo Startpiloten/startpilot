@@ -42,6 +42,7 @@ TCEFORM {
                 5 = Headline H5
                 6 = Headline H6
             }
+
             types {
                 gridelements_pi1 {
                     altLabels {
@@ -49,6 +50,7 @@ TCEFORM {
                         1 = Headline Medium
                         2 = Headline Small
                     }
+
                     removeItems = 3,4,5,6
                 }
             }
@@ -60,6 +62,14 @@ TCEFORM {
                     disabled = 1
                 }
             }
+        }
+
+        imageorient {
+            removeItems = 1,2,9,10
+        }
+
+        imagecols {
+            keepItems = 1,2,3,4,6
         }
     }
 
