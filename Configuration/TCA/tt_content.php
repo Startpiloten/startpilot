@@ -2,6 +2,8 @@
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
+$GLOBALS['TCA']['tt_content']['columns']['image']['config']['appearance']['fileUploadAllowed'] = 0;
+
 $GLOBALS['TCA']['tt_content']['ctrl']['searchFields'] .= ',imageposition';
 
 $GLOBALS['TCA']['tt_content']['columns']['bodytext']['config']['search'] = [
