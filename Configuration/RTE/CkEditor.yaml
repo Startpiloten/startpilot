@@ -58,5 +58,7 @@ editor:
             - Anchor
             - Underline
             - Strike
+            - HorizontalRule
+            - Table
         scayt_autoStartup: false
         scayt_sLang: "de_DE"
