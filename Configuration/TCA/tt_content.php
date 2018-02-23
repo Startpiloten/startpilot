@@ -2,15 +2,34 @@
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
+/*
+ * Define general fields for tt_content
+ * */
+$global_fields = [];
+
+ExtensionManagementUtility::addTCAcolumns('tt_content', $global_fields);
+
+/*
+ * Disable direct File Upload on Image Field
+ * */
 $GLOBALS['TCA']['tt_content']['columns']['image']['config']['appearance']['fileUploadAllowed'] = 0;
 
+/*
+ * Add 'imageposition' to search fields - so its included in the backend search results
+ * */
 $GLOBALS['TCA']['tt_content']['ctrl']['searchFields'] .= ',imageposition';
 
+/*
+ * Make bodytext searchable in all cTypes (Backend Search)
+ * */
 $GLOBALS['TCA']['tt_content']['columns']['bodytext']['config']['search'] = [
     'pidonly' => 0,
     'case' => 0,
 ];
 
+/*
+ * Create custom category for own cTypes
+ * */
 ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
@@ -22,10 +41,9 @@ ExtensionManagementUtility::addTcaSelectItem(
     'before'
 );
 
-$global_fields = [];
-
-ExtensionManagementUtility::addTCAcolumns('tt_content', $global_fields);
-
+/*
+ * This variables are used to create the defaults in custom ctypes. (tt_content_textimage.php L:74:23)
+ * */
 $showitem_default_01 = '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
                         ';
@@ -43,72 +61,3 @@ $showitem_default_02 = '--div--;LLL:EXT:frontend/Resources/Private/Language/loca
                             rowDescription,
                         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
                         ';
-
-$GLOBALS['TCA']['sys_file_reference']['columns']['crop']['config']['cropVariants'] = [
-    'default' => [
-        'title' => 'Desktop',
-        'allowedAspectRatios' => [
-            'NaN' => [
-                'title' => 'Free',
-                'value' => 0.0
-            ],
-            '3:2' => [
-                'title' => '3:2',
-                'value' => 3 / 2
-            ],
-            '1:1' => [
-                'title' => '1:1',
-                'value' => 1 / 1
-            ],
-            'person' => [
-                'title' => 'Portrait',
-                'value' => 0.6666
-            ],
-        ],
-        'selectedRatio' => 'NaN',
-    ],
-    'tablet' => [
-        'title' => 'Tablet',
-        'allowedAspectRatios' => [
-            'NaN' => [
-                'title' => 'Free',
-                'value' => 0.0
-            ],
-            '3:2' => [
-                'title' => '3:2',
-                'value' => 3 / 2
-            ],
-            '1:1' => [
-                'title' => '1:1',
-                'value' => 1 / 1
-            ],
-            'person' => [
-                'title' => 'Portrait',
-                'value' => 0.6666
-            ],
-        ],
-        'selectedRatio' => 'NaN',
-    ],
-    'mobile' => [
-        'title' => 'Mobile',
-        'allowedAspectRatios' => [
-            'NaN' => [
-                'title' => 'Free',
-                'value' => 0.0
-            ],
-            '3:2' => [
-                'title' => '3:2',
-                'value' => 3 / 2
-            ],
-            '1:1' => [
-                'title' => '1:1',
-                'value' => 1 / 1
-            ],
-            'person' => [
-                'title' => 'Portrait',
-                'value' => 0.6666
-            ],
-        ],
-        'selectedRatio' => 'NaN',
-    ],
-];
