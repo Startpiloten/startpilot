@@ -9,6 +9,7 @@ TCEFORM {
         author.disabled = 1
         author_email.disabled = 1
         lastUpdated.disabled = 1
+        keywords.disabled = 1
 
         // Appearance
         layout.disabled = 1
