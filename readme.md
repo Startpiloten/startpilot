@@ -13,7 +13,7 @@ curl https://raw.githubusercontent.com/Startpiloten/startpilot/master/start.sh >
 This script is tested on MAC OSX.
 
 System environment:
-* npm@8
+* npm >= 6
 
 #### Thanks
 * To Benjamin Kott and his Bootstrap Package 
