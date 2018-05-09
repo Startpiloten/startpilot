@@ -1,0 +1,16 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:form/Configuration/TypoScript/setup.txt">
+plugin.tx_form {
+  settings {
+    yamlConfigurations {
+      1815 = EXT:startpilot/Configuration/Yaml/FormConfig.yaml
+    }
+  }
+}
+
+module.tx_form {
+  settings {
+    yamlConfigurations {
+      1815 = EXT:startpilot/Configuration/Yaml/FormConfig.yaml
+    }
+  }
+}

@@ -20,7 +20,7 @@ if (TYPO3_MODE === 'BE') {
         ['source' => 'EXT:startpilot/ext_icon.svg']
     );
 
-    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['default'] = 'EXT:startpilot/Configuration/RTE/CkEditor.yaml';
+    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['default'] = 'EXT:startpilot/Configuration/Yaml/DefaultEditor.yaml';
 
     /***************
      * Extension Manager Settings

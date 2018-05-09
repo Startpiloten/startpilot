@@ -1,0 +1,61 @@
+
+renderingOptions:
+  submitButtonLabel: Submit
+type: Form
+identifier: default
+label: Example Form
+prototypeName: standard
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label: Step
+    renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: Vorname
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Vorname
+            required: required
+          elementDescription: Vorname
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            identifier: Alphanumeric
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-2
+        label: Nachname
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Nachname
+            required: required
+          elementDescription: Nachname
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            identifier: Alphanumeric
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-3
+        label: Email
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: hello@startpilot.online
+            required: required
+          elementDescription: Email
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty

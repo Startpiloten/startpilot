@@ -1,0 +1,20 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowSaveToExtensionPaths: true
+        allowDeleteFromExtensionPaths: false
+        allowedExtensionPaths:
+          1815: EXT:startpilot/Resources/Private/Forms/Yaml/
+
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  200: 'EXT:startpilot/Resources/Private/Forms/Templates/'
+                partialRootPaths:
+                  200: 'EXT:startpilot/Resources/Private/Forms/Partials/'
+                layoutRootPaths:
+                  200: 'EXT:startpilot/Resources/Private/Forms/Layouts/'
