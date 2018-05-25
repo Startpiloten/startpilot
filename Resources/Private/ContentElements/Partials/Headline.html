@@ -1,4 +1,5 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"  data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
 <f:if condition="{header}">
 	<f:if condition="{default}">
 		<f:else>
@@ -50,4 +51,5 @@
 	<!-- Example use-->
 	<f:render partial="Headline" arguments="{header:data.header,layout:data.header_layout,link:header_link,default:2}" />
 </f:comment>
+
 </html>
