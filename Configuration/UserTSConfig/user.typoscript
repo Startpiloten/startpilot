@@ -1,0 +1,9 @@
+options.pageTree.showPageIdWithTitle = 0
+
+mod.SHARED {
+  defaultLanguageFlag = de
+  defaultLanguageLabel = German
+}
+
+mod.web_layout.localization.enableCopy = 0
+mod.web_layout.localization.enableTranslate = 1
