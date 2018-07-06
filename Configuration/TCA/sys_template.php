@@ -6,3 +6,9 @@ defined('TYPO3_MODE') or die();
     'Configuration/TypoScript',
     'Startpilot'
 );
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+    'startpilot',
+    'Configuration/PageTS/pagetsconfig.typoscript',
+    'Startpilot PageTSConfig'
+);
