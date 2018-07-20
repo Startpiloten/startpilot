@@ -1,7 +1,7 @@
 mod.web_layout.BackendLayouts {
     MainTemplate {
-        title = MainTemplate
-        name = MainTemplate
+        title = Default
+        name = Default
         icon = EXT:startpilot/ext_icon.png
         config {
             backend_layout {
