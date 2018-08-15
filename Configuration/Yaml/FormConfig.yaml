@@ -6,7 +6,20 @@ TYPO3:
         allowDeleteFromExtensionPaths: false
         allowedExtensionPaths:
           1815: EXT:startpilot/Resources/Private/Forms/Yaml/
-
+      mixins:
+        ########### FORM ELEMENT MIXINS ###########
+        formElementMixins:
+          FileUploadMixin:
+            formEditor:
+              predefinedDefaults:
+                properties:
+                  saveToFileMount: '1:/form-uploads/'
+              editors:
+                400:
+                  selectOptions:
+                    10:
+                      value: '1:/form-uploads/'
+                      label: '1:/form-uploads/'
       prototypes:
         standard:
           formElementsDefinition:
