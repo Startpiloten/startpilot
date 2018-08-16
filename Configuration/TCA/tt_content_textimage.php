@@ -2,7 +2,6 @@
 /**
  * Startpilot Content Element | startpilot_textimage
  */
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 /***************
  * Register fields
@@ -36,7 +35,7 @@ $startpilot_textimage_fields = [
     ],
 ];
 
-ExtensionManagementUtility::addTCAcolumns('tt_content', $startpilot_textimage_fields);
+TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $startpilot_textimage_fields);
 
 /***************
  * Add Content Element: startpilot_textimage
@@ -48,7 +47,7 @@ if (!is_array($GLOBALS['TCA']['tt_content']['types']['startpilot_textimage'])) {
 /***************
  * Add content element to seletor list
  */
-ExtensionManagementUtility::addTcaSelectItem(
+TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [
@@ -86,7 +85,7 @@ $GLOBALS['TCA']['tt_content']['types']['startpilot_textimage'] = array_replace_r
                 ]
             ],
             'image' => [
-                'config' => ExtensionManagementUtility::getFileFieldTCAConfig(
+                'config' => TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                     'image',
                     [
                         'collapseAll' => 1,
