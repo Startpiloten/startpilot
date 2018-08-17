@@ -1,13 +1,11 @@
 <?php
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-
 /*
  * Define general fields for tt_content
  * */
 $global_fields = [];
 
-ExtensionManagementUtility::addTCAcolumns('tt_content', $global_fields);
+TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $global_fields);
 
 /*
  * Disable direct File Upload on Image Field
@@ -30,7 +28,7 @@ $GLOBALS['TCA']['tt_content']['columns']['bodytext']['config']['search'] = [
 /*
  * Create custom category for own cTypes
  * */
-ExtensionManagementUtility::addTcaSelectItem(
+TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [
