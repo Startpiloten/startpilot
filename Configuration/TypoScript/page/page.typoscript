@@ -123,7 +123,8 @@ page {
     ## includeJS
     ###
     includeJSFooter {
-        main = EXT:startpilot/Resources/Public/JavaScript/main.min.js
+      main = EXT:startpilot/Resources/Public/JavaScript/main.min.js
+      main.async = 1
     }
 }
 
