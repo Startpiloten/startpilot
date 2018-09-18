@@ -3,3 +3,4 @@
 /Resources/Build/node_modules/
 /Resources/Public/
 /Resources/Gulp/package-lock.json
+/.php_cs.cache
