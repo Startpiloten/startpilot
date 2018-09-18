@@ -1,11 +1,10 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
+@import "EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript"
 
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/config">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/lib">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/page">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/settings">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/tt_content">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/fluid">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/form">
+@import "EXT:startpilot/Configuration/TypoScript/config/"
+@import "EXT:startpilot/Configuration/TypoScript/lib/"
+@import "EXT:startpilot/Configuration/TypoScript/page/"
+@import "EXT:startpilot/Configuration/TypoScript/tt_content/"
+@import "EXT:startpilot/Configuration/TypoScript/fluid/"
+@import "EXT:startpilot/Configuration/TypoScript/form/"
 
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TypoScript/ContentElements">
+@import "EXT:startpilot/Configuration/TypoScript/ContentElements/"
