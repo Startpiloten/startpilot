@@ -1,5 +1,5 @@
 ## Constants ##
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.txt">
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
 
 # customsubcategory=100=General
 page {
