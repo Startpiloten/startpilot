@@ -1,2 +1,4 @@
-@import 'EXT:startpilot/Configuration/TSconfig'
+@import 'EXT:startpilot/Configuration/TSconfig/ContentElements/'
+@import 'EXT:startpilot/Configuration/TSconfig/mod/'
+@import 'EXT:startpilot/Configuration/TSconfig/'
 
