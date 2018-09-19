@@ -131,9 +131,9 @@ TCEFORM.tt_content.CType.removeItems := addToList(menu_sitemap_pages)
 TCEFORM.tt_content.CType.removeItems := addToList(menu_subpages)
 
 ## Disable hide at copy
-TCEMAIN.table.tt_content.disableHideAtCopy = 1
-TCEMAIN.table.pages.disableHideAtCopy = 1
+# TCEMAIN.table.tt_content.disableHideAtCopy = 1
+# TCEMAIN.table.pages.disableHideAtCopy = 1
 
-## Cpoys will *not* have "(copy)" appended
-TCEMAIN.table.pages.disablePrependAtCopy = 1
-TCEMAIN.table.tt_content.disablePrependAtCopy = 1
+## Copys will *not* have "(copy)" appended
+# TCEMAIN.table.pages.disablePrependAtCopy = 1
+# TCEMAIN.table.tt_content.disablePrependAtCopy = 1
