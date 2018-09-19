@@ -1,4 +1,4 @@
 tt_content.list =< lib.ce_startpilot
 tt_content.list {
-    templateName = FE_List
+  templateName = FE_List
 }

@@ -1,6 +1,5 @@
 @import 'EXT:form/Configuration/TypoScript/setup.typoscript'
 
-
 plugin.tx_form {
   settings {
     yamlConfigurations {

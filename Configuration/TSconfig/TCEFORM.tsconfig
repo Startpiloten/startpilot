@@ -74,23 +74,23 @@ TCEFORM {
             keepItems = 1,2,3,4,6
         }
 
-        layout{
+        layout {
             disabled = 1
         }
 
-        frame_class{
+        frame_class {
             disabled = 1
         }
 
-        space_before_class{
+        space_before_class {
             disabled = 1
         }
 
-        space_after_class{
+        space_after_class {
             disabled = 1
         }
 
-        linkToTop{
+        linkToTop {
             disabled = 1
         }
     }
