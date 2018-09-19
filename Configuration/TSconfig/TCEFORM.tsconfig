@@ -1,7 +1,7 @@
 TCEFORM {
     pages {
         // General
-        nav_title.disabled = 1
+        nav_title.disabled = 0
         subtitle.disabled = 1
 
         // Metadata
@@ -14,16 +14,14 @@ TCEFORM {
         // Appearance
         layout.disabled = 1
         newUntil.disabled = 1
-        content_from_pid.disabled = 1
 
         // Behavior
         cache_timeout.disabled = 1
         cache_tags.disabled = 1
-        no_cache.disabled = 1
-        no_search.disabled = 1
+        no_cache.disabled = 0
 
         // Resources
-        TSconfig.disabled = 1
+        TSconfig.disabled = 0
 
         // Categories
         categories.disabled = 1
@@ -31,6 +29,9 @@ TCEFORM {
         // Access
         fe_group.disabled = 1
         fe_login_mode.disabled = 1
+
+        // Notes
+        rowDescription.disabled = 1
     }
 
     tt_content {
@@ -103,7 +104,7 @@ TCEFORM {
 ## Disable FSC cTypes
 TCEFORM.tt_content.CType.removeItems := addToList(html)
 # TCEFORM.tt_content.CType.removeItems := addToList(shortcut)
-TCEFORM.tt_content.CType.removeItems := addToList(header)
+# TCEFORM.tt_content.CType.removeItems := addToList(header)
 TCEFORM.tt_content.CType.removeItems := addToList(text)
 TCEFORM.tt_content.CType.removeItems := addToList(textpic)
 TCEFORM.tt_content.CType.removeItems := addToList(textmedia)
