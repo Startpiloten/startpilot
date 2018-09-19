@@ -1,1 +1,2 @@
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TSconfig">
+@import 'EXT:startpilot/Configuration/TSconfig'
+
