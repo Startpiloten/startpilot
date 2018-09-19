@@ -3,14 +3,14 @@
 
 # customsubcategory=100=General
 page {
-    template {
-        # cat=startpilot: Settings/100/150; type=string; label=Layout Root Path: Path to layouts
-        layoutRootPath = EXT:startpilot/Resources/Private/Page/Layouts/
-        # cat=startpilot: Settings/100/160; type=string; label=Partial Root Path: Path to partials
-        partialRootPath = EXT:startpilot/Resources/Private/Page/Partials/
-        # cat=startpilot: Settings/100/170; type=string; label=Template Root Path: Path to templates
-        templateRootPath = EXT:startpilot/Resources/Private/Page/Templates/
-    }
+  template {
+    # cat=startpilot: Settings/100/150; type=string; label=Layout Root Path: Path to layouts
+    layoutRootPath = EXT:startpilot/Resources/Private/Page/Layouts/
+    # cat=startpilot: Settings/100/160; type=string; label=Partial Root Path: Path to partials
+    partialRootPath = EXT:startpilot/Resources/Private/Page/Partials/
+    # cat=startpilot: Settings/100/170; type=string; label=Template Root Path: Path to templates
+    templateRootPath = EXT:startpilot/Resources/Private/Page/Templates/
+  }
 }
 
 # customsubcategory=200=Favicon
@@ -23,10 +23,10 @@ googlewebmaster =
 
 # customsubcategory=300=Meta
 page.meta {
-    # cat=startpilot: Meta/400/100; type=string; label=viewport
-    viewport = width=device-width, initial-scale=1
-    # cat=startpilot: Meta/400/120; type=string; label=apple-mobile-web-app-capable
-    apple-mobile-web-app-capable = yes
-    # cat=startpilot: Meta/400/140; type=string; label=google
-    google = translate
+  # cat=startpilot: Meta/400/100; type=string; label=viewport
+  viewport = width=device-width, initial-scale=1
+  # cat=startpilot: Meta/400/120; type=string; label=apple-mobile-web-app-capable
+  apple-mobile-web-app-capable = yes
+  # cat=startpilot: Meta/400/140; type=string; label=google
+  google = translate
 }

@@ -1,15 +1,16 @@
 [applicationContext = Production/Live]
-    ### Google Webmaster Header Code ###
-    page.meta {
-        google-site-verification = TEXT
-        google-site-verification {
-            if.isTrue = {$googlewebmaster}
-            stdWrap.cObject = COA
-            stdWrap.cObject {
-                10 = TEXT
-                10.value = {$googlewebmaster}
-            }
-        }
+  ### Google Webmaster Header Code ###
+  page.meta {
+    google-site-verification = TEXT
+    google-site-verification {
+      if.isTrue = {$googlewebmaster}
+      stdWrap.cObject = COA
+      stdWrap.cObject {
+        10 = TEXT
+        10.value = {$googlewebmaster}
+      }
     }
-    ### Google Webmaster Header Code - END ###
+  }
+
+  ### Google Webmaster Header Code - END ###
 [END]
