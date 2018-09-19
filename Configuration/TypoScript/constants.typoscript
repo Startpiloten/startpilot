@@ -20,21 +20,13 @@ favicon = EXT:startpilot/Resources/Public/Images/Icons/Device/Icon.png
 # customsubcategory=120=Google Webmaster/Analytics
 # cat=startpilot: Google Tools/200/100; type=string; label= Google Webmaster ID - (content="xxxxxxxx")
 googlewebmaster =
-# cat=startpilot: Google Tools/200/110; type=string; label= Google Analytics ID - (content="UA-xxx-x")
-googleanalytics =
 
 # customsubcategory=300=Meta
 page.meta {
     # cat=startpilot: Meta/400/100; type=string; label=viewport
-    viewport = width=device-width, initial-scale=1, shrink-to-fit=no
-    # cat=startpilot: Meta/400/110; type=string; label=robots
-    robots = index,follow
+    viewport = width=device-width, initial-scale=1
     # cat=startpilot: Meta/400/120; type=string; label=apple-mobile-web-app-capable
-    apple-mobile-web-app-capable = no
-    # cat=startpilot: Meta/400/130; type=string; label=compatible
-    compatible = IE=edge
+    apple-mobile-web-app-capable = yes
     # cat=startpilot: Meta/400/140; type=string; label=google
-    google = notranslate
-    # cat=startpilot: Meta/400/150; type=boolean; label=Use Page Media as OG-Image (slide collect)
-    ogimage = 0
+    google = translate
 }
