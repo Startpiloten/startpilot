@@ -1,4 +1,5 @@
 options.pageTree.showPageIdWithTitle = 1
+options.showDuplicate = 1
 
 mod.SHARED {
   defaultLanguageFlag = de
