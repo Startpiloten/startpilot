@@ -3,7 +3,7 @@ renderingOptions:
   submitButtonLabel: Submit
 type: Form
 identifier: default
-label: Example Form
+label: 'Example Form'
 prototypeName: standard
 renderables:
   -
