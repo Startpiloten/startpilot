@@ -46,37 +46,37 @@ gulp.task('watch', function () {
 
 
     // watch styles
-    const watchScss = gulp.watch(packageJson.config.path.src + '/Scss/**/*.scss', gulp.series('css'));
+    const watchScss = gulp.watch('Assets/Scss/**/*.scss', gulp.series('css'));
     watchScss.on('unlink', function(src) {
         syncDelImages(src);
     });
-    
+
     // watch images
-    const watchImages = gulp.watch(packageJson.config.path.src + '/Images/**/*', gulp.series('image'));
+    const watchImages = gulp.watch('Assets/Images/**/*', gulp.series('image'));
     watchImages.on('unlink', function(src) {
         syncDelImages(src);
     });
 
     // watch fonts
-    const watchFonts = gulp.watch(packageJson.config.path.src + '/Fonts/**/*', gulp.series('fonts'));
+    const watchFonts = gulp.watch('Assets/Fonts/**/*', gulp.series('fonts'));
     watchFonts.on('unlink', function(src) {
         syncDel(src);
     });
 
     // watch misc
-    const watchMisc = gulp.watch(packageJson.config.path.src + '/Misc/**/*', gulp.series('misc'));
+    const watchMisc = gulp.watch('Assets/Misc/**/*', gulp.series('misc'));
     watchMisc.on('unlink', function(src) {
         syncDel(src);
     });
-  
+
     // watch misc
-    const watchCKEditor = gulp.watch(packageJson.config.path.src + '/CKEditor/**/*', gulp.series('ckeditor'));
+    const watchCKEditor = gulp.watch('Assets/CKEditor/**/*', gulp.series('ckeditor'));
     watchCKEditor.on('unlink', function(src) {
       syncDel(src);
     });
 
     // watch scripts
-    const watchJavaScript = gulp.watch(packageJson.config.path.src + '/JavaScript/**/*.js', gulp.series('javascript'));
+    const watchJavaScript = gulp.watch('Assets/JavaScript/**/*.js', gulp.series('javascript'));
     watchJavaScript.on('unlink', function(src) {
         syncDel(src);
     });

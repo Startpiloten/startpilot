@@ -12,9 +12,9 @@ const log = require('gutil-color-log');
 const modernizr = require('gulp-modernizr-build');
 const del = require('del');
 
-function swallowError (error) {
-  gutil.log(error.SyntaxError);
-  this.emit('end')
+function swallowError(error) {
+    gutil.log(error.SyntaxError);
+    this.emit('end')
 }
 
 gulp.task('javascript:lint', function () {
@@ -26,32 +26,32 @@ gulp.task('javascript:lint', function () {
         .pipe(eslint.format());
 });
 
-gulp.task('javascript:modernizr', function() {
+gulp.task('javascript:modernizr', function () {
     'use strict';
-    if(packageJson.config.modernizr.active) {
-      log('magenta', 'modernizr activated.');
-      return gulp.src([packageJson.config.path.src  + '**/*.js', packageJson.config.path.dest  + '**/*.css', '!./**/modernizr*.js'])
-      .pipe( modernizr('modernizr-custom.js', {
-        cssPrefix: packageJson.config.modernizr.settings.cssPrefix,
-        addFeatures: packageJson.config.modernizr.settings.addFeatures,
-        quiet: packageJson.config.modernizr.settings.quiet
-      }))
-      .pipe(gulp.dest(packageJson.config.path.dest + '/JavaScript'))
-      .pipe(uglify())
-      .pipe(rename({
-        suffix: '.min'
-      }))
-      .pipe(gulp.dest(packageJson.config.path.dest + '/JavaScript'));
+    if (packageJson.config.modernizr.active) {
+        log('magenta', 'modernizr activated.');
+        return gulp.src([packageJson.config.path.src + '**/*.js', packageJson.config.path.dest + '**/*.css', '!./**/modernizr*.js'])
+            .pipe(modernizr('modernizr-custom.js', {
+                cssPrefix: packageJson.config.modernizr.settings.cssPrefix,
+                addFeatures: packageJson.config.modernizr.settings.addFeatures,
+                quiet: packageJson.config.modernizr.settings.quiet
+            }))
+            .pipe(gulp.dest(packageJson.config.path.dest + '/JavaScript'))
+            .pipe(uglify())
+            .pipe(rename({
+                suffix: '.min'
+            }))
+            .pipe(gulp.dest(packageJson.config.path.dest + '/JavaScript'));
     }
     else {
-      return del(packageJson.config.path.dest + '/Javascript/modernizr.*', {force: true});
+        return del(packageJson.config.path.dest + '/Javascript/modernizr.*', {force: true});
     }
 });
 
 gulp.task('javascript:compile', function () {
     const bundler = browserify({
         entries: packageJson.config.path.src + '/JavaScript/main.js'
-    }).transform('babelify', {presets: ['@babel/env']});
+    }).transform("babelify", {presets: ["@babel/preset-env"]});
 
     const bundle = function () {
         return bundler
