@@ -7,6 +7,7 @@ editor:
     externalPlugins:
       wordcount: { resource: "EXT:startpilot/Resources/Public/CKEditor/wordcount/", showParagraphs: true, showCharCount: true, showWordCount: true, pasteWarningDuration: 3000 }
       notification: { resource: "EXT:startpilot/Resources/Public/CKEditor/notification/" }
+      blockquote: { resource: "EXT:startpilot/Resources/Public/CKEditor/blockquote/" }
 
     config:
         defaultContentLanguage: "de"
