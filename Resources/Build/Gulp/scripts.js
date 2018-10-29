@@ -51,7 +51,7 @@ gulp.task('javascript:modernizr', function() {
 gulp.task('javascript:compile', function () {
     const bundler = browserify({
         entries: packageJson.config.path.src + '/JavaScript/main.js'
-    }).transform('babelify', {presets: ['env']});
+    }).transform('babelify', {presets: ['@babel/env']});
 
     const bundle = function () {
         return bundler
