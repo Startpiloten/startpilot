@@ -12,5 +12,5 @@ require('bootstrap'); // Bootstrap
  */
 $(document).ready(function () {
     const Console = console;
-    Console.log("Hello world!");
+    Console.log("Hello - TYPO3!");
 });
