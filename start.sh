@@ -28,8 +28,9 @@ esac
 shift # past argument or value
 done
 
-path=($(find . -name "typo3conf")/ext)
-DIR=${path}/$EXTNAME
+mkdir -p packages
+
+DIR=./packages/$EXTNAME
 
 vendor=`echo ${VENDOR:0:1} | tr  '[a-z]' '[A-Z]'`${VENDOR:1}
 package=`echo ${PACKAGE:0:1} | tr  '[a-z]' '[A-Z]'`${PACKAGE:1}
