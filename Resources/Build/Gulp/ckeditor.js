@@ -9,6 +9,6 @@ const packageJson = require('../package.json');
  */
 gulp.task('ckeditor', function () {
     'use strict';
-    return gulp.src(packageJson.config.path.src + '/CKEditor/**/*')
-        .pipe(gulp.dest(packageJson.config.path.dest + './CKEditor'))
+    return gulp.src(`${packageJson.config.path.src}CKEditor/**/*`)
+        .pipe(gulp.dest(`${packageJson.config.path.dest}CKEditor`))
 });

@@ -10,32 +10,32 @@ const packageJson = require('../package.json');
  */
 gulp.task('clean:scripts', function () {
     'use strict';
-    return del(packageJson.config.path.dest + '/JavaScript/*', {force: true})
+    return del(`${packageJson.config.path.dest}JavaScript/*`, {force: true})
 });
 
 gulp.task('clean:styles', function () {
     'use strict';
-    return del(packageJson.config.path.dest + '/Css/*', {force: true})
+    return del(`${packageJson.config.path.dest}Css/*`, {force: true})
 });
 
 gulp.task('clean:fonts', function () {
     'use strict';
-    return del(packageJson.config.path.dest + '/Fonts/*', {force: true})
+    return del(`${packageJson.config.path.dest}Fonts/*`, {force: true})
 });
 
 gulp.task('clean:images', function () {
     'use strict';
-    return del(packageJson.config.path.dest + '/Images/*', {force: true})
+    return del(`${packageJson.config.path.dest}Images/*`, {force: true})
 });
 
 gulp.task('clean:misc', function () {
   'use strict';
-  return del(packageJson.config.path.dest + '/Misc/*', {force: true})
+  return del(`${packageJson.config.path.dest}Misc/*`, {force: true})
 });
 
 gulp.task('clean:ckeditor', function () {
   'use strict';
-  return del(packageJson.config.path.dest + '/CKEditor/*', {force: true})
+  return del(`${packageJson.config.path.dest}CKEditor/*`, {force: true})
 });
 
 

@@ -18,7 +18,7 @@ const sourcemaps = require('gulp-sourcemaps');
  * Compressor: clean-css
  */
 gulp.task('css:compile', function () {
-    return gulp.src(packageJson.config.path.src + '/Scss/**/*.scss')
+    return gulp.src(`${packageJson.config.path.src}Scss/**/*.scss`)
       .pipe(plumber())
       .pipe(gulpStylelint({
         reporters: [
@@ -37,15 +37,15 @@ gulp.task('css:compile', function () {
         addComment: true,
         sourceRoot: '../../../Build/Assets/Scss/'
       }))
-      .pipe(gulp.dest(packageJson.config.path.dest + './Css'))
+      .pipe(gulp.dest(`${packageJson.config.path.dest}Css`))
       .pipe(rename({
         suffix: '.min'
       }))
-      .pipe(gulp.dest(packageJson.config.path.dest + './Css'))
+      .pipe(gulp.dest(`${packageJson.config.path.dest}Css`))
 });
 
 gulp.task('css:lint', function lintCssTask() {
-    return gulp.src(packageJson.config.path.src + '/Scss/**/*.scss')
+    return gulp.src(`${packageJson.config.path.src}Scss/**/*.scss`)
         .pipe(gulpStylelint({
             reporters: [
                 {formatter: 'string', console: true}
@@ -55,11 +55,11 @@ gulp.task('css:lint', function lintCssTask() {
 
 
 gulp.task('css:format', function () {
-    return gulp.src(packageJson.config.path.src + '/Scss/**/*.scss')
+    return gulp.src(`${packageJson.config.path.src}Scss/**/*.scss`)
         .pipe(plumber())
         .pipe(stylefmt())
         .pipe(plumber.stop())
-        .pipe(gulp.dest(packageJson.config.path.src + '/Scss/'));
+        .pipe(gulp.dest(`${packageJson.config.path.src}Scss/`));
 });
 
 gulp.task('css', gulp.series('css:compile'));

@@ -9,6 +9,6 @@ const packageJson = require('../package.json');
  */
 gulp.task('fonts', function () {
     'use strict';
-    return gulp.src(packageJson.config.path.src + '/Fonts/**/*')
-        .pipe(gulp.dest(packageJson.config.path.dest + './Fonts'))
+    return gulp.src(`${packageJson.config.path.src}Fonts/**/*`)
+        .pipe(gulp.dest(`${packageJson.config.path.dest}Fonts`))
 });

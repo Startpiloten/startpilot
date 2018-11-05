@@ -11,10 +11,10 @@ const packageJson = require('../package.json');
 gulp.task('image', function () {
     'use strict';
     return gulp.src([
-        packageJson.config.path.src + '/Images/**/*.gif',
-        packageJson.config.path.src + '/Images/**/*.jpg',
-        packageJson.config.path.src + '/Images/**/*.png',
-        packageJson.config.path.src + '/Images/**/*.svg'])
+        `${packageJson.config.path.src}Images/**/*.gif`,
+        `${packageJson.config.path.src}Images/**/*.jpg`,
+        `${packageJson.config.path.src}Images/**/*.png`,
+        `${packageJson.config.path.src}Images/**/*.svg`])
         .pipe(imagemin([
             imagemin.gifsicle({interlaced: true}),
             imagemin.jpegtran({progressive: true}),
@@ -23,5 +23,5 @@ gulp.task('image', function () {
         ], {
             verbose: true
         }))
-        .pipe(gulp.dest(packageJson.config.path.dest + './Images'))
+        .pipe(gulp.dest(`${packageJson.config.path.dest}Images`))
 });
