@@ -4,8 +4,8 @@ tt_content.startpilot_textimage {
   dataProcessing {
     20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
     20 {
-      references.fieldName = image
-      as = images
+      references.fieldName = assets
+      as = assets
     }
   }
 
