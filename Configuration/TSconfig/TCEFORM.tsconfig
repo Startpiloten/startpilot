@@ -58,14 +58,6 @@ TCEFORM {
             }
         }
 
-        header_position {
-            types {
-                gridelements_pi1 {
-                    disabled = 1
-                }
-            }
-        }
-
         imageorient {
             removeItems = 1,2,9,10
         }
@@ -74,25 +66,11 @@ TCEFORM {
             keepItems = 1,2,3,4,6
         }
 
-        layout {
-            disabled = 1
-        }
-
-        frame_class {
-            disabled = 1
-        }
-
-        space_before_class {
-            disabled = 1
-        }
-
-        space_after_class {
-            disabled = 1
-        }
-
-        linkToTop {
-            disabled = 1
-        }
+        layout.disabled = 1
+        frame_class.disabled = 1
+        space_before_class.disabled = 1
+        space_after_class.disabled = 1
+        linkToTop.disabled = 1
     }
 
     tx_news_domain_model_news {
