@@ -67,32 +67,29 @@ $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['startpilot_textimage'
 /***************
  * Configure element type
  */
-$GLOBALS['TCA']['tt_content']['types']['startpilot_textimage'] = array_replace_recursive(
-    $GLOBALS['TCA']['tt_content']['types']['startpilot_textimage'],
-    [
-        'showitem' => $showitem_default_01 . '
-        header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_formlabel,
-        header_layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout_formlabel,
-        imageposition,
-        image,
-        bodytext,
-        ' . $showitem_default_02,
-        'columnsOverrides' => [
-            'bodytext' => [
-                'config' => [
-                    'enableRichtext' => true,
-                    'richtextConfiguration' => 'default'
-                ]
-            ],
-            'image' => [
-                'config' => TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-                    'image',
-                    [
-                        'collapseAll' => 1,
-                        'maxitems' => 1,
-                    ]
-                ),
-            ],
-        ]
-    ]
+$GLOBALS['TCA']['tt_content']['types']['startpilot_textimage']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['header']['showitem'];
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+    'tt_content',
+    'imageposition,assets,bodytext',
+    'startpilot_textimage',
+    'after:header'
 );
+
+$GLOBALS['TCA']['tt_content']['types']['startpilot_textimage']['columnsOverrides'] = [
+    'bodytext' => [
+        'config' => [
+            'enableRichtext' => true,
+            'richtextConfiguration' => 'default'
+        ],
+    ],
+    'assets' => [
+        'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+            'assets',
+            [
+                'collapseAll' => 1,
+                'maxitems' => 1,
+            ]
+        ),
+    ],
+];
