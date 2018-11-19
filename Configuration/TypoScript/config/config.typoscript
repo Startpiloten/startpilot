@@ -34,12 +34,16 @@ config {
   concatenateCss = 1
   compressJs = 1
   concatenateJs = 1
+  sendCacheHeaders = 1
+  cache_period = 86400
 }
 
 ## Disable Cache when logged in BE
 [globalVar = TSFE:beUserLogin > 0]
   config {
-    no_cache = 1
+    no_cache = 0
+    sendCacheHeaders = 0
+    cache_period = 0
   }
 [global]
 
