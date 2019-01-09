@@ -3,7 +3,6 @@
 @import 'EXT:startpilot/Configuration/TypoScript/config/'
 @import 'EXT:startpilot/Configuration/TypoScript/fluid/'
 @import 'EXT:startpilot/Configuration/TypoScript/form/'
-@import 'EXT:startpilot/Configuration/TypoScript/lib/'
 @import 'EXT:startpilot/Configuration/TypoScript/page/'
 @import 'EXT:startpilot/Configuration/TypoScript/tt_content/'
 
