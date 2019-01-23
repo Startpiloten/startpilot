@@ -93,3 +93,74 @@ $GLOBALS['TCA']['tt_content']['types']['startpilot_textimage']['columnsOverrides
         ),
     ],
 ];
+
+$GLOBALS['TCA']['tt_content']['types']['startpilot_textimage']['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config'] = [
+    'cropVariants' => [
+        'default' => [
+            'title' => 'Desktop',
+            'allowedAspectRatios' => [
+                'NaN' => [
+                    'title' => 'Free',
+                    'value' => 0.0
+                ],
+                '3:2' => [
+                    'title' => '3:2',
+                    'value' => 3 / 2
+                ],
+                '1:1' => [
+                    'title' => '1:1',
+                    'value' => 1 / 1
+                ],
+                'person' => [
+                    'title' => 'Portrait',
+                    'value' => 0.6666
+                ],
+            ],
+            'selectedRatio' => 'NaN',
+        ],
+        'tablet' => [
+            'title' => 'Tablet',
+            'allowedAspectRatios' => [
+                'NaN' => [
+                    'title' => 'Free',
+                    'value' => 0.0
+                ],
+                '3:2' => [
+                    'title' => '3:2',
+                    'value' => 3 / 2
+                ],
+                '1:1' => [
+                    'title' => '1:1',
+                    'value' => 1 / 1
+                ],
+                'person' => [
+                    'title' => 'Portrait',
+                    'value' => 0.6666
+                ],
+            ],
+            'selectedRatio' => 'NaN',
+        ],
+        'mobile' => [
+            'title' => 'Mobile',
+            'allowedAspectRatios' => [
+                'NaN' => [
+                    'title' => 'Free',
+                    'value' => 0.0
+                ],
+                '3:2' => [
+                    'title' => '3:2',
+                    'value' => 3 / 2
+                ],
+                '1:1' => [
+                    'title' => '1:1',
+                    'value' => 1 / 1
+                ],
+                'person' => [
+                    'title' => 'Portrait',
+                    'value' => 0.6666
+                ],
+            ],
+            'selectedRatio' => 'NaN',
+        ],
+    ]
+];

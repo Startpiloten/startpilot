@@ -21,28 +21,28 @@ lib.ce_startpilot {
         media = max-width
         size = 375
         maxWidth = 375
-        cropVariant = mobile
+        cropVariant = default
       }
 
       1 {
         media = max-width
         size = 480
         maxWidth = 480
-        cropVariant = mobile
+        cropVariant = default
       }
 
       2 {
         media = max-width
         size = 767
         maxWidth = 767
-        cropVariant = tablet
+        cropVariant = default
       }
 
       3 {
         media = max-width
         size = 991
         maxWidth = 991
-        cropVariant = tablet
+        cropVariant = default
       }
 
       4 {
