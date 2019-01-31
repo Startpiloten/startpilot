@@ -54,8 +54,12 @@
     }
   },
   "scripts": {
-    "ci": "./node_modules/gulp/bin/gulp.js ci",
+    "set node version": "n 10",
     "start": "./node_modules/gulp/bin/gulp.js default",
-    "build": "./node_modules/gulp/bin/gulp.js build"
+    "build": "./node_modules/gulp/bin/gulp.js build",
+    "stylelint:fix": "./node_modules/.bin/stylelint --syntax 'scss' ./Assets/Scss/**/*.scss --fix --custom-formatter=./node_modules/stylelint-formatter-pretty || exit 0",
+    "stylelint:check": "./node_modules/.bin/stylelint --syntax 'scss' ./Assets/Scss/**/*.scss --custom-formatter=./node_modules/stylelint-formatter-pretty",
+    "eslint:fix": "./node_modules/.bin/eslint -c ./.eslintrc.json --fix ./Assets/JavaScript || exit 0",
+    "eslint:check": "./node_modules/.bin/eslint -c ./.eslintrc.json ./Assets/JavaScript || exit 0"
   }
 }
