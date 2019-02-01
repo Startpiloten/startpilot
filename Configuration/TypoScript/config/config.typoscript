@@ -12,6 +12,7 @@ config {
 
   no_cache = 0
   sendCacheHeaders = 1
+  cache_period = 86400
   enableContentLengthHeader = 0
 
   extTarget = _blank
@@ -34,8 +35,6 @@ config {
   concatenateCss = 1
   compressJs = 1
   concatenateJs = 1
-  sendCacheHeaders = 1
-  cache_period = 86400
 }
 
 ## Disable Cache when logged in BE

@@ -1,8 +1,8 @@
 ## Constants ##
 @import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
 
-# customsubcategory=100=General
 page {
+  # customsubcategory=100=General
   template {
     # cat=startpilot: Settings/100/150; type=string; label=Layout Root Path: Path to layouts
     layoutRootPath = EXT:startpilot/Resources/Private/Page/Layouts/
@@ -10,6 +10,15 @@ page {
     partialRootPath = EXT:startpilot/Resources/Private/Page/Partials/
     # cat=startpilot: Settings/100/170; type=string; label=Template Root Path: Path to templates
     templateRootPath = EXT:startpilot/Resources/Private/Page/Templates/
+  }
+  # customsubcategory=300=Meta
+  meta {
+    # cat=startpilot: Meta/400/100; type=string; label=viewport
+    viewport = width=device-width, initial-scale=1
+    # cat=startpilot: Meta/400/120; type=string; label=apple-mobile-web-app-capable
+    apple-mobile-web-app-capable = yes
+    # cat=startpilot: Meta/400/140; type=string; label=google
+    google = translate
   }
 }
 
@@ -20,13 +29,3 @@ favicon = EXT:startpilot/Resources/Public/Images/Icons/Device/Icon.png
 # customsubcategory=120=Google Webmaster/Analytics
 # cat=startpilot: Google Tools/200/100; type=string; label= Google Webmaster ID - (content="xxxxxxxx")
 googlewebmaster =
-
-# customsubcategory=300=Meta
-page.meta {
-  # cat=startpilot: Meta/400/100; type=string; label=viewport
-  viewport = width=device-width, initial-scale=1
-  # cat=startpilot: Meta/400/120; type=string; label=apple-mobile-web-app-capable
-  apple-mobile-web-app-capable = yes
-  # cat=startpilot: Meta/400/140; type=string; label=google
-  google = translate
-}

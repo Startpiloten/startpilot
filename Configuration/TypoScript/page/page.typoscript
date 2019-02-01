@@ -16,8 +16,10 @@ page {
         override.field = backend_layout
         split {
           token = pagets__
-          1.current = 1
-          1.wrap = |
+          1 {
+            current = 1
+            wrap = |
+          }
         }
       }
 
@@ -93,14 +95,6 @@ page {
     main.async = 1
   }
 }
-
-
-###
-## Disable indexing
-###
-# [globalVar = TSFE:page|no_search = 1]
-#    page.meta.robots = noindex,follow
-# [end]
 
 ###
 ## applicationContext
