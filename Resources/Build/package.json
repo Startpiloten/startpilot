@@ -30,6 +30,7 @@
     "gulp-sourcemaps": "^2.6.3",
     "gulp-stylefmt": "^1.1.0",
     "gulp-stylelint": "^8.0.0",
+    "stylelint-formatter-pretty": "^1.0.3",
     "gulp-uglify": "^3.0.0",
     "gutil-color-log": "^1.0.2",
     "vinyl-buffer": "^1.0.1",
