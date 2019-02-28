@@ -66,8 +66,14 @@ TCEFORM {
             keepItems = 1,2,3,4,6
         }
 
+        frame_class {
+            removeItems = ruler-before, ruler-after, indent, indent-left, indent-right, indent-righ
+            addItems {
+                container = Container
+            }
+        }
+
         layout.disabled = 1
-        frame_class.disabled = 1
         space_before_class.disabled = 1
         space_after_class.disabled = 1
         linkToTop.disabled = 1
@@ -77,6 +83,8 @@ TCEFORM {
 
     }
 }
+
+TCAdefaults.tt_content.frame_class = none
 
 
 ## Disable FSC cTypes
