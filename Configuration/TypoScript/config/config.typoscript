@@ -38,13 +38,13 @@ config {
 }
 
 ## Disable Cache when logged in BE
-[globalVar = TSFE:beUserLogin > 0]
+[getTSFE().beUserLogin]
   config {
     no_cache = 1
     sendCacheHeaders = 0
     cache_period = 0
   }
-[global]
+[END]
 
 ###
 ## applicationContext
@@ -57,4 +57,4 @@ config {
     concatenateJs = 0
     inlineStyle2TempFile = 0
   }
-[end]
+[END]

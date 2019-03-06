@@ -113,7 +113,7 @@ page {
   }
 [END]
 
-[globalVar = TSFE : beUserLogin > 0] || [applicationContext = Development*]
+[getTSFE().beUserLogin] || [applicationContext = Development*]
   // show some debug infos in <head>
   page.headerData.666999 = TEXT
   page.headerData.666999 {
