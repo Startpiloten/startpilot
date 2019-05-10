@@ -84,34 +84,17 @@ page {
   ## includeCSS
   ###
   includeCSS {
-    style = EXT:startpilot/Resources/Public/Css/main.min.css
+    style = EXT:startpilot/Resources/Public/style.css
   }
 
   ###
   ## includeJS
   ###
   includeJSFooter {
-    main = EXT:startpilot/Resources/Public/JavaScript/main.min.js
+    main = EXT:startpilot/Resources/Public/main.js
     main.async = 1
   }
 }
-
-###
-## applicationContext
-###
-[applicationContext = Development*]
-  page {
-    # Override min files
-    includeCSS {
-      style = EXT:startpilot/Resources/Public/Css/main.css
-    }
-
-    # Override min files
-    includeJSFooter {
-      main = EXT:startpilot/Resources/Public/JavaScript/main.js
-    }
-  }
-[END]
 
 [getTSFE().beUserLogin] || [applicationContext = Development*]
   // show some debug infos in <head>
