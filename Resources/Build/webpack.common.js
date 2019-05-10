@@ -130,7 +130,8 @@ module.exports = {
             {from: 'Assets/Images/Misc', to: 'Images/Misc'}
         ]),
         new CopyPlugin([
-            {from: 'Assets/JavaScripts/static', to: 'JavaScripts'}
+            {from: 'Assets/JavaScripts/static', to: 'JavaScripts'},
+            {from: 'Assets/CKEditor', to: 'CKEditor'}
         ]),
         new ImageminPlugin({
             test: /\.(jpe?g|png|gif|svg)$/i,
