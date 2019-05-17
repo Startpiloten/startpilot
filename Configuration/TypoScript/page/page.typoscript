@@ -84,7 +84,7 @@ page {
   ## includeCSS
   ###
   includeCSS {
-    style = EXT:startpilot/Resources/Public/style.css
+    style = EXT:startpilot/Resources/Public/main.css
   }
 
   ###

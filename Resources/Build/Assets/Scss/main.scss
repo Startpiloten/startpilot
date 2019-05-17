@@ -1,18 +1,14 @@
 // VARIABLES OVERWRITES
 @import "base/b-variables";
 @import "base/b-bootstrap-variables";
-
 // BOOTSTRAP
-
 // Core variables and mixins
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/utilities";
-
 // Reset and dependencies
 @import "~bootstrap/scss/print";
-
 // Core CSS
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/images";
@@ -24,18 +20,21 @@
 @import "~bootstrap/scss/nav";
 @import "~bootstrap/scss/navbar";
 @import "~bootstrap/scss/transitions";
-
 // Layout
 @import "layout/l-body";
 @import "layout/l-header";
 @import "layout/l-footer";
-
 // Fonts
 @import "fonts/roboto";
-
 // Content Elements
 @import "content-elements/ce-includes";
 
 body {
     font-family: Roboto;
+}
+
+@media (min-width: 576px) {
+    body {
+        background-color: green;
+    }
 }
