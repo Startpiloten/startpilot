@@ -7,6 +7,8 @@ const WebpackBar = require('webpackbar');
 const CopyPlugin = require('copy-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const MediaQueryPlugin = require('media-query-plugin');
+
 
 module.exports = {
     stats: 'none',
@@ -48,6 +50,7 @@ module.exports = {
                             sourceMap: true
                         }
                     },
+                    MediaQueryPlugin.loader,
                     {
                         loader: 'resolve-url-loader',
                         options: {
@@ -124,6 +127,14 @@ module.exports = {
         }),
         new FriendlyErrorsWebpackPlugin(),
         new MiniCssExtractPlugin({
+        }),
+        new MediaQueryPlugin({
+            include: [
+                'index.js'
+            ],
+            queries: {
+                '(min-width: 576px)': 'mobile'
+            }
         }),
         new UglifyJsPlugin({
             extractComments: true

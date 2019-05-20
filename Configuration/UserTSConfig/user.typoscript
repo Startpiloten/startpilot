@@ -1,2 +1,4 @@
-options.pageTree.showPageIdWithTitle = 1
-options.showDuplicate = 1
+options {
+  pageTree.showPageIdWithTitle = 1
+  showDuplicate = 1
+}

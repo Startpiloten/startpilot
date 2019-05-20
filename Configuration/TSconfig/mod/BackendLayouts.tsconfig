@@ -1,24 +1,24 @@
 mod.web_layout.BackendLayouts {
-    MainTemplate {
-        title = MainTemplate
-        name = MainTemplate
-        icon = EXT:startpilot/ext_icon.png
-        config {
-            backend_layout {
-                colCount = 1
-                rowCount = 1
-                rows {
-                    1 {
-                        columns {
-                            1 {
-                                name = Main Area
-                                colPos = 0
-                                colspan = 1
-                            }
-                        }
-                    }
-                }
+  MainTemplate {
+    title = MainTemplate
+    name = MainTemplate
+    icon = EXT:startpilot/ext_icon.png
+    config {
+      backend_layout {
+        colCount = 1
+        rowCount = 1
+        rows {
+          1 {
+            columns {
+              1 {
+                name = Main Area
+                colPos = 0
+                colspan = 1
+              }
             }
+          }
         }
+      }
     }
+  }
 }

@@ -1,9 +1,0 @@
-paths:
-  - public/typo3conf/ext/startpilot/Configuration/TypoScript
-sniffs:
-  - class: Indentation
-    parameters:
-      useSpaces: true
-      indentPerLevel: 2
-  - class: RepeatingRValue
-    disabled: true
