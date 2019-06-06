@@ -123,17 +123,16 @@ module.exports = {
             profile: true,
         }),
         new FriendlyErrorsWebpackPlugin(),
-        new MiniCssExtractPlugin({
-        }),
+        new MiniCssExtractPlugin(),
         new UglifyJsPlugin({
             extractComments: true
         }),
-        new CopyPlugin([
-            {from: 'Assets/Images/Misc', to: 'Images/Misc'}
-        ]),
+        new CopyPlugin(
+            [{from: 'Assets/Images/Misc', to: 'Images/Misc'},
+                {from: 'Assets/CKEditor', to: 'CKEditor'}],
+            {copyUnmodified: true}),
         new CopyPlugin([
             {from: 'Assets/JavaScripts/static', to: 'JavaScripts'},
-            {from: 'Assets/CKEditor', to: 'CKEditor'}
         ]),
         new ImageminPlugin({
             test: /\.(jpe?g|png|gif|svg)$/i,
