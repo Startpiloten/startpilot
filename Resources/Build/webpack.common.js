@@ -117,7 +117,7 @@ module.exports = {
     },
     plugins: [
         new webpack.ProgressPlugin(),
-        new CleanWebpackPlugin(),
+        // new CleanWebpackPlugin(),
         new WebpackBar({
             clear: false,
             profile: true,
