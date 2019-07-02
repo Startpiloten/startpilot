@@ -53,7 +53,7 @@ TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
     [
         'Text with Image',
         'startpilot_textimage',
-        'EXT:startpilot/ext_icon.png'
+        'logo-small'
     ],
     '--div--',
     'after'
@@ -62,7 +62,7 @@ TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
 /***************
  * Assign Icon
  */
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['startpilot_textimage'] = 'default-icon';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['startpilot_textimage'] = 'logo-small';
 
 /***************
  * Configure element type

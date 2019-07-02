@@ -5,7 +5,7 @@ mod {
         common {
           elements {
             startpilot_textimage {
-              iconIdentifier = default-icon
+              iconIdentifier = logo-big
               title = Text with Image
               description = Image positions: Top, Bottom, Left, Right
               tt_content_defValues {
