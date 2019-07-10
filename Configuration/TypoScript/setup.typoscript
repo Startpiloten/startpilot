@@ -5,5 +5,6 @@
 @import 'EXT:startpilot/Configuration/TypoScript/form/'
 @import 'EXT:startpilot/Configuration/TypoScript/page/'
 @import 'EXT:startpilot/Configuration/TypoScript/tt_content/'
+## @import 'EXT:startpilot/Configuration/TypoScript/news/'
 
 @import 'EXT:startpilot/Configuration/TypoScript/ContentElements/'

@@ -1,0 +1,44 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:news/Configuration/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:news/Configuration/TypoScript/Styles/Twb/setup.txt">
+
+plugin.tx_news {
+    view {
+        templateRootPaths {
+            100 = EXT:startpilot/Resources/Private/Plugin/News/Templates/
+        }
+
+        partialRootPaths {
+            99 = EXT:startpilot/Resources/Private/ContentElements/Partials/
+            100 = EXT:startpilot/Resources/Private/Plugin/News/Partials/
+        }
+
+        layoutRootPaths {
+            100 = EXT:startpilot/Resources/Private/Plugin/News/Layouts/
+        }
+
+        // widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = EXT:news/Resources/Private/Templates/
+    }
+
+    settings {
+        list {
+            paginate {
+                insertAbove = 0
+                insertBelow = 1
+                prevNextHeaderTags = 1
+                maximumNumberOfLinks = 3
+            }
+        }
+    }
+
+    _LOCAL_LANG {
+        default {
+            paginate_next = >
+            paginate_previous = <
+        }
+
+        de {
+            paginate_next = >
+            paginate_previous = <
+        }
+    }
+}
