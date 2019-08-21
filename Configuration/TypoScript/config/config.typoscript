@@ -18,8 +18,8 @@ config {
   extTarget = _blank
   disableImgBorderAttr = 1
 
-  spamProtectEmailAddresses = 2
-  spamProtectEmailAddresses_atSubst = &#64;<span class="d-none">no-spam</span>
+  spamProtectEmailAddresses = ascii
+  spamProtectEmailAddresses_atSubst = <span style='display:none'>whatever</span>@
 
   ## Enable RealUrl
   tx_realurl_enable = 1
