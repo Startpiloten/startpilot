@@ -126,7 +126,8 @@ module.exports = {
         new MiniCssExtractPlugin({
         }),
         new UglifyJsPlugin({
-            extractComments: true
+            extractComments: true,
+            sourceMap: true
         }),
         new CopyPlugin(
             [{from: 'Assets/Images/Misc', to: 'Images/Misc'}],
