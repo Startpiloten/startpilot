@@ -6,8 +6,7 @@ config {
   pageTitleFirst = 1
 
   headerComment (
-        This Website is created with the TYPO3 Startpilot
-        https://github.com/Startpiloten/startpilot
+        This Website is created with the TYPO3  S t a r t p i l o t
   )
 
   no_cache = 0
@@ -31,10 +30,11 @@ config {
   meaningfulTempFilePrefix = 100
 
   ## CSS and JS Compression
-  compressCss = 1
-  concatenateCss = 1
-  compressJs = 1
-  concatenateJs = 1
+  compressCss = 0
+  concatenateCss = 0
+  compressJs = 0
+  concatenateJs = 0
+  inlineStyle2TempFile = 0
 }
 
 ## Disable Cache when logged in BE
@@ -43,18 +43,5 @@ config {
     no_cache = 1
     sendCacheHeaders = 0
     cache_period = 0
-  }
-[END]
-
-###
-## applicationContext
-###
-[applicationContext = Development*]
-  config {
-    compressCss = 0
-    concatenateCss = 0
-    compressJs = 0
-    concatenateJs = 0
-    inlineStyle2TempFile = 0
   }
 [END]
