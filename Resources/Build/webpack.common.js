@@ -6,6 +6,7 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 const WebpackBar = require('webpackbar');
 const CopyPlugin = require('copy-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
     stats: 'none',
@@ -24,6 +25,7 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: "eslint-loader",
                 options: {
+                    sourceMap: true,
                     cache: false,
                     configFile: '.eslintrc.json',
                     emitError: true,
@@ -38,6 +40,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
+                        sourceMap: true,
                         presets: ['@babel/preset-env']
                     }
                 }
