@@ -1,10 +1,15 @@
 const merge = require('webpack-merge');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
 const baseConfig = require('./webpack.common.js');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 const developConfig = {
     mode: 'development',
-    devtool: "source-map"
+    devtool: "source-map",
+    plugins: [
+        new ImageminPlugin({
+            disable: true
+        }),
+    ]
 };
 
 module.exports = merge.smart(baseConfig, developConfig);

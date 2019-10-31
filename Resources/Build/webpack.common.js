@@ -2,12 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const WebpackBar = require('webpackbar');
 const CopyPlugin = require('copy-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
     stats: 'none',
@@ -26,7 +24,12 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: "eslint-loader",
                 options: {
-                    configFile: '.eslintrc.json'
+                    cache: false,
+                    configFile: '.eslintrc.json',
+                    emitError: true,
+                    emitWarning: true,
+                    failOnError: false,
+                    failOnWarning: false,
                 }
             },
             {
@@ -92,31 +95,6 @@ module.exports = {
                             name: '[path][name].[ext]',
                             outputPath: 'Images/'
                         }
-                    },
-                    {
-                        loader: 'image-webpack-loader',
-                        options: {
-                            cacheFolder: path.resolve('./cache'),
-                            mozjpeg: {
-                                progressive: true,
-                                quality: 65
-                            },
-                            // optipng.enabled: false will disable optipng
-                            optipng: {
-                                enabled: false,
-                            },
-                            pngquant: {
-                                quality: [0.65, 0.90],
-                                speed: 4
-                            },
-                            gifsicle: {
-                                interlaced: false,
-                            },
-                            // the webp option will enable WEBP
-                            webp: {
-                                quality: 75
-                            }
-                        }
                     }
                 ]
             }
@@ -124,7 +102,6 @@ module.exports = {
     },
     plugins: [
         new webpack.ProgressPlugin(),
-        // new CleanWebpackPlugin(),
         new WebpackBar({
             clear: false,
             profile: true,
@@ -136,42 +113,24 @@ module.exports = {
             sourceMap: true
         }),
         new CopyPlugin(
-            [{from: 'Assets/Images/Misc', to: 'Images/Misc'}],
-            {copyUnmodified: true}
+            [{
+                from: 'Assets/Images/Misc', to: 'Images/Misc',
+                cache: true,
+            }]
         ),
         new CopyPlugin([
-            {from: 'Assets/JavaScripts/static', to: 'JavaScripts'},
-            {from: 'Assets/CKEditor', to: 'CKEditor'}
+            {from: 'Assets/JavaScripts/static', to: 'JavaScripts', cache: true},
+            {from: 'Assets/CKEditor', to: 'CKEditor', cache: true},
         ]),
-        new ImageminPlugin({
-            test: /\.(jpe?g|png|gif|svg)$/i,
-            options: {
-                cacheFolder: path.resolve('./cache'),
-                mozjpeg: {
-                    progressive: true,
-                    quality: 65
-                },
-                // optipng.enabled: false will disable optipng
-                optipng: {
-                    enabled: false,
-                },
-                pngquant: {
-                    quality: [0.65, 0.90],
-                    speed: 4
-                },
-                gifsicle: {
-                    interlaced: false,
-                },
-                // the webp option will enable WEBP
-                webp: {
-                    quality: 75
-                }
-            }
-        }),
         new StyleLintPlugin({
             configFile: ".stylelintrc.json",
             syntax: 'scss',
             files: '**/*.scss',
+            quiet: false,
+            emitError: true,
+            emitWarning: true,
+            failOnError: false,
+            failOnWarning: false,
         }),
     ],
 };
