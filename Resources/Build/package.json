@@ -34,9 +34,9 @@
   },
   "scripts": {
     "set-node-version": "n 10",
-    "webpack:build:dev": "./node_modules/.bin/webpack --config ./webpack.dev.js",
-    "webpack:build:dev:watch": "./node_modules/.bin/webpack --config ./webpack.dev.js --watch",
-    "webpack:build:live": "./node_modules/.bin/webpack --config ./webpack.prod.js",
+    "webpack:build:dev": "./node_modules/.bin/webpack --config ./webpack.dev.js || exit 0",
+    "webpack:build:dev:watch": "./node_modules/.bin/webpack --config ./webpack.dev.js --watch || exit 0",
+    "webpack:build:live": "./node_modules/.bin/webpack --config ./webpack.prod.js || exit 0",
     "stylelint:fix": "./node_modules/.bin/stylelint --syntax 'scss' ./Assets/Scss/**/*.scss --fix --custom-formatter=./node_modules/stylelint-formatter-pretty || exit 0",
     "eslint:fix": "./node_modules/.bin/eslint -c ./.eslintrc.json --fix ./Assets || exit 0"
   },
