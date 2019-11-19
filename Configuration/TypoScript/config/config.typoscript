@@ -11,8 +11,9 @@ config {
 
   no_cache = 0
   sendCacheHeaders = 1
-  cache_period = 86400
+  cache_period = 604800
   enableContentLengthHeader = 0
+  cache_clearAtMidnight = 0
 
   extTarget = _blank
   disableImgBorderAttr = 1
@@ -35,6 +36,7 @@ config {
   compressJs = 0
   concatenateJs = 0
   inlineStyle2TempFile = 0
+
 }
 
 ## Disable Cache when logged in BE
