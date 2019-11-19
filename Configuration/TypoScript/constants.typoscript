@@ -21,11 +21,3 @@ page {
     google = translate
   }
 }
-
-# customsubcategory=200=Favicon
-# cat=startpilot: Settings/100/100; type=string; label= Path to Favicon (PNG)
-favicon = EXT:startpilot/Resources/Public/Images/Icons/Device/Icon.png
-
-# customsubcategory=120=Google Webmaster/Analytics
-# cat=startpilot: Google Tools/200/100; type=string; label= Google Webmaster ID - (content="xxxxxxxx")
-googlewebmaster =

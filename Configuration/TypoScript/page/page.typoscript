@@ -3,7 +3,7 @@
 ###
 page = PAGE
 page {
-  bodyTag = <body class="l-body" itemscope="" itemtype="http://schema.org/WebPage">
+  bodyTag = <body class="l-body">
 
   # Pagetemplate
   10 = FLUIDTEMPLATE
