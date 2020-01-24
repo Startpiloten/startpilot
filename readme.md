@@ -84,7 +84,7 @@ There is one more thing we need to do, which is heading to the root page in our 
 
 ### Does it work?
 
-You  can check by adding Content to your page in the backend. Most of the TYPO3 default content elements should not be listed anymore and you should see a new content element tab called „Custom Content Elements“ with the „Text with Image“ element displayed.
+You  can check by adding content to your page in the backend. Most of the TYPO3 default content elements should not be listed anymore and you should see a new content element tab called „Custom Content Elements“ with the „Text with Image“ element displayed.
 There is a basic frontend output now which should display all the content you put into your first „Text with Image“ element. Text is being displayed? Image is being displayed? No error occurred? GZ you just successfully set up your first provider extension with startpilot.
 
 
@@ -100,33 +100,41 @@ There is a basic frontend output now which should display all the content you pu
 
 ## Further steps
 
-### gulp workflow
+### webpack workflow
 
-To get the gulp workflow running we first need to run `npm install` in the `Build` directory. Therefore we need to open our CLI and navigate to our build folder first, then execute `npm install`.
+To get the webpack workflow running we first need to run `npm install` in the `Build` directory. Therefore we need to open our CLI and navigate to our build folder first, then execute `npm install`.
 
-1. `cd typo3conf/ext/startpilot/Resources/Build`
+1. `cd public/typo3conf/ext/startpilot/Resources/Build`
 
 2. `npm install`
 
-You can run the predefined npm tasks through your CLI by entering one of `npm run build`, `npm run ci` , `npm run start`. If you are using PhpStorm you also can use them by right clicking on the `package.json` and selecting „Show npm Scripts“. After configuring node with your PhpStorm simply double click one of the shown tasks to execute them.
+You can run the predefined npm tasks through your CLI by entering one of `webpack:build:dev`, `webpack:build:dev:watch` , `webpack:build:live`. If you are using PhpStorm you also can use them by right clicking on the `package.json` and selecting „Show npm Scripts“. After configuring node with your PhpStorm simply double click one of the shown tasks to execute them.
 
 
 
-`ci` 
+`webpack:build:dev` 
 
-executes linting tasks which run over your .scss and .js files. The settings for the linter are oriented on the TYPO3 coding guidelines. Additionally `ci` runs a formatter that fixes some of the minor linting errors.
-
-
-
-`build`
-
-gets your frontend ready once. If you only need to check on the frontend once (maybe after a system update) this task is what you are looking for.
+Collects all frontend related necessary files and distributes them to the /public folder.
 
 
 
-`start`
+`webpack:build:dev:watch`
 
-gets your frontend ready and keeps watching for changes. If you are going to work on things continuously and you will check the frontend multiple times this task suits you.
+Does the same as `webpack:build:dev`, but also sets up a watcher for Assets and .js | .scss files.
+
+
+
+`webpack:build:live`
+
+Generates a production build with minimized images.
+
+
+
+`stylelint:fix`|`eslint:fix`
+
+executes linting tasks which run over your .scss | .js files. The settings for the linter are oriented on the TYPO3 coding guidelines. Additionally a formatter fixes some of the minor linting errors.
+
+
 
 ### ce-gen
 
