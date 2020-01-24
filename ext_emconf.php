@@ -13,8 +13,6 @@ $EM_CONF[$_EXTKEY] = [
     'generator' => 'startpilot',
     'constraints' => [
         'depends' => [
-            'typo3' => '8.7.*',
-            'rte_ckeditor' => '8.7.*'
         ],
         'conflicts' => [
             'fluidpages' => '*',

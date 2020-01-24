@@ -3,7 +3,7 @@
 	"description": "TYPO3 Provider Extension",
 	"type": "typo3-cms-extension",
 	"require": {
-		"typo3/cms-frontend": "^9"
+		"typo3/cms-frontend": "^10"
 	},
 	"authors": [
 		{
