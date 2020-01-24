@@ -1,37 +1,7 @@
 TCEFORM {
   pages {
     // General
-    nav_title.disabled = 0
-    subtitle.disabled = 1
 
-    // Metadata
-    abstract.disabled = 1
-    author.disabled = 1
-    author_email.disabled = 1
-    lastUpdated.disabled = 1
-    keywords.disabled = 1
-
-    // Appearance
-    layout.disabled = 1
-    newUntil.disabled = 1
-
-    // Behavior
-    cache_timeout.disabled = 1
-    cache_tags.disabled = 1
-    no_cache.disabled = 0
-
-    // Resources
-    TSconfig.disabled = 0
-
-    // Categories
-    categories.disabled = 1
-
-    // Access
-    fe_group.disabled = 1
-    fe_login_mode.disabled = 1
-
-    // Notes
-    rowDescription.disabled = 1
   }
 
   tt_content {
@@ -44,18 +14,6 @@ TCEFORM {
         5 = Headline H5
         6 = Headline H6
       }
-
-      types {
-        gridelements_pi1 {
-          altLabels {
-            0 = Headline Large
-            1 = Headline Medium
-            2 = Headline Small
-          }
-
-          removeItems = 3,4,5,6
-        }
-      }
     }
 
     imageorient {
@@ -67,21 +25,10 @@ TCEFORM {
     }
 
     frame_class {
-      removeItems = ruler-before, ruler-after, indent, indent-left, indent-right, indent-righ
-      addItems {
-        container = Container
-      }
+      removeItems = ruler-before
     }
-
-    layout.disabled = 1
-    space_before_class.disabled = 1
-    space_after_class.disabled = 1
-    linkToTop.disabled = 1
   }
 }
-
-TCAdefaults.tt_content.frame_class = none
-
 
 ## Disable FSC cTypes
 TCEFORM.tt_content.CType.removeItems := addToList(html)
