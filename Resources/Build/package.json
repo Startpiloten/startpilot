@@ -30,20 +30,19 @@
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",
     "webpack-merge": "^4.2.2",
-    "webpackbar": "^4.0.0"
+    "webpackbar": "^4.0.0",
+    "imagemin-webpack-plugin": "^2.4.2"
   },
   "scripts": {
-    "set-node-version": "n 10",
-    "webpack:build:dev": "./node_modules/.bin/webpack --config ./webpack.dev.js || exit 0",
-    "webpack:build:dev:watch": "./node_modules/.bin/webpack --config ./webpack.dev.js --watch || exit 0",
-    "webpack:build:live": "./node_modules/.bin/webpack --config ./webpack.prod.js || exit 0",
-    "stylelint:fix": "./node_modules/.bin/stylelint --syntax 'scss' ./Assets/Scss/**/*.scss --fix --custom-formatter=./node_modules/stylelint-formatter-pretty || exit 0",
-    "eslint:fix": "./node_modules/.bin/eslint -c ./.eslintrc.json --fix ./Assets || exit 0"
+    "set-node-version": "n 12",
+    "webpack:build:dev": "npx webpack --config ./webpack.dev.js || exit 0",
+    "webpack:build:dev:watch": "npx webpack --config ./webpack.dev.js --watch || exit 0",
+    "webpack:build:live": "npx webpack --config ./webpack.prod.js || exit 0",
+    "stylelint:fix": "npx stylelint --syntax 'scss' ./Assets/Scss/**/*.scss --fix --custom-formatter=./node_modules/stylelint-formatter-pretty || exit 0",
+    "eslint:fix": "npx eslint -c ./.eslintrc.json --fix ./Assets || exit 0"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "imagemin-webpack-plugin": "^2.4.2",
-    "jquery": "^3.4.1",
-    "popper.js": "^1.15.0"
+    "jquery": "^3",
+    "popper.js": "^1"
   }
 }

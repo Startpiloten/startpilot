@@ -1,5 +1,4 @@
 // Example for module
-
 const sayhello = name => {
     const Console = console;
     Console.log(`Hello ` + name);
