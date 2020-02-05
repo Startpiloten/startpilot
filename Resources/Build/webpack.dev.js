@@ -4,7 +4,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 const developConfig = {
     mode: 'development',
-    devtool: "source-map",
+    devtool: "inline-source-map",
     plugins: [
         new ImageminPlugin({
             disable: true
