@@ -1,3 +1,6 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:startpilot/Configuration/TSconfig/mod/newContentElement.tsconfig" extensions="tsconfig">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/TSconfig/ContentElements/" extensions="tsconfig">
+
 TCEMAIN {
   permissions {
     # Owner be_users UID for new pages:

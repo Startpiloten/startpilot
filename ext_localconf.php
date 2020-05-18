@@ -24,5 +24,5 @@ $iconRegistry->registerIcon(
 $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['default'] = 'EXT:startpilot/Configuration/Yaml/DefaultEditor.yaml';
 
 TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
-    '<INCLUDE_TYPOSCRIPT: source="DIR:EXT:' . $_EXTKEY . '/Configuration/UserTSConfig">'
+    '<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/UserTSConfig">'
 );
