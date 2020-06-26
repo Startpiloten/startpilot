@@ -30,6 +30,9 @@ TCEFORM {
   }
 }
 
+## Set default Frame class to none (form_framework and fsc)
+TCAdefaults.tt_content.frame_class = none
+
 ## Disable FSC cTypes
 TCEFORM.tt_content.CType.removeItems := addToList(html)
 # TCEFORM.tt_content.CType.removeItems := addToList(shortcut)
