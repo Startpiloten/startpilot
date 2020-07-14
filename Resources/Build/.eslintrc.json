@@ -3,7 +3,9 @@
     "es6": true
   },
   "parserOptions": {
-    "sourceType": "module"
+	  "ecmaVersion": 11,
+	  "sourceType": "module",
+	  "allowImportExportEverywhere": true
   },
   "extends": "eslint:recommended",
   "rules": {

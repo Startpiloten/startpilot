@@ -3,7 +3,7 @@
 ###
 page = PAGE
 page {
-  bodyTag = <body class="l-body">
+  bodyTag = <body class="lazy">
 
   # Pagetemplate
   10 = FLUIDTEMPLATE

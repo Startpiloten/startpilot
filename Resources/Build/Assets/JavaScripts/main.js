@@ -1,9 +1,12 @@
 // Import jQuery global
-import {$,jQuery} from 'jquery';
+import {$, jQuery} from 'jquery';
 
 window.$ = $;
 window.jQuery = jQuery;
 
-// Example for modules
-import {sayhello} from "./modules/sayhello";
-sayhello('TYPO3');
+// Lazy Load sayhello Modules if body.lazy exists
+if (document.body.classList.contains('lazy')) {
+    import(/* webpackChunkName: "sayhello" */'./modules/sayhello').then(module => {
+        module.sayhello('TYPO3');
+    })
+}

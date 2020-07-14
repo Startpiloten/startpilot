@@ -13,6 +13,8 @@ module.exports = {
     entry: ['./index.js'],
     output: {
         path: path.resolve(__dirname, '../Public'),
+        chunkFilename: '[name].lazy.js',
+        publicPath: 'typo3conf/ext/startpilot/Resources/Public/',
     },
     optimization: {
         minimizer: [new UglifyJsPlugin()]
