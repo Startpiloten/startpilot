@@ -88,7 +88,8 @@ module.exports = {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
                 loader: 'file-loader',
                 options: {
-                    outputPath: 'Fonts/'
+                    outputPath: 'Fonts/',
+                    publicPath: './Fonts/',
                 }
             },
             {
