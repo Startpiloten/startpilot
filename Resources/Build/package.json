@@ -35,11 +35,11 @@
   },
   "scripts": {
     "set-node-version": "n 12",
-    "webpack:build:dev": "npx webpack --config ./webpack.dev.js || exit 0",
+    "webpack:build:dev": "npx webpack --config ./webpack.dev.js",
     "webpack:build:dev:watch": "npx webpack --config ./webpack.dev.js --watch || exit 0",
-    "webpack:build:live": "npx webpack --config ./webpack.prod.js || exit 0",
-    "stylelint:fix": "npx stylelint --syntax 'scss' ./Assets/Scss/**/*.scss --fix --custom-formatter=./node_modules/stylelint-formatter-pretty || exit 0",
-    "eslint:fix": "npx eslint -c ./.eslintrc.json --ignore-pattern '*.min.js' --fix ./Assets/JavaScripts || exit 0"
+    "webpack:build:live": "npx webpack --config ./webpack.prod.js",
+    "stylelint:fix": "npx -quiet stylelint --syntax 'scss' ./Assets/Scss/**/*.scss --fix --custom-formatter=./node_modules/stylelint-formatter-pretty --config ./.stylelintrc.json",
+    "eslint:fix": "npx -quiet eslint -c ./.eslintrc.json --fix --ignore-pattern '*.min.js' --ignore-path './Assets/JavaScripts/static' ./Assets/JavaScripts"
   },
   "dependencies": {
     "jquery": "^3",
