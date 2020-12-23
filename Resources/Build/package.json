@@ -39,7 +39,7 @@
     "webpack:build:dev:watch": "npx -quiet webpack --config ./webpack.dev.js --watch || exit 0",
     "webpack:build:live": "npx -quiet webpack --config ./webpack.prod.js",
     "stylelint:fix": "npx -quiet stylelint --syntax 'scss' ./Assets/Scss/**/*.scss --fix --custom-formatter=./node_modules/stylelint-formatter-pretty --config ./.stylelintrc.json",
-    "eslint:fix": "npx -quiet eslint -c ./.eslintrc.json --fix --ignore-pattern '*.min.js' --ignore-path './Assets/JavaScripts/static' ./Assets/JavaScripts"
+    "eslint:fix": "npx -quiet eslint -c ./.eslintrc.json --fix --ignore-pattern '*.min.js' ./Assets/JavaScripts"
   },
   "dependencies": {
     "jquery": "^3",
