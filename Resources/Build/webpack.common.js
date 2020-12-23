@@ -126,8 +126,8 @@ module.exports = {
             }]
         ),
         new CopyPlugin([
-            {from: 'Assets/JavaScripts/static', to: 'JavaScripts', cache: true},
-            {from: 'Assets/CKEditor', to: 'CKEditor', cache: true},
+            {from: 'Assets/JavaScriptLibs', to: 'JavaScriptLibs'},
+            {from: 'Assets/CKEditor', to: 'CKEditor'},
         ]),
         new StyleLintPlugin({
             configFile: ".stylelintrc.json",

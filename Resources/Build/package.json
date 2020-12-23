@@ -34,10 +34,10 @@
     "imagemin-webpack-plugin": "^2.4.2"
   },
   "scripts": {
-    "set-node-version": "n 12",
-    "webpack:build:dev": "npx webpack --config ./webpack.dev.js",
-    "webpack:build:dev:watch": "npx webpack --config ./webpack.dev.js --watch || exit 0",
-    "webpack:build:live": "npx webpack --config ./webpack.prod.js",
+    "set-node-version": "n 14",
+    "webpack:build:dev": "npx -quiet webpack --config ./webpack.dev.js",
+    "webpack:build:dev:watch": "npx -quiet webpack --config ./webpack.dev.js --watch || exit 0",
+    "webpack:build:live": "npx -quiet webpack --config ./webpack.prod.js",
     "stylelint:fix": "npx -quiet stylelint --syntax 'scss' ./Assets/Scss/**/*.scss --fix --custom-formatter=./node_modules/stylelint-formatter-pretty --config ./.stylelintrc.json",
     "eslint:fix": "npx -quiet eslint -c ./.eslintrc.json --fix --ignore-pattern '*.min.js' --ignore-path './Assets/JavaScripts/static' ./Assets/JavaScripts"
   },
